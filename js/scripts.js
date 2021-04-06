@@ -5,6 +5,6 @@ function prueba() {
             document.getElementById("myCarousel") = this.responseText();
         }
     }
-    xhttp.open("GET", "prueba.txt", true);
+    xhttp.open("GET", "js/prueba.txt", true);
     xhttp.send();
 }
