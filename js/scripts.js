@@ -1,10 +1,10 @@
 function prueba() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange == function() {
-        if(this.readyState == 4 && this.status == 1) {
-            document.getElementById("myCarousel") = this.responseText();
+        if(this.readyState == 4 && this.status == 200) {
+            document.getElementById("myCarousel").innerHTML = this.responseText();
         }
-    }
+    };
     xhttp.open("GET", "js/prueba.txt", true);
     xhttp.send();
 }
