@@ -9,6 +9,21 @@
     <meta name="generator" content="Hugo 0.82.0">
     <title>Hoteles Mallorca</title>
     <script type="text/javascript" src="js/scripts.js"></script>
+    
+    function muestraOculta(id) {
+        var elemento = document.getElementById('contenidos_'+id);
+        var enlace = document.getElementById('enlace_'+id);
+ 
+      if(elemento.style.display == "" || elemento.style.display == "block") {
+        elemento.style.display = "none";
+        enlace.innerHTML = 'Mostrar contenidos';
+      }
+      else {
+        elemento.style.display = "block";
+        enlace.innerHTML = 'Ocultar contenidos';
+      }
+    }
+    
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 
     <!-- Bootstrap core CSS -->
