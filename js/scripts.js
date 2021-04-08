@@ -6,6 +6,6 @@ function prueba() {
             document.getElementById("myCarousel").innerHTML = this.responseText();
         }
     };
-    xhttp.open("GET", "js/prueba.txt", true);
-    xhttp.send();
+    xhttp.open("GET", 'js/prueba.txt', true);
+    xhttp.send(null);
 }
