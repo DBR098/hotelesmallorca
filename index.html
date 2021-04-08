@@ -13,6 +13,21 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <script type="text/javascript">
+    function muestraOculta(p) {
+        var elemento = document.getElementById('p'+id);
+        var enlace = document.getElementById('e'+id);
+
+        if(elemento.style.display == "" || elemento.style.display == "block") {
+            elemento.style.display = "none";
+            enlace.innerHTML = 'Mostrar contenidos';
+        } else {
+            elemento.style.display = "block";
+            enlace.innerHTML = 'Ocultar contenidos';
+        }
+    }
+    </script>
 
     <style>
         .bd-placeholder-img {
@@ -164,19 +179,20 @@
                     <img src="img/logo1.jpg" class="bd-placeholder-img rounded-circle" alt="Logo1">
 
                     <h2>Sant Francesc Hotel Singular</h2>
-                    <p>Sant Francesc Hotel Singular Palma es un Hotel boutique de 5 estrellas, ubicado en una casa
+                    <p id="p1">Sant Francesc Hotel Singular Palma es un Hotel boutique de 5 estrellas, ubicado en una casa
                         señorial neoclásica del S.XIX, en pleno casco antiguo de la ciudad de Palma de Mallorca. Cuenta
                         con 42 habitaciones y suites. En el interior
                         se descubre una decoración cálida y sofisticada. La situación del hotel lo hace ideal para
                         disfrutar la ciudad a pie, así como el resto de la isla de Mallorca.</p>
                     <p><a class="btn btn-secondary" href="#">Ver hotel &raquo;</a></p>
+                    <a id="e1" href="#" onclick="muestraOculta('1'); return false;">Ocultar texto</a>
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <img src="img/logo2.jpg" class="bd-placeholder-img rounded-circle" alt="Logo2">
 
                     <h2>Boutique Hotel Can Alomar</h2>
-                    <p>El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo nombre,
+                    <p id="p2">El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo nombre,
                         una antigua casa señorial urbana, catalogada y protegida, de interés histórico, artístico y
                         arquitectónico y gran valor Patrimonial.
                         El hotel dispone de 16 amplias y luminosas habitaciones decoradas dentro de un diseño moderno,
@@ -184,13 +200,14 @@
                         solarium para uso exclusivo de los huéspedes
                         del hotel.</p>
                     <p><a class="btn btn-secondary" href="#">Ver hotel &raquo;</a></p>
+                    <a id="e2" href="#" onclick="muestraOculta('2'); return false;">Ocultar texto</a>
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <img src="img/logo3.jpg" class="bd-placeholder-img rounded-circle" alt="Logo3">
 
                     <h2>Hotel Diamante</h2>
-                    <p>Diamante es un pequeño hotel familiar céntrico a tan solo 100 m. de la Playa Palmira en una
+                    <p id="p3">Diamante es un pequeño hotel familiar céntrico a tan solo 100 m. de la Playa Palmira en una
                         tranquila calle adyacente al Bulevar en donde se encuentran numerosas posibilidades de
                         entretenimiento como pasear, ir de compras o comer y
                         beber algo sentado en una de las terrazas de los numerosos bares y restaurantes. Dispone de un
@@ -198,6 +215,7 @@
                         puede tomar el sol o leer un libro sentado
                         en una de sus camas balinesas.</p>
                     <p><a class="btn btn-secondary" href="#">Ver hotel &raquo;</a></p>
+                    <a id="e3" href="#" onclick="muestraOculta('3'); return false;">Ocultar texto</a>
                 </div>
                 <!-- /.col-lg-4 -->
             </div>
