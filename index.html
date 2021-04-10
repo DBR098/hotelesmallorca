@@ -35,7 +35,33 @@
 </head>
 
 <body>
+    
+    <div id="popup" style="display: none;">
+        <div class="content-popup">
+            <div class="close"><a href="#" id="close">X</a></div>
+            <div>
+                <h2>Quienes somos</h2>
+                <p>Somos sentimientos y tenemos seres humanos.</p>
+                <div style="float:left; width:100%;">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay"></div>
 
+    <div id="popup2" style="display: none;">
+        <div class="content-popup">
+            <div class="close"><a href="#" id="close2">X</a></div>
+            <div>
+                <h2>Contacto</h2>
+                <p>Teléfono: 666 </p>
+                <div style="float:left; width:100%;">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup2-overlay"></div>
+    
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container">
@@ -63,9 +89,9 @@
                                         href="https://hotelesmallorca.netlify.com/ayuda/preguntas_frecuentes">Preguntas
                                         frecuentes</a></li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Quienes somos</a>
+                                    <a class="dropdown-item" href="#" id="open">Quienes somos</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Contacto</a></li>
+                                <li><a class="dropdown-item" href="#" id="open2">Contacto</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
