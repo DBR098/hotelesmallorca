@@ -39,6 +39,10 @@
     cursor: pointer;
     opacity: 0.7;
 }
+
+.navbar {
+    z-index: 10
+}
  
 .close {
     position: absolute;
