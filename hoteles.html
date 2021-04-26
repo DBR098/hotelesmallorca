@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Denny Barreiro Rubio, Carlos Suárez Reborido">
+    <meta name="generator" content="Hugo 0.82.0">
+    <title>Hoteles</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <link href="css/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css"/>                                <!-- Templatemo style -->
+
+    <link href="css/hoteles.css" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+    
+    <div id="popup" style="display: none;">
+        <div class="content-popup">
+            <div class="close"><a href="#" id="close">X</a></div>
+                <div>
+                    <h2>Quienes somos</h2>
+                    <p>Hoteles Mallorca es una empresa fundada en 2020 con el objetivo de ayudar a la hostelería local.</p>
+                    <p>Aquí podrás encontrar el hotel que buscas entre una gran selección de hoteles.</p>
+                    <div style="float:left; width:100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay"></div>
+
+    <div id="popup2" style="display: none;">
+        <div class="content-popup">
+            <div class="close"><a href="#" id="close2">X</a></div>
+                <div>
+                    <h2>Contacto</h2>
+                    <p>Teléfono: 911 178 867 </p>
+                    
+                    <hr class="dropdown-divider">
+                    <p>Nuestros representantes están a tu disposición todos los días desde las 08:00 hasta las 22:00.</p>
+                    <p>Tarifa estándar</p>
+                    <div style="float:left; width:100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup2-overlay"></div>
+    
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <h2>Hoteles Mallorca</h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mob-navbar"
+                    aria-label="Toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mob-navbar">
+                    <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="https://hotelesmallorca.netlify.com/ofertas">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hoteles</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Ayuda</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item"
+                                        href="https://hotelesmallorca.netlify.com/ayuda/preguntas_frecuentes">Preguntas
+                                        frecuentes</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="open">Quienes somos</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" id="open2">Contacto</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Idiomas</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Español</a></li>
+                                <li><a class="dropdown-item" href="#">Català</a></li>
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-success" type="button">Login</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tm-section tm-bg-img" id="tm-section-1">
+            <div class="tm-bg-white ie-container-width-fix-2">
+                <div class="container ie-h-align-center-fix">
+                    <div class="row">
+                        <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
+                            <form action="hoteles.html" method="get" class="tm-search-form tm-section-pad-2">
+                                <div class="form-row tm-search-form-row">
+                                    <div class="form-group tm-form-element tm-form-element-100">
+                                        <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
+                                        <input name="city" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-50">
+                                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                                        <input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="Check In">
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-50">
+                                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                                        <input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="Check Out">
+                                    </div>
+                                </div>
+                                <div class="form-row tm-search-form-row">
+                                    <div class="form-group tm-form-element tm-form-element-2">                                            
+                                        <select name="adult" class="form-control tm-select" id="adult">
+                                            <option value="">Adult</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-2">                                            
+                                        <select name="children" class="form-control tm-select" id="children">
+                                            <option value="">Children</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                        <i class="fa fa-user tm-form-element-icon tm-form-element-icon-small"></i>
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-2">
+                                        <select name="room" class="form-control tm-select" id="room">
+                                            <option value="">Room</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                        <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
+                                    </div>
+                                    <div class="form-group tm-form-element tm-form-element-2">
+                                        <button type="submit" class="btn btn-primary tm-btn-search">Check Availability</button>
+                                    </div>
+                                  </div>
+                            </form>
+                        </div>                        
+                    </div>      
+                </div>
+            </div>                  
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>&copy; 2000–2021 Vini11BalondeOroCompany, Inc. &middot; <a
+                    href="https://hotelesmallorca.netlify.com/privacy">Privacy</a> &middot; <a
+                    href="https://hotelesmallorca.netlify.com/terms">Terms</a></p>
+        </footer>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+    <script src="js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
+    <script src="js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
+    <script src="js/datepicker.min.js"></script>                <!-- https://github.com/qodesmith/datepicker -->
+    <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+    <script>
+        $(document).ready(function(){
+            // Date Picker
+            const pickerCheckIn = datepicker('#inputCheckIn');
+            const pickerCheckOut = datepicker('#inputCheckOut');
+        });
+    </script>    
+</body>
+
+</html>

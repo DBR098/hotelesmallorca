@@ -30,7 +30,7 @@
  
 .popup-overlay,.popup2-overlay {
     left: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
@@ -145,8 +145,8 @@ body {
 }
 
 .col-md-5>img {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
 }
 
 
