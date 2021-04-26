@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <div id="prueba">
+        <script>
+            fetch("js/hoteles.json")
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.nom)
+                    document.querySelector("#prueba").innerText = data.nom
+                })
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+{
+    "nom": "Sant Francesc Hotel Singular",
+    "descripcio": "Sant Francesc Hotel Singular Palma es un Hotel boutique de 5 estrellas, ubicado en una casa señorial neoclásica del S.XIX, en pleno casco antiguo de la ciudad de Palma de Mallorca. Cuenta con 42 habitaciones y suites. En el interior se descubre una decoración cálida y sofisticada. La situación del hotel lo hace ideal para disfrutar la ciudad a pie, así como el resto de la isla de Mallorca.",
+    "detall": "",
+    "tipus": "hotel",
+    "identificador": "",
+    "preu": {
+        "import": "1",
+        "coment-preu": "precio de más de 200€ noche"
+    },
+    "contacte": {
+        "telf": "971495000",
+        "email": "INFO@HOTELSANTFRANCESC.COM",
+        "xarxes": {
+            "web": "https://www.hotelsantfrancesc.com",
+            "facebook": "https://www.facebook.com/hotelsantfrancesc",
+            "twitter": "https://twitter.com/hotelstfrancesc",
+            "instagram": "https://www.instagram.com/hotelsantfrancesc"
+        }
+    },
+    "puntuacio": 4.6,
+    "visualitzacions": "",
+    "likes": 0,
+    "icones": [
+        ""
+    ],
+    "imatges": [
+        "",
+        ""
+    ],
+    "videos": [
+        {
+            "tipus": "",
+            "url": ""
+        },
+        {
+            "tipus": "",
+            "url": ""
+        }
+    ],
+    "audio": [
+        {
+            "tipus": "",
+            "url": ""
+        }
+    ],
+    "geoposicionament1": {
+        "address": "Plaça de Sant Francesc, 5",
+        "lat": 39.56900350156376,
+        "long": 2.652615329251165,
+        "city": "Palma de Mallorca",
+        "Country": "España",
+        "zip": "07001"
+    },
+    "geoposicionament2": {
+        "address": "",
+        "lat": 0,
+        "long": 0,
+        "city": "",
+        "Country": "",
+        "zip": ""
+    },
+    "horari": {
+        "di": [
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dm": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dx": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dj": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dv": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "ds": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dg": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ]
+    },
+    "calendari": {
+        "startDataEvent": "",
+        "startTimeEvent": "",
+        "endDataEvent": "",
+        "endTimeEvent": ""
+    },
+    "dadesPropies": {
+        "estrellas": 5,
+        "extras": [
+            {
+                "todoIncluido":1,
+                "wifi":1,
+                "suites": 1,
+                "nevera": 1,
+                "piscina": 1,
+                "aparcamiento": 1
+            }
+        ]
+    }
+}
