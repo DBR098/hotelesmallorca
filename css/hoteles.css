@@ -5,6 +5,10 @@
 
 .tm-section { min-height: 515px; }
 
+.navbar {
+    z-index: 10
+}
+
 #tm-section-1 {	
 	background-image: url('../img/bg-img-1.jpg');	
 	height: 515px;
