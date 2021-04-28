@@ -2,8 +2,6 @@ async function getHoteles() {
     let url = 'js/hoteles.json';
     try {
         let res = await fetch(url);
-        console.log(res.status);
-        console.log(res.statusText);
         return await res.json();
     } catch (error) {
         console.log(error);
@@ -25,5 +23,4 @@ async function printHoteles() {
     container.innerHTML = html;
 }
 
-//getHoteles();
-printHoteles();
+//printHoteles();
