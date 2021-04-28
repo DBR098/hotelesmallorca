@@ -25,5 +25,5 @@ async function printHoteles() {
     container.innerHTML = html;
 }
 
-getHoteles();
-//printHoteles();
+//getHoteles();
+printHoteles();
