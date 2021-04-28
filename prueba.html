@@ -5,16 +5,7 @@
 </head>
 
 <body>
-    <div id="prueba">
-        <script>
-            fetch("js/hoteles.json")
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    document.querySelector("#prueba").innerText = JSON.stringify(data);
-                })
-        </script>
-    </div>
+    <script src="js/hoteles.js"></script>
 </body>
 
 </html>
