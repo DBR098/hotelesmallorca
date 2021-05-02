@@ -149,8 +149,8 @@
     }
 },
 {
-    "nom": "Sant Francesc Hotel Singular",
-    "descripcio": "Sant Francesc Hotel Singular Palma es un Hotel boutique de 5 estrellas, ubicado en una casa señorial neoclásica del S.XIX, en pleno casco antiguo de la ciudad de Palma de Mallorca. Cuenta con 42 habitaciones y suites. En el interior se descubre una decoración cálida y sofisticada. La situación del hotel lo hace ideal para disfrutar la ciudad a pie, así como el resto de la isla de Mallorca.",
+    "nom": "Boutique Hotel Can Alomar",
+    "descripcio": "El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo nombre, una antigua casa señorial urbana, catalogada y protegida, de interés histórico, artístico y arquitectónico y gran valor Patrimonial. El hotel dispone de 16 amplias y luminosas habitaciones decoradas dentro de un diseño moderno, un restaurante gastronómico de cocina fusión mediterránea, japonesa, peruana y una terraza solarium para uso exclusivo de los huéspedes del hotel.",
     "detall": "",
     "tipus": "hotel",
     "identificador": "",
@@ -159,13 +159,163 @@
         "coment-preu": "precio de más de 200€ noche"
     },
     "contacte": {
-        "telf": "971495000",
-        "email": "INFO@HOTELSANTFRANCESC.COM",
+        "telf": "871592002",
+        "email": "info@boutiquehotelcanalomar.com",
         "xarxes": {
-            "web": "https://www.hotelsantfrancesc.com",
-            "facebook": "https://www.facebook.com/hotelsantfrancesc",
-            "twitter": "https://twitter.com/hotelstfrancesc",
-            "instagram": "https://www.instagram.com/hotelsantfrancesc"
+            "web": "https://www.boutiquehotelcanalomar.com",
+            "facebook": "https://www.facebook.com/boutiquehotelcanalomar",
+            "twitter": "",
+            "instagram": "https://www.instagram.com/itmallorcahotels"
+        }
+    },
+    "puntuacio": 4.7,
+    "visualitzacions": "",
+    "likes": 0,
+    "icones": [
+        ""
+    ],
+    "imatges": [
+        "",
+        ""
+    ],
+    "videos": [
+        {
+            "tipus": "",
+            "url": ""
+        },
+        {
+            "tipus": "",
+            "url": ""
+        }
+    ],
+    "audio": [
+        {
+            "tipus": "",
+            "url": ""
+        }
+    ],
+    "geoposicionament1": {
+        "address": " Carrer de Sant Feliu, 1",
+        "lat": 39.57003181501989,
+        "long": 2.646164755620548,
+        "city": "Palma de Mallorca",
+        "Country": "España",
+        "zip": "07012"
+    },
+    "geoposicionament2": {
+        "address": "",
+        "lat": 0,
+        "long": 0,
+        "city": "",
+        "Country": "",
+        "zip": ""
+    },
+    "horari": {
+        "di": [
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dm": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dx": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dj": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dv": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "ds": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ],
+        "dg": [
+            {
+                "in": "-",
+                "out": "-"
+            },
+            {
+                "in": "-",
+                "out": "-"
+            }
+        ]
+    },
+    "calendari": {
+        "startDataEvent": "",
+        "startTimeEvent": "",
+        "endDataEvent": "",
+        "endTimeEvent": ""
+    },
+    "dadesPropies": {
+        "estrellas": 5,
+        "extras": [
+            {
+                "todoIncluido":1,
+                "wifi":1,
+                "suites": 1,
+                "nevera": 1,
+                "piscina": 1,
+                "aparcamiento": 1
+            }
+        ]
+    }
+},
+{
+    "nom": "Hipotels Playa de Palma Palace",
+    "descripcio": "El Hipotels Playa de Palma Palace es un espectacular hotel de 5 estrellas ubicado en Playa de Palma, Mallorca. Un hotel de nueva construcción ideal para vacaciones o negocios, con un lujoso spa y precios especiales para jugar al golf. Un interior moderno y elegante con habitaciones amplias de diseño, que te ofrecerán unas vacaciones perfectas con toda la oferta de ocio complementaria de Playa de Palma. No puedes perderte visitar la zona chill out en el último piso del hotel, nuestro Heaven Rooftop Bar con unas vistas únicas a la Bahía de Palma y una puesta de sol que, acompañada de un refrescante cóctel y música en directo, se convertirá en uno de los momentos inolvidables de tus vacaciones.",
+    "detall": "",
+    "tipus": "hotel",
+    "identificador": "",
+    "preu": {
+        "import": "2",
+        "coment-preu": "precio de más de 100€ noche"
+    },
+    "contacte": {
+        "telf": "971260528",
+        "email": "playadepalmapalace@hipotels.com",
+        "xarxes": {
+            "web": "https://www.hipotels.com/hoteles/playadepalmapalace",
+            "facebook": "https://www.facebook.com/Hipotels",
+            "twitter": "https://twitter.com/hipotels",
+            "instagram": "https://www.instagram.com/hipotels"
         }
     },
     "puntuacio": 4.6,
@@ -195,12 +345,12 @@
         }
     ],
     "geoposicionament1": {
-        "address": "Plaça de Sant Francesc, 5",
-        "lat": 39.56900350156376,
-        "long": 2.652615329251165,
+        "address": "Avda. Fra Joan Llabrés, 20",
+        "lat": 39.514941917153024,
+        "long": 2.749959252355224,
         "city": "Palma de Mallorca",
         "Country": "España",
-        "zip": "07001"
+        "zip": "07600"
     },
     "geoposicionament2": {
         "address": "",
