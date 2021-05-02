@@ -49,6 +49,6 @@ async function printHoteles() {
                         </div>`;
         html += htmlSegment;
     });
-    let container = document.querySelector('.container');
+    let container = document.querySelector('.lista-hoteles');
     container.innerHTML = html;
 }
