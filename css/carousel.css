@@ -28,7 +28,7 @@
     padding-bottom: 4px;
 }
  
-.popup-overlay,.popup2-overlay {
+.popup-overlay {
     left: 0;
     position: fixed;
     top: 0;

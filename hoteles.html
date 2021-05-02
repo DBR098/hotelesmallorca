@@ -29,19 +29,16 @@
     </style>
 
     <link href="css/carousel.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="css/datepicker.css"/>                                <!-- Templatemo style -->
-
     <link href="css/hoteles.css" rel="stylesheet">
-    
+    <link href="css/nouislider.min.css" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://kit.fontawesome.com/ddbe9af287.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
 </head>
 
 <body>
-    
     <div id="popup" style="display: none;">
         <div class="content-popup">
             <div class="close"><a href="#" id="close">X</a></div>
@@ -71,12 +68,11 @@
             </div>
         </div>
     </div>
-    <div class="popup2-overlay"></div>
     
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="http://hotelesmallorca.netlify.app">
+                <a class="navbar-brand" href="#">
                     <h2>Hoteles Mallorca</h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mob-navbar"
@@ -85,10 +81,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="mob-navbar">
                     <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="https://hotelesmallorca.netlify.com/ofertas">Ofertas</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Hoteles</a>
                         </li>
@@ -123,98 +115,152 @@
         </nav>
     </header>
 
-    <main>
-        <div class="tm-section tm-bg-img" id="tm-section-1">
-            <div class="tm-bg-white ie-container-width-fix-2">
-                <div class="container ie-h-align-center-fix">
-                    <div class="row">
-                        <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
-                            <form action="hoteles.html" method="get" class="tm-search-form tm-section-pad-2">
-                                <div class="form-row tm-search-form-row">
-                                    <div class="form-group tm-form-element tm-form-element-100">
-                                        <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
-                                        <input name="city" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
-                                    </div>
-                                    <div class="form-group tm-form-element tm-form-element-50">
-                                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
-                                        <input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="Check In">
-                                    </div>
-                                    <div class="form-group tm-form-element tm-form-element-50">
-                                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
-                                        <input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="Check Out">
-                                    </div>
+    <nav class="menu" id="sidebar">
+        <div class="p-3 bg-white">
+            <a class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                <span class="fs-5 fw-semibold">ESPAÑA</span>
+            </a>
+            <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#zona-collapse" aria-expanded="false">
+                        Zona
+                    </button>
+                    <div class="collapse" id="zona-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal">
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox">Overview</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox">Updates</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox">Reports</label></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#precio-collapse" aria-expanded="false">
+                        Precio
+                    </button>
+
+                    <div class="collapse" id="precio-collapse">
+                        <div class="middle">
+                            <div align="center">
+                                <p style="margin:0;display:inline"><span id="val-left"></p>
+                                <p style="margin:0;display:inline" align="right"> - <span id="val-right"></span></p>
+                            </div>
+                            <div class="multi-range-slider">
+                                <input type="range" class="form-range" id="input-left" min="1" max="5" value="2" step="1">
+                                <input type="range" class="form-range" id="input-right" min="1" max="5" value="4" step="1">
+
+                                <div class="slider">
+                                    <div class="track"></div>
+                                    <div class="range"></div>
+                                    <div class="thumb left"></div>
+                                    <div class="thumb right"></div>
                                 </div>
-                                <div class="form-row tm-search-form-row">
-                                    <div class="form-group tm-form-element tm-form-element-2">                                            
-                                        <select name="adult" class="form-control tm-select" id="adult">
-                                            <option value="">Adult</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                        <i class="fa fa-2x fa-user tm-form-element-icon"></i>
-                                    </div>
-                                    <div class="form-group tm-form-element tm-form-element-2">                                            
-                                        <select name="children" class="form-control tm-select" id="children">
-                                            <option value="">Children</option>
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                        </select>
-                                        <i class="fa fa-user tm-form-element-icon tm-form-element-icon-small"></i>
-                                    </div>
-                                    <div class="form-group tm-form-element tm-form-element-2">
-                                        <select name="room" class="form-control tm-select" id="room">
-                                            <option value="">Room</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                        </select>
-                                        <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
-                                    </div>
-                                    <div class="form-group tm-form-element tm-form-element-2">
-                                        <button type="submit" class="btn btn-primary tm-btn-search">Check Availability</button>
-                                    </div>
-                                  </div>
-                            </form>
-                        </div>                        
-                    </div>      
-                </div>
-            </div>                  
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#categoria-collapse" aria-expanded="false">
+                        Categoria
+                    </button>
+                    <div class="collapse" id="categoria-collapse">
+                        
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 1 estrella</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 2 estrellas</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 3 estrellas</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 4 estrellas</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 5 estrellas</label></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#valoracion-collapse" aria-expanded="false">
+                        Valoraciones
+                    </button>
+                    <div class="collapse" id="valoracion-collapse">
+                        <div class="middle2">
+                            <div align="center">
+                                <p style="margin:0;display:inline"><span id="val-left2"></p>
+                                <p style="margin:0;display:inline" align="right"> - <span id="val-right2"></span></p>
+                            </div>
+                            <div class="multi-range-slider">
+                                <input type="range" class="form-range" id="input-left2" min="1" max="5" value="2" step="1">
+                                <input type="range" class="form-range" id="input-right2" min="1" max="5" value="4" step="1">
+
+                                <div class="slider2">
+                                    <div class="track"></div>
+                                    <div class="range"></div>
+                                    <div class="thumb left"></div>
+                                    <div class="thumb right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extras-collapse" aria-expanded="false">
+                        Extras
+                    </button>
+                    <div class="collapse" id="extras-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> New</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> Processed</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> Shipped</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> Returned</label></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-        <hr class="featurette-divider">
+    <div id="popup-hotel" style="display: none;">
+        <div class="content-popup-hotel">
+            <div class="close"><a href="#" id="close-hotel">X</a></div>
+                <div class="panel-hotel">
+                    <fieldset id="cosa-gorda">
+                        <h2 id="nomHotel">nombre</h2>
+                        <img src="img/1.jpg">
+                        <div id="desc">
+                            <p>El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo nombre,
+                                una antigua casa señorial urbana, catalogada y protegida, de interés histórico, artístico y
+                                arquitectónico y gran valor Patrimonial.
+                                El hotel dispone de 16 amplias y luminosas habitaciones decoradas dentro de un diseño moderno,
+                                un restaurante gastronómico de cocina fusión mediterránea, japonesa, peruana y una terraza
+                                solarium para uso exclusivo de los huéspedes
+                                del hotel.
+                            </p>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- FOOTER -->
-        <footer class="container">
-            <p class="float-end"><a href="#">Back to top</a></p>
-            <p>&copy; 2000–2021 Vini11BalondeOroCompany, Inc. &middot; <a
+    <main>
+        <section class="p-4 my-container">
+            <button class="btn my-4" id="menu-btn"><i class="fas fa-bars"></i></button>
+
+            <div id="lista-hoteles">
+                <script src="js/scripts.js"></script>
+                <script>printHoteles()</script>
+            </div>
+            <hr class="featurette-divider">
+
+            <!-- FOOTER -->
+            <footer class="container">
+                <p class="float-end"><a href="#">Back to top</a></p>
+                <p>&copy; 2000–2021 Vini11BalondeOroCompany, Inc. &middot; <a
                     href="https://hotelesmallorca.netlify.com/privacy">Privacy</a> &middot; <a
                     href="https://hotelesmallorca.netlify.com/terms">Terms</a></p>
-        </footer>
+            </footer>
+        </section>
+
     </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-    <script src="js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
-    <script src="js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
-    <script src="js/datepicker.min.js"></script>                <!-- https://github.com/qodesmith/datepicker -->
-    <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
-    <script>
-        $(document).ready(function(){
-            // Date Picker
-            const pickerCheckIn = datepicker('#inputCheckIn');
-            const pickerCheckOut = datepicker('#inputCheckOut');
-        });
-    </script>
+    <script src="js/hoteles-scripts.js"></script>
 </body>
 
 </html>
