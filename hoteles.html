@@ -35,18 +35,19 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://kit.fontawesome.com/ddbe9af287.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    
+    <script src="js/scripts.js"></script>
+
 </head>
 
 <body>
     <div id="popup" style="display: none;">
         <div class="content-popup">
             <div class="close"><a href="#" id="close">X</a></div>
-                <div>
-                    <h2>Quienes somos</h2>
-                    <p>Hoteles Mallorca es una empresa fundada en 2020 con el objetivo de ayudar a la hostelería local.</p>
-                    <p>Aquí podrás encontrar el hotel que buscas entre una gran selección de hoteles.</p>
-                    <div style="float:left; width:100%;">
+            <div>
+                <h2>Quienes somos</h2>
+                <p>Hoteles Mallorca es una empresa fundada en 2020 con el objetivo de ayudar a la hostelería local.</p>
+                <p>Aquí podrás encontrar el hotel que buscas entre una gran selección de hoteles.</p>
+                <div style="float:left; width:100%;">
                 </div>
             </div>
         </div>
@@ -56,19 +57,19 @@
     <div id="popup2" style="display: none;">
         <div class="content-popup">
             <div class="close"><a href="#" id="close2">X</a></div>
-                <div>
-                    <h2>Contacto</h2>
-                    <p>Teléfono: 911 178 867 </p>
-                    
-                    <hr class="dropdown-divider">
-                    <p>Nuestros representantes están a tu disposición todos los días desde las 08:00 hasta las 22:00.</p>
-                    <p>Tarifa estándar</p>
-                    <div style="float:left; width:100%;">
+            <div>
+                <h2>Contacto</h2>
+                <p>Teléfono: 911 178 867 </p>
+
+                <hr class="dropdown-divider">
+                <p>Nuestros representantes están a tu disposición todos los días desde las 08:00 hasta las 22:00.</p>
+                <p>Tarifa estándar</p>
+                <div style="float:left; width:100%;">
                 </div>
             </div>
         </div>
     </div>
-    
+
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container">
@@ -118,12 +119,15 @@
     <nav class="menu" id="sidebar">
         <div class="p-3 bg-white">
             <a class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-                <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                <svg class="bi me-2" width="30" height="24">
+                    <use xlink:href="#bootstrap" />
+                </svg>
                 <span class="fs-5 fw-semibold">ESPAÑA</span>
             </a>
             <ul class="list-unstyled ps-0">
                 <li class="mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#zona-collapse" aria-expanded="false">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#zona-collapse" aria-expanded="false">
                         Zona
                     </button>
                     <div class="collapse" id="zona-collapse">
@@ -135,7 +139,8 @@
                     </div>
                 </li>
                 <li class="mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#precio-collapse" aria-expanded="false">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#precio-collapse" aria-expanded="false">
                         Precio
                     </button>
 
@@ -146,8 +151,10 @@
                                 <p style="margin:0;display:inline" align="right"> - <span id="val-right"></span></p>
                             </div>
                             <div class="multi-range-slider">
-                                <input type="range" class="form-range" id="input-left" min="1" max="5" value="2" step="1">
-                                <input type="range" class="form-range" id="input-right" min="1" max="5" value="4" step="1">
+                                <input type="range" class="form-range" id="input-left" min="1" max="5" value="2"
+                                    step="1">
+                                <input type="range" class="form-range" id="input-right" min="1" max="5" value="4"
+                                    step="1">
 
                                 <div class="slider">
                                     <div class="track"></div>
@@ -160,22 +167,28 @@
                     </div>
                 </li>
                 <li class="mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#categoria-collapse" aria-expanded="false">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#categoria-collapse" aria-expanded="false">
                         Categoria
                     </button>
                     <div class="collapse" id="categoria-collapse">
-                        
+
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
                             <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 1 estrella</label></li>
-                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 2 estrellas</label></li>
-                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 3 estrellas</label></li>
-                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 4 estrellas</label></li>
-                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 5 estrellas</label></li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 2 estrellas</label>
+                            </li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 3 estrellas</label>
+                            </li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 4 estrellas</label>
+                            </li>
+                            <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> 5 estrellas</label>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li class="mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#valoracion-collapse" aria-expanded="false">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#valoracion-collapse" aria-expanded="false">
                         Valoraciones
                     </button>
                     <div class="collapse" id="valoracion-collapse">
@@ -185,8 +198,10 @@
                                 <p style="margin:0;display:inline" align="right"> - <span id="val-right2"></span></p>
                             </div>
                             <div class="multi-range-slider">
-                                <input type="range" class="form-range" id="input-left2" min="1" max="5" value="2" step="1">
-                                <input type="range" class="form-range" id="input-right2" min="1" max="5" value="4" step="1">
+                                <input type="range" class="form-range" id="input-left2" min="1" max="5" value="2"
+                                    step="1">
+                                <input type="range" class="form-range" id="input-right2" min="1" max="5" value="4"
+                                    step="1">
 
                                 <div class="slider2">
                                     <div class="track"></div>
@@ -199,7 +214,8 @@
                     </div>
                 </li>
                 <li class="mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extras-collapse" aria-expanded="false">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#extras-collapse" aria-expanded="false">
                         Extras
                     </button>
                     <div class="collapse" id="extras-collapse">
@@ -218,24 +234,26 @@
     <div id="popup-hotel" style="display: none;">
         <div class="content-popup-hotel">
             <div class="close"><a href="#" id="close-hotel">X</a></div>
-                <div class="panel-hotel">
-                    <fieldset id="cosa-gorda">
-                        <h2 id="nomHotel">nombre</h2>
-                        <img src="img/1.jpg">
-                        <div id="desc">
-                            <p>El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo nombre,
-                                una antigua casa señorial urbana, catalogada y protegida, de interés histórico, artístico y
-                                arquitectónico y gran valor Patrimonial.
-                                El hotel dispone de 16 amplias y luminosas habitaciones decoradas dentro de un diseño moderno,
-                                un restaurante gastronómico de cocina fusión mediterránea, japonesa, peruana y una terraza
-                                solarium para uso exclusivo de los huéspedes
-                                del hotel.
-                            </p>
-                        </div>
-                    </fieldset>
-                </div>
+            <div class="panel-hotel">
+                <fieldset id="cosa-gorda">
+                    <h2 id="nomHotel">nombre</h2>
+                    <img src="img/1.jpg">
+                    <div id="desc">
+                        <p>El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo
+                            nombre,
+                            una antigua casa señorial urbana, catalogada y protegida, de interés histórico, artístico y
+                            arquitectónico y gran valor Patrimonial.
+                            El hotel dispone de 16 amplias y luminosas habitaciones decoradas dentro de un diseño
+                            moderno,
+                            un restaurante gastronómico de cocina fusión mediterránea, japonesa, peruana y una terraza
+                            solarium para uso exclusivo de los huéspedes
+                            del hotel.
+                        </p>
+                    </div>
+                </fieldset>
             </div>
         </div>
+    </div>
     </div>
 
     <main>
@@ -243,7 +261,6 @@
             <button class="btn my-4" id="menu-btn"><i class="fas fa-bars"></i></button>
 
             <div id="lista-hoteles">
-                <script src="js/scripts.js"></script>
                 <script>printHoteles()</script>
             </div>
             <hr class="featurette-divider">
@@ -252,8 +269,8 @@
             <footer class="container">
                 <p class="float-end"><a href="#">Back to top</a></p>
                 <p>&copy; 2000–2021 Vini11BalondeOroCompany, Inc. &middot; <a
-                    href="https://hotelesmallorca.netlify.com/privacy">Privacy</a> &middot; <a
-                    href="https://hotelesmallorca.netlify.com/terms">Terms</a></p>
+                        href="https://hotelesmallorca.netlify.com/privacy">Privacy</a> &middot; <a
+                        href="https://hotelesmallorca.netlify.com/terms">Terms</a></p>
             </footer>
         </section>
 
