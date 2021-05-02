@@ -28,6 +28,21 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function(){
+    $('.hotel').on('click', function(){
+        $('#popup-hotel').fadeIn('slow');
+        $('.popup-overlay').fadeIn('slow');
+        $('.popup-overlay').height($(window).height());
+        return false;
+    });
+
+    $('#close-hotel').on('click', function(){
+        $('#popup-hotel').fadeOut('slow');
+        $('.popup-overlay').fadeOut('slow');
+        return false;
+    });
+});
+
 async function getHoteles() {
     let url = 'js/hoteles.json';
     try {
@@ -42,11 +57,16 @@ async function printHoteles() {
     let hoteles = await getHoteles();
     let html = '';
     hoteles.forEach(hotel => {
-        let htmlSegment = `<div class="hotel">
-                            <img src="${hotel.icones[0]}">
-                            <h2>${hotel.nom}</h2>
-                            <a>${hotel.descripcio}</a>
-                        </div>`;
+        let htmlSegment = 
+        `<div class="hotel">
+            <img src="${hotel.icones[0]}">
+            <div id="desc">
+                <h2>${hotel.nom}</h2>
+                <p>${hotel.descripcio}</a>
+                <p style="margin:0;display:inline">PRECIO</p>
+                <p style="margin:10%;display:inline">ALGO</p>
+            </div>
+        </div>`;
         html += htmlSegment;
     });
     let container = document.querySelector('#lista-hoteles');
