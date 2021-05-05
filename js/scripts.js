@@ -28,20 +28,41 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function(){
-    $('.hotel').on('click', function(){
-        $('#popup-hotel').fadeIn('slow');
-        $('.popup-overlay').fadeIn('slow');
-        $('.popup-overlay').height($(window).height());
-        return false;
-    });
+function abrirpopup(nom, img, desc, precio, valoracion) {
+    let tval = pintar(valoracion);
+    let tprecio = pintar(precio);
+    var texto =
+        `<div>
+            <h2>`+ nom + `</h2>
+            <img src="`+ img + `">
+            <div id="desc">
+                <p>`+ desc + `</a>
+                <table>
+                    <tr>
+                        <td style="padding-right:10px">
+                            <label>Precio: </label>
+                            `+tprecio+`
+                        </td>
+                        <td style="padding-right:10px;padding-left:100px">
+                            <labelx>Valoración: </label>
+                            `+tval+`
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>`;
+    var c = document.getElementById("codigo");
+    c.innerHTML = texto;
 
-    $('#close-hotel').on('click', function(){
-        $('#popup-hotel').fadeOut('slow');
-        $('.popup-overlay').fadeOut('slow');
-        return false;
-    });
-});
+    $('#popup-hotel').fadeIn('slow');
+    $('.popup-overlay').fadeIn('slow');
+    $('.popup-overlay').height($(window).height());
+}
+
+function cerrarpopup() {
+    $('#popup-hotel').fadeOut('slow');
+    $('.popup-overlay').fadeOut('slow');
+}
 
 async function getHoteles() {
     let url = 'js/hoteles.json';
@@ -56,19 +77,71 @@ async function getHoteles() {
 async function printHoteles() {
     let hoteles = await getHoteles();
     let html = '';
+
     hoteles.forEach(hotel => {
-        let htmlSegment = 
-        `<div class="hotel">
-            <img src="${hotel.icones[0]}">
-            <div id="desc">
-                <h2>${hotel.nom}</h2>
-                <p>${hotel.descripcio}</a>
-                <p style="margin:0;display:inline">PRECIO</p>
-                <p style="margin:10%;display:inline">ALGO</p>
-            </div>
+        let tval = pintar(hotel.puntuacio);
+        let tprecio = pintar(hotel.preu.import);
+        
+        let htmlSegment =
+            `<div class="hotel" onclick="abrirpopup('${hotel.nom}','${hotel.icones[0]}','${hotel.descripcio}',
+            '${hotel.preu.import}', '${hotel.puntuacio}')">
+            <table>
+                <tr>
+                    <td>
+                        <img src="${hotel.icones[0]}">
+                    </td>
+                    <td>
+                        <h2>${hotel.nom}</h2>
+                        <p>${hotel.descripcio}</a>
+                        <table>
+                            <tr>
+                                <td style="padding-right:10px">
+                                    <label for="input-3" class="control-label">Precio: </label>
+                                    `+tprecio+`
+                                </td>
+                                <td style="padding-right:10px; padding-left:10%">
+                                    <label for="input-3" class="control-label">Valoración: </label>
+                                    `+tval+`
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
         </div>`;
+
         html += htmlSegment;
     });
     let container = document.querySelector('#lista-hoteles');
     container.innerHTML = html;
+}
+
+function pintar(num){
+    let codigo = '';
+    var i = 0;
+    while (i<num){
+        codigo += '<span class="fa fa-star checked"></span>'
+        i++;
+    }
+    while(i<5){
+        codigo += '<span class="fa fa-star"></span>'
+        i++
+    }
+    return codigo;
+}
+
+/* mostrar-ocultar */
+
+function muestraOculta(id) {
+    var elemento = document.getElementById('contenidos_' + id);
+    var enlace = document.getElementById('enlace_' + id);
+
+    if (elemento.style.display == "" || elemento.style.display == "block") {
+        elemento.style.display = "none";
+        enlace.innerHTML = 'Mostrar contenidos';
+    }
+    else {
+        elemento.style.display = "block";
+        enlace.innerHTML = 'Ocultar contenidos';
+    }
 }
