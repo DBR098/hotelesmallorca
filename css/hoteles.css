@@ -12,6 +12,14 @@
     /*background-color: #1847e2;*/
     transition: 0.4s;
     border-right: black 2px solid;
+	overflow: scroll;
+	padding-bottom: 50px;
+}
+
+.menu label{
+	padding-bottom: 3px;
+	padding-top: 3px;
+	padding-left: 6px;
 }
 
 .my-container {
@@ -252,32 +260,29 @@ input[class=form-range]::-webkit-slider-thumb {
 }
 
 .hotel table {
-	width: 100%;
-	margin: 10px;
+	width: 97%;
+	margin: 8px;
 }
 
 .hotel img{
+	margin: 5px 15px 5px 5px;
+    width: 200px;
+}
+
+.panel-hotel {
+    width: 100%;
+	height: auto;
+    margin-bottom: 10px;
+}
+
+.panel-hotel img{
 	margin-right: 15px;
     width: 200px;
     height: auto;
 }
 
-.panel-hotel {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.panel-hotel > #desc {
-    margin-top: 10px;
-    margin-right: 25px;
-}
-
-.panel-hotel img{
-	margin: 10px;
-    float: left;
-    width: 35%;
-    height: auto;
+.panel-hotel table {
+	width: 97%;
 }
 
 #popup-hotel{
@@ -295,18 +300,30 @@ input[class=form-range]::-webkit-slider-thumb {
     padding-bottom: 4px;
 }
 
+.desc {
+	overflow: scroll;
+	height: 100%;	
+}
+
 .content-popup-hotel {
     margin:0px auto;
     margin-top:120px;
     position: relative;
     padding:10px;
-    width:1000px;
-    min-height:250px;
+    width: 90%;
+	height: 90%;
     border-radius:4px;
     background-color:#FFFFFF;
     box-shadow: 0 2px 5px #666666;
 }
 
-.checked {
-    color: yellow;
+@media (min-width: 640px) {
+	.menu {
+	}
+}
+
+@media (min-width: 992px) {
+	.menu {
+
+	}
 }

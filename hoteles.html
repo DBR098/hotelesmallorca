@@ -30,7 +30,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://kit.fontawesome.com/ddbe9af287.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
     <script src="js/scripts.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </head>
@@ -79,8 +81,7 @@
                             transform="translate(0 43.167) scale(1)"></path>
                         <g fill="#ead017" color="#ead017" transform="translate(219.844 0) scale(0.7252188)">
                             <g transform="translate(0.473, 2.786)">
-                                <svg width="100.0" height="100.0" x="-0.473"
-                                    y="-2.786" viewBox="-0.473 -2.786 100 100">
+                                <svg width="100.0" height="100.0" x="-0.473" y="-2.786" viewBox="-0.473 -2.786 100 100">
                                     <path
                                         d="M93.75,80.334v-50.8c-23.014,9.118-67.733,9.118-67.733,9.118v42.117h-3.475v11.11h75.984v-8.071L93.75,80.334z   M31.661,80.766h-3.474v-5.644h3.474V80.766z M31.661,71.504h-3.474v-5.644h3.474V71.504z M31.661,62.242h-3.474V56.6h3.474V62.242z   M31.661,52.979h-3.474v-5.643h3.474V52.979z M37.624,80.766H34.15v-5.644h3.473V80.766z M37.624,71.504H34.15v-5.644h3.473V71.504z   M37.624,62.242H34.15V56.6h3.473V62.242z M37.624,52.979H34.15v-5.643h3.473V52.979z M43.587,80.766h-3.474v-5.644h3.474V80.766z   M43.587,71.504h-3.474v-5.644h3.474V71.504z M43.587,62.242h-3.474V56.6h3.474V62.242z M43.587,52.979h-3.474v-5.643h3.474V52.979z   M49.547,80.766h-3.473v-5.644h3.473V80.766z M49.547,71.504h-3.473v-5.644h3.473V71.504z M49.547,62.242h-3.473V56.6h3.473V62.242z   M49.547,52.979h-3.473v-5.643h3.473V52.979z M55.511,80.766h-3.473v-5.644h3.473V80.766z M55.511,71.504h-3.473v-5.644h3.473  V71.504z M55.511,62.242h-3.473V56.6h3.473V62.242z M55.511,52.979h-3.473v-5.643h3.473V52.979z M61.472,80.766h-3.471v-5.644h3.471  V80.766z M61.472,71.504h-3.471v-5.644h3.471V71.504z M61.472,62.242h-3.471V56.6h3.471V62.242z M61.472,52.979h-3.471v-5.643h3.471  V52.979z M67.435,80.766h-3.474v-5.644h3.474V80.766z M67.435,71.504h-3.474v-5.644h3.474V71.504z M67.435,62.242h-3.474V56.6h3.474  V62.242z M73.4,80.766h-3.475v-5.644H73.4V80.766z M73.4,71.504h-3.475v-5.644H73.4V71.504z M73.4,62.242h-3.475V56.6H73.4V62.242z   M79.362,80.766h-3.474v-5.644h3.474V80.766z M79.362,71.504h-3.474v-5.644h3.474V71.504z M85.325,80.766h-3.474v-5.644h3.474  V80.766z">
                                     </path>
@@ -144,13 +145,14 @@
             </div>
         </nav>
     </header>
+
     <nav class="menu" id="sidebar">
         <div class="p-3 bg-white">
             <a class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
                 <svg class="bi me-2" width="30" height="24">
                     <use xlink:href="#bootstrap" />
                 </svg>
-                <span class="fs-5 fw-semibold">ESPAÑA</span>
+                <span class="fs-5 fw-semibold">Filtros de búsqueda</span>
             </a>
             <ul class="list-unstyled ps-0">
                 <li class="mb-1">
@@ -162,17 +164,17 @@
                         <ul class="btn-toggle-nav list-unstyled fw-normal">
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">Overview
+                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Palma
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">Updates
+                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Calvià
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">Reports
+                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Paguera
                                 </label>
                             </li>
                         </ul>
@@ -184,6 +186,7 @@
                         Precio
                     </button>
                     <div class="collapse" id="precio-collapse">
+                        <!--
                         <div class="middle">
                             <div align="center">
                                 <p style="margin:0;display:inline">
@@ -205,7 +208,62 @@
                                     <div class="thumb right"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+
+
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </label>
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li class="mb-1">
@@ -217,27 +275,55 @@
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> 1 estrella
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> 2 estrellas
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+
+
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> 3 estrellas
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> 4 estrellas
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> 5 estrellas
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
                                 </label>
                             </li>
                         </ul>
@@ -249,7 +335,7 @@
                         Valoraciones
                     </button>
                     <div class="collapse" id="valoracion-collapse">
-                        <div class="middle2">
+                        <!--<div class="middle2">
                             <div align="center">
                                 <p style="margin:0;display:inline">
                                     <span id="val-left2">
@@ -270,7 +356,63 @@
                                     <div class="thumb right"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
+
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+
+
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </label>
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li class="mb-1">
@@ -282,22 +424,32 @@
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> New
+                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Todo incluido
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Processed
+                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Wi-Fi
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Shipped
+                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Aparcamiento
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Returned
+                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Suite
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Piscina
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Nevera en habitación
                                 </label>
                             </li>
                         </ul>
@@ -306,7 +458,7 @@
             </ul>
         </div>
     </nav>
-    
+
     <div id="popup-hotel" style="display: none;">
         <div class="content-popup-hotel">
             <div class="close">
@@ -340,7 +492,7 @@
             </footer>
         </section>
     </main>
-    
+
     <script src="js/hoteles-scripts.js"></script>
 </body>
 

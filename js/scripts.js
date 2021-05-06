@@ -28,31 +28,54 @@ $(document).ready(function () {
     });
 });
 
-function abrirpopup(nom, img, desc, precio, valoracion) {
+function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud) {
     let tval = pintar(valoracion);
     let tprecio = pintar(precio);
+
     var texto =
         `<div>
             <h2>`+ nom + `</h2>
-            <img src="`+ img + `">
-            <div id="desc">
-                <p>`+ desc + `</a>
+            <div class="desc">
                 <table>
                     <tr>
-                        <td style="padding-right:10px">
-                            <label>Precio: </label>
-                            `+tprecio+`
+                        <td>
+                            <img src="`+ img + `">
                         </td>
-                        <td style="padding-right:10px;padding-left:100px">
-                            <labelx>Valoración: </label>
-                            `+tval+`
+                        <td>
+                            <p>`+ desc + `</p>
+                            <table>
+                                <tr>
+                                    <td style="padding-right:10px">
+                                        <label>Precio: </label>
+                                        `+ tprecio + `
+                                    </td>
+                                    <td style="padding-right:10px; padding-left:10%">
+                                        <label>Valoración: </label>
+                                        `+ tval + `
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <hr style="margin:1rem 0;width:98%">
+                <table> 
+                    <tr>
+                        <td>
+                            <div id='map' style='width: 400px; height: 300px; '></div>
+                        </td>
+                        <td>
+                            <div id="openweathermap-widget-15"></div>
                         </td>
                     </tr>
                 </table>
             </div>
         </div>`;
+
     var c = document.getElementById("codigo");
     c.innerHTML = texto;
+    crearMapa(longitud, latitud);
+    crearTiempo();
 
     $('#popup-hotel').fadeIn('slow');
     $('.popup-overlay').fadeIn('slow');
@@ -81,34 +104,34 @@ async function printHoteles() {
     hoteles.forEach(hotel => {
         let tval = pintar(hotel.puntuacio);
         let tprecio = pintar(hotel.preu.import);
-        
+
         let htmlSegment =
             `<div class="hotel" onclick="abrirpopup('${hotel.nom}','${hotel.icones[0]}','${hotel.descripcio}',
-            '${hotel.preu.import}', '${hotel.puntuacio}')">
-            <table>
-                <tr>
-                    <td>
-                        <img src="${hotel.icones[0]}">
-                    </td>
-                    <td>
-                        <h2>${hotel.nom}</h2>
-                        <p>${hotel.descripcio}</a>
-                        <table>
-                            <tr>
-                                <td style="padding-right:10px">
-                                    <label for="input-3" class="control-label">Precio: </label>
-                                    `+tprecio+`
-                                </td>
-                                <td style="padding-right:10px; padding-left:10%">
-                                    <label for="input-3" class="control-label">Valoración: </label>
-                                    `+tval+`
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </div>`;
+            '${hotel.preu.import}', '${hotel.puntuacio}', '${hotel.geoposicionament1.long}', '${hotel.geoposicionament1.lat}')">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="${hotel.icones[0]}">
+                        </td>
+                        <td>
+                            <h2>${hotel.nom}</h2>
+                            <p>${hotel.descripcio}</p>
+                            <table>
+                                <tr>
+                                    <td style="padding-right:10px">
+                                        <label for="input-3" class="control-label">Precio: </label>
+                                        `+ tprecio + `
+                                    </td>
+                                    <td style="padding-right:10px; padding-left:10%">
+                                        <label for="input-3" class="control-label">Valoración: </label>
+                                        `+ tval + `
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>`;
 
         html += htmlSegment;
     });
@@ -116,14 +139,14 @@ async function printHoteles() {
     container.innerHTML = html;
 }
 
-function pintar(num){
+function pintar(num) {
     let codigo = '';
     var i = 0;
-    while (i<num){
+    while (i < num) {
         codigo += '<span class="fa fa-star checked"></span>'
         i++;
     }
-    while(i<5){
+    while (i < 5) {
         codigo += '<span class="fa fa-star"></span>'
         i++
     }
@@ -144,4 +167,36 @@ function muestraOculta(id) {
         elemento.style.display = "block";
         enlace.innerHTML = 'Ocultar contenidos';
     }
+}
+
+function crearMapa(longitud, latitud) {
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGFjb2J1eW8iLCJhIjoiY2tvYmt4d2pjMGhpaTJwb2RwYzZ6bnB3byJ9.AvkluL71BHQMl_N0EZx7xA';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [longitud, latitud],
+        zoom: 12
+    });
+
+    // Set options
+    var marker = new mapboxgl.Marker({
+        color: "#FF0000"
+    }).setLngLat([longitud, latitud])
+        .addTo(map);
+}
+
+function crearTiempo() {
+    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+    window.myWidgetParam.push({ id: 15, cityid: '2512935', appid: 'a4d03e4faf79fe8e453dcdd13174dea9', units: 'metric', containerid: 'openweathermap-widget-15', });
+    (function () {
+        var script = document.createElement('script');
+        script.async = true; 
+        script.charset = "utf-8";
+        script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+}
+
+function getIDCiudad(ciudad){
+    //Buscar dentro del JSON de ciudades españolas el ID de la ciudad que le pasemos por parámetro
 }
