@@ -290,6 +290,7 @@ input[class=form-range]::-webkit-slider-thumb {
     position: fixed;
     top: 0;
     width: 100%;
+	height: 100%;
     z-index: 1001;
 }
 
@@ -302,7 +303,7 @@ input[class=form-range]::-webkit-slider-thumb {
 
 .desc {
 	overflow: scroll;
-	height: 100%;	
+	height: 900px;	
 }
 
 .content-popup-hotel {
@@ -311,7 +312,7 @@ input[class=form-range]::-webkit-slider-thumb {
     position: relative;
     padding:10px;
     width: 90%;
-	height: 90%;
+	height: auto;
     border-radius:4px;
     background-color:#FFFFFF;
     box-shadow: 0 2px 5px #666666;

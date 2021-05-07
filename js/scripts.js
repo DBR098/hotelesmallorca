@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#open').on('click', function () {
         $('#popup').fadeIn('slow');
         $('.popup-overlay').fadeIn('slow');
-        $('.popup-overlay').height($(window).height());
+        document.getElementById("popup-overlay").style.width = "100%";
         return false;
     });
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
     $('#open2').on('click', function () {
         $('#popup2').fadeIn('slow');
         $('.popup-overlay').fadeIn('slow');
-        $('.popup-overlay').height($(window).height());
+        document.getElementById("popup-overlay").style.width = "100%";
         return false;
     });
 
@@ -79,7 +79,7 @@ function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud) {
 
     $('#popup-hotel').fadeIn('slow');
     $('.popup-overlay').fadeIn('slow');
-    $('.popup-overlay').height($(window).height());
+    document.getElementById("overlay").style.width = "100%";
 }
 
 function cerrarpopup() {
@@ -104,9 +104,9 @@ async function printHoteles() {
     hoteles.forEach(hotel => {
         let tval = pintar(hotel.puntuacio);
         let tprecio = pintar(hotel.preu.import);
-
-        let htmlSegment =
-            `<div class="hotel" onclick="abrirpopup('${hotel.nom}','${hotel.icones[0]}','${hotel.descripcio}',
+        let htmlSegment = crearDivHotel(hotel.geoposicionament1.city, hotel.preu.import, hotel.dadesPropies.estrellas, hotel.puntuacio, hotel.dadesPropies.extras);
+        htmlSegment +=
+            ` onclick="abrirpopup('${hotel.nom}','${hotel.icones[0]}','${hotel.descripcio}',
             '${hotel.preu.import}', '${hotel.puntuacio}', '${hotel.geoposicionament1.long}', '${hotel.geoposicionament1.lat}')">
                 <table>
                     <tr>
@@ -190,13 +190,180 @@ function crearTiempo() {
     window.myWidgetParam.push({ id: 15, cityid: '2512935', appid: 'a4d03e4faf79fe8e453dcdd13174dea9', units: 'metric', containerid: 'openweathermap-widget-15', });
     (function () {
         var script = document.createElement('script');
-        script.async = true; 
+        script.async = true;
         script.charset = "utf-8";
         script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
     })();
 }
 
-function getIDCiudad(ciudad){
+function getIDCiudad(ciudad) {
     //Buscar dentro del JSON de ciudades españolas el ID de la ciudad que le pasemos por parámetro
+}
+
+function crearDivHotel(zona, precio, estrellas, valoracion, extras) {
+    var extra = "";
+    var arrayExtras = extras.map(o => Object.values(o))[0];
+    if (arrayExtras[0] === 1) {
+        extra += " todo_incluido";
+    }
+    if (arrayExtras[1] == 1) {
+        extra += " wifi";
+    }
+    if (arrayExtras[2] == 1) {
+        extra += " suites";
+    }
+    if (arrayExtras[3] == 1) {
+        extra += " nevera";
+    }
+    if (arrayExtras[4] == 1) {
+        extra += " piscina";
+    }
+    if (arrayExtras[5] == 1) {
+        extra += " aparcamiento";
+    }
+    return `<div class= "` + zona + ` ` + precio + 'precio' + ` ` + estrellas + 'estrellas' + ` ` + valoracion + 'valoracion' + `` + extra + `"`;
+}
+
+function actualizaFiltros() {
+    var zona = document.querySelectorAll("#zona-collapse input[type='checkbox']");
+    var precio = document.querySelectorAll("#precio-collapse input[type='checkbox']");
+    var estrella = document.querySelectorAll("#categoria-collapse input[type='checkbox']");
+    var valoracion = document.querySelectorAll("#valoracion-collapse input[type='checkbox']");
+    var extra = document.querySelectorAll("#extras-collapse input[type='checkbox']");
+    var filters = {
+        zonas: getClassOfCheckedCheckboxes(zona),
+        precios: getClassOfCheckedCheckboxes(precio),
+        estrellas: getClassOfCheckedCheckboxes(estrella),
+        valoraciones: getClassOfCheckedCheckboxes(valoracion),
+        extras: getClassOfCheckedCheckboxes(extra)
+    };
+    console.log(filters);
+    filtrarBusqueda(filters);
+}
+
+function getClassOfCheckedCheckboxes(checkboxes) {
+    var classes = [];
+
+    if (checkboxes && checkboxes.length > 0) {
+        for (var i = 0; i < checkboxes.length; i++) {
+            var cb = checkboxes[i];
+
+            if (cb.checked) {
+                classes.push(cb.getAttribute("rel"));
+            }
+        }
+    }
+
+    return classes;
+}
+
+function filtrarBusqueda(filters) {
+    var rElems = document.querySelectorAll("#lista-hoteles div");
+    var hiddenElems = [];
+
+    if (!rElems || rElems.length <= 0) {
+        return;
+    }
+
+    for (var i = 0; i < rElems.length; i++) {
+        var el = rElems[i];
+        //Zonas
+        if (filters.zonas.length > 0) {
+            var isHidden = true;
+
+            for (var j = 0; j < filters.zonas.length; j++) {
+                var filter = filters.zonas[j];
+
+                if (el.classList.contains(filter)) {
+                    isHidden = false;
+                    break;
+                }
+            }
+
+            if (isHidden) {
+                hiddenElems.push(el);
+            }
+        }
+        //Precios
+        if (filters.precios.length > 0) {
+            var isHidden = true;
+
+            for (var j = 0; j < filters.precios.length; j++) {
+                var filter = filters.precios[j];
+
+                if (el.classList.contains(filter)) {
+                    isHidden = false;
+                    break;
+                }
+            }
+
+            if (isHidden) {
+                hiddenElems.push(el);
+            }
+        }
+        //Estrellas
+        if (filters.estrellas.length > 0) {
+            var isHidden = true;
+
+            for (var j = 0; j < filters.estrellas.length; j++) {
+                var filter = filters.estrellas[j];
+
+                if (el.classList.contains(filter)) {
+                    isHidden = false;
+                    break;
+                }
+            }
+
+            if (isHidden) {
+                hiddenElems.push(el);
+            }
+        }
+        //Valoracion
+        if (filters.valoraciones.length > 0) {
+            var isHidden = true;
+
+            for (var j = 0; j < filters.valoraciones.length; j++) {
+                var filter = filters.valoraciones[j];
+
+                if (el.classList.contains(filter)) {
+                    isHidden = false;
+                    break;
+                }
+            }
+
+            if (isHidden) {
+                hiddenElems.push(el);
+            }
+        }
+        //Extras
+        if (filters.extras.length > 0) {
+            var isHidden = true;
+
+            for (var j = 0; j < filters.extras.length; j++) {
+                var filter = filters.extras[j];
+
+                if (el.classList.contains(filter)) {
+                    isHidden = false;
+                    break;
+                }
+            }
+
+            if (isHidden) {
+                hiddenElems.push(el);
+            }
+        }
+    }
+
+    for (var i = 0; i < rElems.length; i++) {
+        rElems[i].style.display = "block";
+    }
+
+    if (hiddenElems.length <= 0) {
+        return;
+    }
+
+    for (var i = 0; i < hiddenElems.length; i++) {
+        hiddenElems[i].style.display = "none";
+    }
 }

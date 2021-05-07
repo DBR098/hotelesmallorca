@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    <div class="popup-overlay"></div>
+    <div class="popup-overlay" id="overlay"></div>
     <div id="popup2" style="display: none;">
         <div class="content-popup">
             <div class="close">
@@ -164,17 +164,17 @@
                         <ul class="btn-toggle-nav list-unstyled fw-normal">
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Palma
+                                    <input type="checkbox" rel="Palma" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Palma
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Calvià
+                                    <input type="checkbox" rel="Calvià" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Calvià
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Paguera
+                                    <input type="checkbox" rel="Paguera" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Paguera
                                 </label>
                             </li>
                         </ul>
@@ -212,7 +212,7 @@
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="5precio" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -223,7 +223,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="4precio" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -235,7 +235,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="3precio" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -245,7 +245,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="2precio" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star"></span>
@@ -255,7 +255,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="1precio" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
@@ -275,7 +275,7 @@
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="5estrellas" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -286,7 +286,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="4estrellas" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -298,7 +298,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="3estrellas" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -308,7 +308,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="2estrellas" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star"></span>
@@ -318,7 +318,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="1estrellas" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
@@ -361,7 +361,7 @@
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="5valoracion" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -372,7 +372,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="4valoracion" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -384,7 +384,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="3valoracion" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
@@ -394,7 +394,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="2valoracion" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star"></span>
@@ -404,7 +404,7 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                                    <input type="checkbox" rel="1valoracion" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
@@ -424,32 +424,32 @@
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Todo incluido
+                                    <input type="checkbox" rel="todo_incluido" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Todo incluido
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Wi-Fi
+                                    <input type="checkbox" rel="wifi" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Wi-Fi
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Aparcamiento
+                                    <input type="checkbox" rel="aparcamiento" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Aparcamiento
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Suite
+                                    <input type="checkbox" rel="suites" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Suites
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Piscina
+                                    <input type="checkbox" rel="piscina" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Piscina
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox"> Nevera en habitación
+                                    <input type="checkbox" rel="nevera" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Nevera en habitación
                                 </label>
                             </li>
                         </ul>

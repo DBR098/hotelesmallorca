@@ -42,6 +42,7 @@ var range = document.querySelector(".slider > .range");
 var v1 = document.getElementById("val-left");
 var v2 = document.getElementById("val-right");
 
+/*
 function setLeftValue() {
 	var _this = inputLeft,
 	min = parseInt(_this.min),
@@ -102,8 +103,9 @@ inputRight.addEventListener("mousedown", function() {
 inputRight.addEventListener("mouseup", function() {
 	thumbRight.classList.remove("active");
 });
-
+*/
 /*--rango valoración--*/
+/*
 var inputLeft2 = document.getElementById("input-left2");
 var inputRight2 = document.getElementById("input-right2");
 
@@ -161,3 +163,4 @@ inputLeft2.addEventListener("mousedown", function() {
 inputLeft2.addEventListener("mouseup", function() {
 	thumbLeft2.classList.remove("active");
 });
+*/
