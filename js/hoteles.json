@@ -1,451 +1,434 @@
-[{
-    "nom": "Sant Francesc Hotel Singular",
-    "descripcio": "Sant Francesc Hotel Singular Palma es un Hotel boutique de 5 estrellas, ubicado en una casa señorial neoclásica del S.XIX, en pleno casco antiguo de la ciudad de Palma de Mallorca. Cuenta con 42 habitaciones y suites. En el interior se descubre una decoración cálida y sofisticada. La situación del hotel lo hace ideal para disfrutar la ciudad a pie, así como el resto de la isla de Mallorca.",
-    "detall": "",
-    "tipus": "hotel",
-    "identificador": "",
-    "preu": {
-        "import": "1",
-        "coment-preu": "precio de más de 200€ noche"
-    },
-    "contacte": {
-        "telf": "971495000",
-        "email": "INFO@HOTELSANTFRANCESC.COM",
-        "xarxes": {
-            "web": "https://www.hotelsantfrancesc.com",
-            "facebook": "https://www.facebook.com/hotelsantfrancesc",
-            "twitter": "https://twitter.com/hotelstfrancesc",
-            "instagram": "https://www.instagram.com/hotelsantfrancesc"
-        }
-    },
-    "puntuacio": 5,
-    "visualitzacions": "",
-    "likes": 0,
-    "icones": [
-        "img/logo1.jpg"
-    ],
-    "imatges": [
-        "",
-        ""
-    ],
-    "videos": [
-        {
-            "tipus": "",
-            "url": ""
+[
+    {
+        "nom": "Sant Francesc Hotel Singular",
+        "descripcio": "Sant Francesc Hotel Singular Palma es un Hotel boutique de 5 estrellas, ubicado en una casa señorial neoclásica del S.XIX, en pleno casco antiguo de la ciudad de Palma de Mallorca. Cuenta con 42 habitaciones y suites. En el interior se descubre una decoración cálida y sofisticada. La situación del hotel lo hace ideal para disfrutar la ciudad a pie, así como el resto de la isla de Mallorca.",
+        "tipus": "hotel",
+        "identificador": "",
+        "preu": {
+            "import": "1",
+            "coment-preu": "precio de más de 200€ noche"
         },
-        {
-            "tipus": "",
-            "url": ""
-        }
-    ],
-    "audio": [
-        {
-            "tipus": "",
-            "url": ""
-        }
-    ],
-    "geoposicionament1": {
-        "address": "Plaça de Sant Francesc, 5",
-        "lat": 39.56900350156376,
-        "long": 2.652615329251165,
-        "city": "Palma de Mallorca",
-        "Country": "España",
-        "zip": "07001"
-    },
-    "geoposicionament2": {
-        "address": "",
-        "lat": 0,
-        "long": 0,
-        "city": "",
-        "Country": "",
-        "zip": ""
-    },
-    "horari": {
-        "di": [
-            {
-                "in": "-",
-                "out": "-"
+        "contacte": {
+            "telf": "971495000",
+            "email": "INFO@HOTELSANTFRANCESC.COM",
+            "xarxes": {
+                "web": "https://www.hotelsantfrancesc.com",
+                "facebook": "https://www.facebook.com/hotelsantfrancesc",
+                "twitter": "https://twitter.com/hotelstfrancesc",
+                "instagram": "https://www.instagram.com/hotelsantfrancesc"
             }
-        ],
-        "dm": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dx": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dj": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dv": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "ds": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dg": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ]
-    },
-    "calendari": {
-        "startDataEvent": "",
-        "startTimeEvent": "",
-        "endDataEvent": "",
-        "endTimeEvent": ""
-    },
-    "dadesPropies": {
-        "estrellas": 5,
-        "extras": [
-            {
-                "todoIncluido":1,
-                "wifi":1,
-                "suites": 1,
-                "nevera": 1,
-                "piscina": 1,
-                "aparcamiento": 1
-            }
-        ]
-    }
-},
-{
-    "nom": "Boutique Hotel Can Alomar",
-    "descripcio": "El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo nombre, una antigua casa señorial urbana, catalogada y protegida, de interés histórico, artístico y arquitectónico y gran valor Patrimonial. El hotel dispone de 16 amplias y luminosas habitaciones decoradas dentro de un diseño moderno, un restaurante gastronómico de cocina fusión mediterránea, japonesa, peruana y una terraza solarium para uso exclusivo de los huéspedes del hotel.",
-    "detall": "",
-    "tipus": "hotel",
-    "identificador": "",
-    "preu": {
-        "import": "1",
-        "coment-preu": "precio de más de 200€ noche"
-    },
-    "contacte": {
-        "telf": "871592002",
-        "email": "info@boutiquehotelcanalomar.com",
-        "xarxes": {
-            "web": "https://www.boutiquehotelcanalomar.com",
-            "facebook": "https://www.facebook.com/boutiquehotelcanalomar",
-            "twitter": "",
-            "instagram": "https://www.instagram.com/itmallorcahotels"
-        }
-    },
-    "puntuacio": 5,
-    "visualitzacions": "",
-    "likes": 0,
-    "icones": [
-        "img/logo2.jpg"
-    ],
-    "imatges": [
-        "",
-        ""
-    ],
-    "videos": [
-        {
-            "tipus": "",
-            "url": ""
         },
-        {
-            "tipus": "",
-            "url": ""
-        }
-    ],
-    "audio": [
-        {
-            "tipus": "",
-            "url": ""
-        }
-    ],
-    "geoposicionament1": {
-        "address": " Carrer de Sant Feliu, 1",
-        "lat": 39.57003181501989,
-        "long": 2.646164755620548,
-        "city": "Palma de Mallorca",
-        "Country": "España",
-        "zip": "07012"
-    },
-    "geoposicionament2": {
-        "address": "",
-        "lat": 0,
-        "long": 0,
-        "city": "",
-        "Country": "",
-        "zip": ""
-    },
-    "horari": {
-        "di": [
+        "puntuacio": 5,
+        "icones": [
+            "img/logo1.jpg"
+        ],
+        "imatges": [
+            "",
+            ""
+        ],
+        "videos": [
             {
-                "in": "-",
-                "out": "-"
+                "tipus": "",
+                "url": ""
             }
         ],
-        "dm": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dx": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dj": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dv": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "ds": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dg": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ]
-    },
-    "calendari": {
-        "startDataEvent": "",
-        "startTimeEvent": "",
-        "endDataEvent": "",
-        "endTimeEvent": ""
-    },
-    "dadesPropies": {
-        "estrellas": 5,
-        "extras": [
-            {
-                "todoIncluido":1,
-                "wifi":1,
-                "suites": 1,
-                "nevera": 1,
-                "piscina": 1,
-                "aparcamiento": 1
-            }
-        ]
-    }
-},
-{
-    "nom": "Hipotels Playa de Palma Palace",
-    "descripcio": "El Hipotels Playa de Palma Palace es un espectacular hotel de 5 estrellas ubicado en Playa de Palma, Mallorca. Un hotel de nueva construcción ideal para vacaciones o negocios, con un lujoso spa y precios especiales para jugar al golf. Un interior moderno y elegante con habitaciones amplias de diseño, que te ofrecerán unas vacaciones perfectas con toda la oferta de ocio complementaria de Playa de Palma. No puedes perderte visitar la zona chill out en el último piso del hotel, nuestro Heaven Rooftop Bar con unas vistas únicas a la Bahía de Palma y una puesta de sol que, acompañada de un refrescante cóctel y música en directo, se convertirá en uno de los momentos inolvidables de tus vacaciones.",
-    "detall": "",
-    "tipus": "hotel",
-    "identificador": "",
-    "preu": {
-        "import": "2",
-        "coment-preu": "precio de más de 100€ noche"
-    },
-    "contacte": {
-        "telf": "971260528",
-        "email": "playadepalmapalace@hipotels.com",
-        "xarxes": {
-            "web": "https://www.hipotels.com/hoteles/playadepalmapalace",
-            "facebook": "https://www.facebook.com/Hipotels",
-            "twitter": "https://twitter.com/hipotels",
-            "instagram": "https://www.instagram.com/hipotels"
-        }
-    },
-    "puntuacio": 5,
-    "visualitzacions": "",
-    "likes": 0,
-    "icones": [
-        "img/logo3.jpg"
-    ],
-    "imatges": [
-        "",
-        ""
-    ],
-    "videos": [
-        {
-            "tipus": "",
-            "url": ""
+        "geoposicionament1": {
+            "address": "Plaça de Sant Francesc, 5",
+            "lat": 39.56900350156376,
+            "long": 2.652615329251165,
+            "city": "Palma de Mallorca",
+            "Country": "España",
+            "zip": "07001"
         },
-        {
-            "tipus": "",
-            "url": ""
+        "dadesPropies": {
+            "estrellas": 5,
+            "extras": [
+                {
+                    "todoIncluido": 1,
+                    "wifi": 1,
+                    "suites": 1,
+                    "nevera": 1,
+                    "piscina": 1,
+                    "aparcamiento": 1
+                }
+            ]
         }
-    ],
-    "audio": [
-        {
-            "tipus": "",
-            "url": ""
+    },
+    {
+        "nom": "Boutique Hotel Can Alomar",
+        "descripcio": "El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo nombre, una antigua casa señorial urbana, catalogada y protegida, de interés histórico, artístico y arquitectónico y gran valor Patrimonial. El hotel dispone de 16 amplias y luminosas habitaciones decoradas dentro de un diseño moderno, un restaurante gastronómico de cocina fusión mediterránea, japonesa, peruana y una terraza solarium para uso exclusivo de los huéspedes del hotel.",
+        "tipus": "hotel",
+        "identificador": "",
+        "preu": {
+            "import": "1",
+            "coment-preu": "precio de más de 200€ noche"
+        },
+        "contacte": {
+            "telf": "871592002",
+            "email": "info@boutiquehotelcanalomar.com",
+            "xarxes": {
+                "web": "https://www.boutiquehotelcanalomar.com",
+                "facebook": "https://www.facebook.com/boutiquehotelcanalomar",
+                "twitter": "",
+                "instagram": "https://www.instagram.com/itmallorcahotels"
+            }
+        },
+        "puntuacio": 5,
+        "icones": [
+            "img/logo2.jpg"
+        ],
+        "imatges": [
+            "",
+            ""
+        ],
+        "videos": [
+            {
+                "tipus": "",
+                "url": ""
+            }
+        ],
+        "geoposicionament1": {
+            "address": " Carrer de Sant Feliu, 1",
+            "lat": 39.57003181501989,
+            "long": 2.646164755620548,
+            "city": "Palma de Mallorca",
+            "Country": "España",
+            "zip": "07012"
+        },
+        "dadesPropies": {
+            "estrellas": 5,
+            "extras": [
+                {
+                    "todoIncluido": 1,
+                    "wifi": 1,
+                    "suites": 1,
+                    "nevera": 1,
+                    "piscina": 1,
+                    "aparcamiento": 1
+                }
+            ]
         }
-    ],
-    "geoposicionament1": {
-        "address": "Avda. Fra Joan Llabrés, 20",
-        "lat": 39.514941917153024,
-        "long": 2.749959252355224,
-        "city": "Palma de Mallorca",
-        "Country": "España",
-        "zip": "07600"
     },
-    "geoposicionament2": {
-        "address": "",
-        "lat": 0,
-        "long": 0,
-        "city": "",
-        "Country": "",
-        "zip": ""
+    {
+        "nom": "Hipotels Playa de Palma Palace",
+        "descripcio": "El Hipotels Playa de Palma Palace es un espectacular hotel de 5 estrellas ubicado en Playa de Palma, Mallorca. Un hotel de nueva construcción ideal para vacaciones o negocios, con un lujoso spa y precios especiales para jugar al golf. Un interior moderno y elegante con habitaciones amplias de diseño, que te ofrecerán unas vacaciones perfectas con toda la oferta de ocio complementaria de Playa de Palma. No puedes perderte visitar la zona chill out en el último piso del hotel, nuestro Heaven Rooftop Bar con unas vistas únicas a la Bahía de Palma y una puesta de sol que, acompañada de un refrescante cóctel y música en directo, se convertirá en uno de los momentos inolvidables de tus vacaciones.",
+        "tipus": "hotel",
+        "identificador": "",
+        "preu": {
+            "import": "2",
+            "coment-preu": "precio de más de 100€ noche"
+        },
+        "contacte": {
+            "telf": "971260528",
+            "email": "playadepalmapalace@hipotels.com",
+            "xarxes": {
+                "web": "https://www.hipotels.com/hoteles/playadepalmapalace",
+                "facebook": "https://www.facebook.com/Hipotels",
+                "twitter": "https://twitter.com/hipotels",
+                "instagram": "https://www.instagram.com/hipotels"
+            }
+        },
+        "puntuacio": 5,
+        "icones": [
+            "img/logo3.jpg"
+        ],
+        "imatges": [
+            "",
+            ""
+        ],
+        "videos": [
+            {
+                "tipus": "",
+                "url": ""
+            }
+        ],
+        "geoposicionament1": {
+            "address": "Avda. Fra Joan Llabrés, 20",
+            "lat": 39.514941917153024,
+            "long": 2.749959252355224,
+            "city": "Palma de Mallorca",
+            "Country": "España",
+            "zip": "07600"
+        },
+        "dadesPropies": {
+            "estrellas": 5,
+            "extras": [
+                {
+                    "todoIncluido": 1,
+                    "wifi": 1,
+                    "suites": 1,
+                    "nevera": 1,
+                    "piscina": 1,
+                    "aparcamiento": 1
+                }
+            ]
+        }
     },
-    "horari": {
-        "di": [
+    {
+        "nom": "Blau Punta Reina Family Resort",
+        "descripcio": "El Amic Horizonte  es un hotel de gestión familiar con vistas a la bahía de Palma, situado cerca del puerto de Palma. Súper bien ubicado, excelente atención.",
+        "tipus": "Hotel",
+        "identificador": "1",
+        "preu": {
+            "import": "3",
+            "coment-preu": ""
+        },
+        "contacte": {
+            "telf": "971435024",
+            "email": "puntareina@gmail.com",
+            "xarxes": {
+                "web": "https://www.blauhotels.com/es/hotel-blau-punta-reina-resort-en-mallorca/",
+                "facebook": "https://www.facebook.com/blaupuntareinaresort/",
+                "twitter": "https://twitter.com/blauhotels?lang=es",
+                "instagram": "https://www.instagram.com/explore/locations/210845932914499/spain/manacor/blau-punta-reina-resort/"
+            }
+        },
+        "puntuacio": 3,
+        "icones": [
+            "https://hoteles-free-covid.herokuapp.com/images/HOME_CABECERA_01.jpg"
+        ],
+        "imatges": [
+            "https://hoteles-free-covid.herokuapp.com/images/HOME_CABECERA_01.jpg"
+        ],
+        "videos": [
             {
-                "in": "-",
-                "out": "-"
+                "tipus": "intern",
+                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com%20-%20Blau%20Punta%20Reina%20Resort%20Hotel%20en%20Cala%20Mendia_360p.mp4"
             }
         ],
-        "dm": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dx": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dj": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dv": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "ds": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ],
-        "dg": [
-            {
-                "in": "-",
-                "out": "-"
-            },
-            {
-                "in": "-",
-                "out": "-"
-            }
-        ]
+        "geoposicionament1": {
+            "address": "Plaça de s'Algar, Cala Anguila-Cala Mendia",
+            "lat": 39.5333257,
+            "long": 3.3347806,
+            "city": "Manacor",
+            "Country": "España",
+            "zip": "07680"
+        },
+        "dadesPropies": {
+            "estrellas": 4,
+            "extras": [
+                {
+                    "todoIncluido": 0,
+                    "wifi": 1,
+                    "suites": 1,
+                    "nevera": 0,
+                    "piscina": 1,
+                    "aparcamiento": 0
+                }
+            ]
+        }
     },
-    "calendari": {
-        "startDataEvent": "",
-        "startTimeEvent": "",
-        "endDataEvent": "",
-        "endTimeEvent": ""
-    },
-    "dadesPropies": {
-        "estrellas": 5,
-        "extras": [
-            {
-                "todoIncluido":1,
-                "wifi":1,
-                "suites": 1,
-                "nevera": 1,
-                "piscina": 1,
-                "aparcamiento": 1
+    {
+        "nom": "Protur Naisa Palma Hotel",
+        "descripcio": "El Protur Naisa Palma Hotel está ubicado en Palma de Mallorca, a 1,7 km de la playa de Ca'n Pere Antoni, y ofrece registro de entrada/salida exprés, habitaciones hipoalergénicas, bar, salón común y WiFi gratuita en todas las zonas. Además, este hotel de 4 estrellas cuenta con recepción 24 horas y servicio de conserjería. Hay piscina al aire libre, piscina cubierta, centro de fitness y restaurante.",
+        "tipus": "Hotel",
+        "identificador": "2",
+        "preu": {
+            "import": "5",
+            "coment-preu": ""
+        },
+        "contacte": {
+            "telf": "971542841",
+            "email": "proturnaisa@gmail.com",
+            "xarxes": {
+                "web": "https://www.blauhotels.com/es/hotel-blau-punta-reina-resort-en-mallorca/",
+                "facebook": "https://www.facebook.com/ProturNaisa/",
+                "twitter": "https://twitter.com/proturhotels?lang=es",
+                "instagram": "https://www.instagram.com/proturnaisapalma/?hl=es"
             }
-        ]
+        },
+        "puntuacio": 4,
+        "icones": [
+            "https://hoteles-free-covid.herokuapp.com/images/Protur%20Naisa%20Palma%20Hotel.jpg"
+        ],
+        "imatges": [
+            "https://hoteles-free-covid.herokuapp.com/images/Protur%20Naisa%20Palma%20Hotel.jpg"
+        ],
+        "videos": [
+            {
+                "tipus": "intern",
+                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Protur Naisa Palma Hotel Palma de Mallorca Spain_360p.mp4"
+            }
+        ],
+        "geoposicionament1": {
+            "address": "Carrer de Simó Ballester",
+            "lat": 39.574508,
+            "long": 2.641981,
+            "city": "Palma",
+            "Country": "España",
+            "zip": "07011"
+        },
+        "dadesPropies": {
+            "estrellas": 4,
+            "extras": [
+                {
+                    "todoIncluido": 1,
+                    "wifi": 1,
+                    "suites": 1,
+                    "nevera": 1,
+                    "piscina": 1,
+                    "aparcamiento": 0
+                }
+            ]
+        }
+    },
+    {
+        "nom": "TUI BLUE Alcudia Pins",
+        "descripcio": "El TUI BLUE Alcudia Pins está situado a 1,4 km de la playa de Muro y ofrece alojamiento, restaurante, piscina exterior de temporada, centro de fitness y bar. Hay WiFi gratuita en todas las instalaciones.",
+        "tipus": "Hotel",
+        "identificador": "3",
+        "preu": {
+            "import": "4",
+            "coment-preu": ""
+        },
+        "contacte": {
+            "telf": "971452368",
+            "email": "tuibluealcudia@gmail.com",
+            "xarxes": {
+                "web": "https://www.nordotel.com/tui-blue-alcudia-pins/",
+                "facebook": "https://www.facebook.com/pinsalcudia",
+                "twitter": "https://twitter.com/alcudiapins",
+                "instagram": "https://www.instagram.com/explore/locations/265638062/spain/muro-islas-baleares-spain/tui-family-life-alcudia-pins/"
+            }
+        },
+        "puntuacio": 5,
+        "icones": [
+            "https://hoteles-free-covid.herokuapp.com/images/tui-blue-alcudia-pins.jpg"
+        ],
+        "imatges": [
+            "https://hoteles-free-covid.herokuapp.com/images/tui-blue-alcudia-pins.jpg"
+        ],
+        "videos": [
+            {
+                "tipus": "intern",
+                "url": "https://hoteles-free-covid.herokuapp.com/videos/TUI BLUE Alcudia Pins.mp4"
+            }
+        ],
+        "geoposicionament1": {
+            "address": "Carretera Artà-Alcúdia, km. 25,4, 07458 Playa de Muro",
+            "lat": 39.60992,
+            "long": 3.02948,
+            "city": "Alcúdia",
+            "Country": "España",
+            "zip": "07458"
+        },
+        "dadesPropies": {
+            "estrellas": 3,
+            "extras": [
+                {
+                    "todoIncluido": 1,
+                    "wifi": 0,
+                    "suites": 0,
+                    "nevera": 0,
+                    "piscina": 1,
+                    "aparcamiento": 1
+                }
+            ]
+        }
+    },
+    {
+        "nom": "Las Gaviotas Suites Hotel & Spa",
+        "descripcio": "Este hotel de diseño se encuentra a 100 metros de la playa del Muro, en Mallorca. Las Gaviotas Suites Hotel & Spa está situado en 15.000 m² de jardines y cuenta con piscinas al aire libre y soláriums.",
+        "tipus": "Hotel",
+        "identificador": "4",
+        "preu": {
+            "import": "3",
+            "coment-preu": ""
+        },
+        "contacte": {
+            "telf": "971452369",
+            "email": "lasgaviotas@gmail.com",
+            "xarxes": {
+                "web": "https://www.hotellasgaviotas.com/",
+                "facebook": "https://www.facebook.com/hotellasgaviotas/",
+                "twitter": "https://twitter.com/lasgaviotashtl",
+                "instagram": "https://www.instagram.com/lasgaviotas.suiteshotel/?hl=es"
+            }
+        },
+        "puntuacio": 4,
+        "icones": [
+            "https://hoteles-free-covid.herokuapp.com/images/las%20gaviotas%20suites%20hotel%20&%20spa.jpg"
+        ],
+        "imatges": [
+            "https://hoteles-free-covid.herokuapp.com/images/las%20gaviotas%20suites%20hotel%20&%20spa.jpg"
+        ],
+        "videos": [
+            {
+                "tipus": "intern",
+                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Las Gaviotas Suites Hotel  Spa en Playa de Muro_360p.mp4"
+            }
+        ],
+        "geoposicionament1": {
+            "address": "Avenida Albufera, 51, Playa de Muro",
+            "lat": 39.7969,
+            "long": 3.12046,
+            "city": "Albufera",
+            "Country": "España",
+            "zip": "07458"
+        },
+        "dadesPropies": {
+            "estrellas": 4,
+            "extras": [
+                {
+                    "todoIncluido": 1,
+                    "wifi": 1,
+                    "suites": 1,
+                    "nevera": 0,
+                    "piscina": 1,
+                    "aparcamiento": 0
+                }
+            ]
+        }
+    },
+    {
+        "nom": "INNER Niza Paguera",
+        "descripcio": "Los INNER Niza Paguera se encuentran en Paguera, al suroeste de la isla de Mallorca. Los estudios tienen aire acondicionado y balcón con vistas fantásticas al mar Mediterráneo.",
+        "tipus": "Hotel",
+        "identificador": "5",
+        "preu": {
+            "import": "1",
+            "coment-preu": ""
+        },
+        "contacte": {
+            "telf": "971254874",
+            "email": "nizapaguera@gmail.com",
+            "xarxes": {
+                "web": "http://www.nizapaguera.com/"
+            }
+        },
+        "puntuacio": 2,
+        "icones": [
+            "img/logo3.jpg"
+        ],
+        "imatges": [
+            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+        ],
+        "videos": [
+            {
+                "tipus": "intern",
+                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Apartamentos Niza en Paguera_360p.mp4"
+            }
+        ],
+        "geoposicionament1": {
+            "address": "Niza, 9,",
+            "lat": 39.5375,
+            "long": 3.12046,
+            "city": "Paguera",
+            "Country": "España",
+            "zip": "2.4481"
+        },
+        "dadesPropies": {
+            "estrellas": 3,
+            "extras": [
+                {
+                    "todoIncluido": 1,
+                    "wifi": 1,
+                    "suites": 0,
+                    "nevera": 1,
+                    "piscina": 0,
+                    "aparcamiento": 0
+                }
+            ]
+        }
     }
-}
 ]

@@ -28,9 +28,10 @@ $(document).ready(function () {
     });
 });
 
-function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud, twitter, facebook, instagram, web, telefono, correo) {
+function abrirpopup(nom, img, desc, precio, valoracion, estrellas, ciudad, longitud, latitud, twitter, facebook, instagram, web, telefono, correo) {
     let tval = pintar(valoracion);
     let tprecio = pintar(precio);
+    let testrellas = pintar(estrellas);
 
     var texto =
         `<div>
@@ -53,6 +54,10 @@ function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud, twitt
                                         <label>Valoración: </label>
                                         `+ tval + `
                                     </td>
+                                    <td style="padding-right:10px; padding-left:10%">
+                                        <label>Categoria: </label>
+                                        `+ testrellas+ `
+                                    </td>
                                 </tr>
                             </table>
                         </td>
@@ -69,10 +74,10 @@ function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud, twitt
                         </td>
                         <td align="center">
                             <div class="iconos">
-                                <a href="${twitter}" target="_blank" rel="noopener noreferrer"><img src="img/twitter.svg" alt="Nicegreen circle"/></a>
-                                <a href="${facebook}" target="_blank" rel="noopener noreferrer"><img src="img/facebook.svg" alt="Nicegreen circle"/></a>
-                                <a href="${instagram}" target="_blank" rel="noopener noreferrer"><img src="img/instagram.svg" alt="Nicegreen circle"/></a>
-                                <a href="${web}" target="_blank" rel="noopener noreferrer"><img src="img/web.svg" alt="Nicegreen circle"/></a>
+                                <a href="${twitter}" target="_blank" rel="noopener noreferrer"><img src="img/twitter.svg" height=100 alt="Nicegreen circle"/></a>
+                                <a href="${facebook}" target="_blank" rel="noopener noreferrer"><img src="img/facebook.svg" height=100 alt="Nicegreen circle"/></a>
+                                <a href="${instagram}" target="_blank" rel="noopener noreferrer"><img src="img/instagram.svg" height=100 alt="Nicegreen circle"/></a>
+                                <a href="${web}" target="_blank" rel="noopener noreferrer"><img src="img/web.svg" height=80 alt="Nicegreen circle"/></a>
                             </div>    
                         </td>
                     </tr>
@@ -94,7 +99,8 @@ function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud, twitt
     var c = document.getElementById("codigo");
     c.innerHTML = texto;
     crearMapa(longitud, latitud);
-    crearTiempo();
+    var idciudad = getIDCiudad(ciudad);
+    crearTiempo(idciudad);
 
     $('#popup-hotel').fadeIn('slow');
     $('.popup-overlay').fadeIn('slow');
@@ -106,8 +112,7 @@ function cerrarpopup() {
     $('.popup-overlay').fadeOut('slow');
 }
 
-async function getHoteles() {
-    let url = 'js/hoteles.json';
+async function getValuesJSON(url) {
     try {
         let res = await fetch(url);
         return await res.json();
@@ -117,19 +122,20 @@ async function getHoteles() {
 }
 
 async function printHoteles() {
-    let hoteles = await getHoteles();
+    let hoteles = await getValuesJSON('js/hoteles.json');
     let html = '';
 
     hoteles.forEach(hotel => {
         let tval = pintar(hotel.puntuacio);
         let tprecio = pintar(hotel.preu.import);
+        let testrellas = pintar(hotel.dadesPropies.estrellas);
         let htmlSegment = crearDivHotel(hotel.geoposicionament1.city, hotel.preu.import, hotel.dadesPropies.estrellas, hotel.puntuacio, hotel.dadesPropies.extras) +
-            ` onclick="abrirpopup('${hotel.nom}','${hotel.icones[0]}','${hotel.descripcio}','${hotel.preu.import}', '${hotel.puntuacio}', '${hotel.geoposicionament1.long}', 
-            '${hotel.geoposicionament1.lat}', '${hotel.contacte.xarxes.twitter}', '${hotel.contacte.xarxes.facebook}', '${hotel.contacte.xarxes.instagram}', 
+            ` onclick="abrirpopup('${hotel.nom}','${hotel.icones[0]}','${hotel.descripcio}','${hotel.preu.import}', '${hotel.puntuacio}', '${hotel.dadesPropies.estrellas}', '${hotel.geoposicionament1.city}',
+            '${hotel.geoposicionament1.long}', '${hotel.geoposicionament1.lat}', '${hotel.contacte.xarxes.twitter}', '${hotel.contacte.xarxes.facebook}', '${hotel.contacte.xarxes.instagram}', 
             '${hotel.contacte.xarxes.web}', '${hotel.contacte.telf}', '${hotel.contacte.email}')">
             <table class="hotel">
                 <tr>
-                    <td>
+                    <td style="width:210px">
                         <img src="${hotel.icones[0]}">
                     </td>
                     <td>
@@ -144,6 +150,10 @@ async function printHoteles() {
                                 <td style="padding-right:10px; padding-left:10%">
                                     <label for="input-3" class="control-label">Valoración: </label>
                                     `+ tval + `
+                                </td>
+                                <td style="padding-right:10px; padding-left:10%">
+                                    <label>Categoria: </label>
+                                    `+ testrellas+ `
                                 </td>
                             </tr>
                         </table>
@@ -198,15 +208,18 @@ function crearMapa(longitud, latitud) {
     });
 
     // Set options
+    map.on('load', function () {
+        map.resize();
+    });
     var marker = new mapboxgl.Marker({
         color: "#FF0000"
     }).setLngLat([longitud, latitud])
         .addTo(map);
 }
 
-function crearTiempo() {
+function crearTiempo(ciudad) {
     window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
-    window.myWidgetParam.push({ id: 15, cityid: '2512935', appid: 'a4d03e4faf79fe8e453dcdd13174dea9', units: 'metric', containerid: 'openweathermap-widget-15', });
+    window.myWidgetParam.push({ id: 15, cityid: 2512989, appid: 'a4d03e4faf79fe8e453dcdd13174dea9', units: 'metric', containerid: 'openweathermap-widget-15', });
     (function () {
         var script = document.createElement('script');
         script.async = true;
@@ -216,8 +229,18 @@ function crearTiempo() {
     })();
 }
 
-function getIDCiudad(ciudad) {
+async function getIDCiudad(ciudad) {
     //Buscar dentro del JSON de ciudades españolas el ID de la ciudad que le pasemos por parámetro
+    let ciudades = await getValuesJSON('js/ciudadesESP.json');
+    console.log(ciudad);
+    ciudades.forEach (city => {
+        //console.log(city.Name);
+        if(city.Name == ciudad){
+            return city.id;
+        }
+    })
+    console.log("Not found");
+    return 0;
 }
 
 function crearDivHotel(zona, precio, estrellas, valoracion, extras) {
