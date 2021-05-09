@@ -151,6 +151,22 @@ body {
 
 /* preguntas frecuentes */
 
+.preg {
+    width: max-content;
+    border-bottom: 1px black solid;
+    display: block;
+    cursor: pointer;
+}
+
+.preg span{
+    line-height: 40px;
+    transition: 0.5s;
+}
+
+.preg span.rotate{
+    transform: rotate(+90deg);
+}
+
 .preguntas {
     padding-top: 4rem;
     padding-left: 3rem;
