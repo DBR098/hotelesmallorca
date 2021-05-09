@@ -69,7 +69,7 @@
             "xarxes": {
                 "web": "https://www.boutiquehotelcanalomar.com",
                 "facebook": "https://www.facebook.com/boutiquehotelcanalomar",
-                "twitter": "",
+                "twitter": "https://twitter.com/hotelcanalomar",
                 "instagram": "https://www.instagram.com/itmallorcahotels"
             }
         },
@@ -393,7 +393,10 @@
             "telf": "971254874",
             "email": "nizapaguera@gmail.com",
             "xarxes": {
-                "web": "http://www.nizapaguera.com/"
+                "web": "http://www.nizapaguera.com/",
+                "facebook": "",
+                "twitter": "",
+                "instagram": ""
             }
         },
         "puntuacio": 2,

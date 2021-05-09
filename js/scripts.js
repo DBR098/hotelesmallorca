@@ -33,6 +33,21 @@ function abrirpopup(nom, img, desc, precio, valoracion, estrellas, ciudad, longi
     let tprecio = pintar(precio);
     let testrellas = pintar(estrellas);
 
+    let ticonos = '';
+    
+    if(twitter != ""){
+        ticonos +=`<a href="${twitter}" target="_blank" rel="noopener noreferrer"><img src="img/twitter.svg" height=100 alt="Nicegreen circle"/></a>`
+    }
+    if(facebook != ""){
+        ticonos +=`<a href="${facebook}" target="_blank" rel="noopener noreferrer"><img src="img/facebook.svg" height=100 alt="Nicegreen circle"/></a>`
+    }
+    if(instagram != ""){
+        ticonos +=`<a href="${instagram}" target="_blank" rel="noopener noreferrer"><img src="img/instagram.svg" height=100 alt="Nicegreen circle"/></a>`
+    }
+    if(web != ""){
+        ticonos +=`<a href="${web}" target="_blank" rel="noopener noreferrer"><img src="img/web.svg" height=80 alt="Nicegreen circle"/></a>`
+    }
+
     var texto =
         `<div>
             <h2>`+ nom + `</h2>
@@ -74,10 +89,7 @@ function abrirpopup(nom, img, desc, precio, valoracion, estrellas, ciudad, longi
                         </td>
                         <td align="center">
                             <div class="iconos">
-                                <a href="${twitter}" target="_blank" rel="noopener noreferrer"><img src="img/twitter.svg" height=100 alt="Nicegreen circle"/></a>
-                                <a href="${facebook}" target="_blank" rel="noopener noreferrer"><img src="img/facebook.svg" height=100 alt="Nicegreen circle"/></a>
-                                <a href="${instagram}" target="_blank" rel="noopener noreferrer"><img src="img/instagram.svg" height=100 alt="Nicegreen circle"/></a>
-                                <a href="${web}" target="_blank" rel="noopener noreferrer"><img src="img/web.svg" height=80 alt="Nicegreen circle"/></a>
+                                `+ ticonos + `
                             </div>    
                         </td>
                     </tr>
@@ -214,7 +226,6 @@ function crearMapa(longitud, latitud) {
 }
 
 async function crearTiempo(ciudad) {
-    console.log(ciudad);
     let ciudades = await getValuesJSON('js/ciudadesESP.json');
     var id = 0;
     ciudades.forEach(city => {
@@ -231,11 +242,6 @@ async function crearTiempo(ciudad) {
         script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
     })();
-}
-
-async function getIDCiudad(ciudad) {
-    //Buscar dentro del JSON de ciudades españolas el ID de la ciudad que le pasemos por parámetro
-    
 }
 
 function crearDivHotel(zona, precio, estrellas, valoracion, extras) {
