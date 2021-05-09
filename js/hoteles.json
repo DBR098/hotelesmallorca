@@ -401,7 +401,7 @@
         },
         "puntuacio": 2,
         "icones": [
-            "img/logo3.jpg"
+            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
         ],
         "imatges": [
             "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
