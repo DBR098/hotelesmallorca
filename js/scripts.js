@@ -275,7 +275,6 @@ function actualizaFiltros() {
         valoraciones: getClassOfCheckedCheckboxes(valoracion),
         extras: getClassOfCheckedCheckboxes(extra)
     };
-    console.log(filters);
     filtrarBusqueda(filters);
 }
 
