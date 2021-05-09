@@ -44,7 +44,7 @@
 #menu-btn {
     background-color: #fff;
     color: #000;
-    border-color: #000
+    border-color: #000;
 }
 
 #menu-btn:focus {	
@@ -271,14 +271,18 @@ input[class=form-range]::-webkit-slider-thumb {
 
 .panel-hotel {
     width: 100%;
-	height: auto;
+	height: autopx;
     margin-bottom: 10px;
 }
 
-.panel-hotel img{
-	margin-right: 15px;
-    width: 200px;
+.panel-hotel #imagen{
+	padding-right: 15px;
+    width: 400px;
     height: auto;
+}
+
+.panel-hotel p, .panel-hotel label {
+	font-size: x-large; 
 }
 
 .panel-hotel table {
@@ -303,7 +307,17 @@ input[class=form-range]::-webkit-slider-thumb {
 
 .desc {
 	overflow: scroll;
-	height: 900px;	
+	height: 700px;	
+}
+
+.informacion #map{
+	width: 600px;
+	height: 300px;	
+}
+
+.informacion .iconos{
+	width: 1px;
+	height: auto;
 }
 
 .content-popup-hotel {
@@ -318,15 +332,16 @@ input[class=form-range]::-webkit-slider-thumb {
     box-shadow: 0 2px 5px #666666;
 }
 
-/*
 @media (min-width: 640px) {
-	.menu {
+	.informacion #map{
+		width: 600px;
+		height: 300px;	
 	}
 }
 
 @media (min-width: 992px) {
-	.menu {
-
+	.informacion #map{
+		width: 200px;
+		height: 100px;	
 	}
 }
-*/

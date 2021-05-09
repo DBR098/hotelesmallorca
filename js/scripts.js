@@ -17,7 +17,7 @@ $(document).ready(function () {
     $('#open2').on('click', function () {
         $('#popup2').fadeIn('slow');
         $('.popup-overlay').fadeIn('slow');
-        document.getElementById("popup-overlay").style.width = "100%";
+        document.getElementById("overlay").style.width = "100%";
         return false;
     });
 
@@ -28,7 +28,7 @@ $(document).ready(function () {
     });
 });
 
-function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud) {
+function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud, twitter, facebook, instagram, web, telefono, correo) {
     let tval = pintar(valoracion);
     let tprecio = pintar(precio);
 
@@ -39,7 +39,7 @@ function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud) {
                 <table>
                     <tr>
                         <td>
-                            <img src="`+ img + `">
+                            <img id="imagen" src="`+ img + `">
                         </td>
                         <td>
                             <p>`+ desc + `</p>
@@ -58,14 +58,33 @@ function abrirpopup(nom, img, desc, precio, valoracion, longitud, latitud) {
                         </td>
                     </tr>
                 </table>
+                <hr style="margin:1rem 0;width:98%"> 
+                <table class="informacion"> 
+                    <tr>
+                        <td align="center">
+                            <div id='map'></div>
+                        </td>   
+                        <td align="center">
+                            <div id="openweathermap-widget-15" style="padding-left:20px;padding-right:20px"></div>
+                        </td>
+                        <td align="center">
+                            <div class="iconos">
+                                <a href="${twitter}" target="_blank" rel="noopener noreferrer"><img src="img/twitter.svg" alt="Nicegreen circle"/></a>
+                                <a href="${facebook}" target="_blank" rel="noopener noreferrer"><img src="img/facebook.svg" alt="Nicegreen circle"/></a>
+                                <a href="${instagram}" target="_blank" rel="noopener noreferrer"><img src="img/instagram.svg" alt="Nicegreen circle"/></a>
+                                <a href="${web}" target="_blank" rel="noopener noreferrer"><img src="img/web.svg" alt="Nicegreen circle"/></a>
+                            </div>    
+                        </td>
+                    </tr>
+                </table>
                 <hr style="margin:1rem 0;width:98%">
                 <table> 
                     <tr>
-                        <td>
-                            <div id='map' style='width: 400px; height: 300px; '></div>
+                        <td  align="center">
+                            <p>Telefono de contacto: ${telefono}</p>
                         </td>
-                        <td>
-                            <div id="openweathermap-widget-15"></div>
+                        <td  align="center">
+                            <p>Correo electronico: <a type="email" href="mailto:${correo}">${correo}</a></p>
                         </td>
                     </tr>
                 </table>
@@ -104,33 +123,33 @@ async function printHoteles() {
     hoteles.forEach(hotel => {
         let tval = pintar(hotel.puntuacio);
         let tprecio = pintar(hotel.preu.import);
-        let htmlSegment = crearDivHotel(hotel.geoposicionament1.city, hotel.preu.import, hotel.dadesPropies.estrellas, hotel.puntuacio, hotel.dadesPropies.extras);
-        htmlSegment +=
-            ` onclick="abrirpopup('${hotel.nom}','${hotel.icones[0]}','${hotel.descripcio}',
-            '${hotel.preu.import}', '${hotel.puntuacio}', '${hotel.geoposicionament1.long}', '${hotel.geoposicionament1.lat}')">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="${hotel.icones[0]}">
-                        </td>
-                        <td>
-                            <h2>${hotel.nom}</h2>
-                            <p>${hotel.descripcio}</p>
-                            <table>
-                                <tr>
-                                    <td style="padding-right:10px">
-                                        <label for="input-3" class="control-label">Precio: </label>
-                                        `+ tprecio + `
-                                    </td>
-                                    <td style="padding-right:10px; padding-left:10%">
-                                        <label for="input-3" class="control-label">Valoración: </label>
-                                        `+ tval + `
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
+        let htmlSegment = crearDivHotel(hotel.geoposicionament1.city, hotel.preu.import, hotel.dadesPropies.estrellas, hotel.puntuacio, hotel.dadesPropies.extras) +
+            ` onclick="abrirpopup('${hotel.nom}','${hotel.icones[0]}','${hotel.descripcio}','${hotel.preu.import}', '${hotel.puntuacio}', '${hotel.geoposicionament1.long}', 
+            '${hotel.geoposicionament1.lat}', '${hotel.contacte.xarxes.twitter}', '${hotel.contacte.xarxes.facebook}', '${hotel.contacte.xarxes.instagram}', 
+            '${hotel.contacte.xarxes.web}', '${hotel.contacte.telf}', '${hotel.contacte.email}')">
+            <table class="hotel">
+                <tr>
+                    <td>
+                        <img src="${hotel.icones[0]}">
+                    </td>
+                    <td>
+                        <h2>${hotel.nom}</h2>
+                        <p>${hotel.descripcio}</p>
+                        <table>
+                            <tr>
+                                <td style="padding-right:10px">
+                                    <label for="input-3" class="control-label">Precio: </label>
+                                    `+ tprecio + `
+                                </td>
+                                <td style="padding-right:10px; padding-left:10%">
+                                    <label for="input-3" class="control-label">Valoración: </label>
+                                    `+ tval + `
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
             </div>`;
 
         html += htmlSegment;
