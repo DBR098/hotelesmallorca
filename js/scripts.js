@@ -99,8 +99,7 @@ function abrirpopup(nom, img, desc, precio, valoracion, estrellas, ciudad, longi
     var c = document.getElementById("codigo");
     c.innerHTML = texto;
     crearMapa(longitud, latitud);
-    var idciudad = getIDCiudad(ciudad);
-    crearTiempo(idciudad);
+    crearTiempo(ciudad);
 
     $('#popup-hotel').fadeIn('slow');
     $('.popup-overlay').fadeIn('slow');
@@ -182,8 +181,6 @@ function pintar(num) {
     return codigo;
 }
 
-/* mostrar-ocultar */
-
 function muestraOculta(id) {
     var elemento = document.getElementById('contenidos_' + id);
     var enlace = document.getElementById('enlace_' + id);
@@ -217,9 +214,17 @@ function crearMapa(longitud, latitud) {
         .addTo(map);
 }
 
-function crearTiempo(ciudad) {
+async function crearTiempo(ciudad) {
+    console.log(ciudad);
+    let ciudades = await getValuesJSON('js/ciudadesESP.json');
+    var id = 0;
+    ciudades.forEach(city => {
+        if(city.name == ciudad){
+            id = city.id;
+        }
+    });
     window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
-    window.myWidgetParam.push({ id: 15, cityid: 2512989, appid: 'a4d03e4faf79fe8e453dcdd13174dea9', units: 'metric', containerid: 'openweathermap-widget-15', });
+    window.myWidgetParam.push({ id: 15, cityid: id, appid: 'a4d03e4faf79fe8e453dcdd13174dea9', units: 'metric', containerid: 'openweathermap-widget-15', });
     (function () {
         var script = document.createElement('script');
         script.async = true;
@@ -231,16 +236,7 @@ function crearTiempo(ciudad) {
 
 async function getIDCiudad(ciudad) {
     //Buscar dentro del JSON de ciudades españolas el ID de la ciudad que le pasemos por parámetro
-    let ciudades = await getValuesJSON('js/ciudadesESP.json');
-    console.log(ciudad);
-    ciudades.forEach (city => {
-        //console.log(city.Name);
-        if(city.Name == ciudad){
-            return city.id;
-        }
-    })
-    console.log("Not found");
-    return 0;
+    
 }
 
 function crearDivHotel(zona, precio, estrellas, valoracion, extras) {

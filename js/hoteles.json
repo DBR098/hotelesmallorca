@@ -36,7 +36,7 @@
             "address": "Plaça de Sant Francesc, 5",
             "lat": 39.56900350156376,
             "long": 2.652615329251165,
-            "city": "Palma de Mallorca",
+            "city": "Palma",
             "Country": "España",
             "zip": "07001"
         },
@@ -91,7 +91,7 @@
             "address": " Carrer de Sant Feliu, 1",
             "lat": 39.57003181501989,
             "long": 2.646164755620548,
-            "city": "Palma de Mallorca",
+            "city": "Palma",
             "Country": "España",
             "zip": "07012"
         },
@@ -146,7 +146,7 @@
             "address": "Avda. Fra Joan Llabrés, 20",
             "lat": 39.514941917153024,
             "long": 2.749959252355224,
-            "city": "Palma de Mallorca",
+            "city": "Palma",
             "Country": "España",
             "zip": "07600"
         },
@@ -220,7 +220,7 @@
     },
     {
         "nom": "Protur Naisa Palma Hotel",
-        "descripcio": "El Protur Naisa Palma Hotel está ubicado en Palma de Mallorca, a 1,7 km de la playa de Ca'n Pere Antoni, y ofrece registro de entrada/salida exprés, habitaciones hipoalergénicas, bar, salón común y WiFi gratuita en todas las zonas. Además, este hotel de 4 estrellas cuenta con recepción 24 horas y servicio de conserjería. Hay piscina al aire libre, piscina cubierta, centro de fitness y restaurante.",
+        "descripcio": "El Protur Naisa Palma Hotel está ubicado en Palma de Mallorca, a 1,7 km de la playa de Can Pere Antoni, y ofrece registro de entrada/salida exprés, habitaciones hipoalergénicas, bar, salón común y WiFi gratuita en todas las zonas. Además, este hotel de 4 estrellas cuenta con recepción 24 horas y servicio de conserjería. Hay piscina al aire libre, piscina cubierta, centro de fitness y restaurante.",
         "tipus": "Hotel",
         "identificador": "2",
         "preu": {
@@ -308,7 +308,7 @@
             "address": "Carretera Artà-Alcúdia, km. 25,4, 07458 Playa de Muro",
             "lat": 39.60992,
             "long": 3.02948,
-            "city": "Alcúdia",
+            "city": "Alcudia",
             "Country": "España",
             "zip": "07458"
         },
@@ -362,7 +362,7 @@
             "address": "Avenida Albufera, 51, Playa de Muro",
             "lat": 39.7969,
             "long": 3.12046,
-            "city": "Albufera",
+            "city": "Muro",
             "Country": "España",
             "zip": "07458"
         },
@@ -413,7 +413,7 @@
             "address": "Niza, 9,",
             "lat": 39.5375,
             "long": 3.12046,
-            "city": "Paguera",
+            "city": "Andratx",
             "Country": "España",
             "zip": "2.4481"
         },
