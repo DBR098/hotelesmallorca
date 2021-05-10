@@ -158,16 +158,16 @@ body {
     cursor: pointer;
 }
 
-.preg span{
+.preg span {
     line-height: 40px;
     transition: 0.5s;
 }
 
-.preg span.rotate{
+.preg span.rotate {
     transform: rotate(+90deg);
 }
 
-.resp{
+.resp {
     padding-top: 7px;
     font-size: 2.5ch;
 }
@@ -180,9 +180,7 @@ body {
 
 .featurette-divider2 {
     margin: 1.5rem 0;
-    /* Space out the Bootstrap <hr> more */
 }
-
 
 /*estrellas*/
 .checked {
