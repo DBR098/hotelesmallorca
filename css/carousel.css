@@ -167,6 +167,11 @@ body {
     transform: rotate(+90deg);
 }
 
+.resp{
+    padding-top: 7px;
+    font-size: 2.5ch;
+}
+
 .preguntas {
     padding-top: 4rem;
     padding-left: 3rem;
