@@ -152,7 +152,6 @@ body {
 /* preguntas frecuentes */
 
 .preg {
-    width: max-content;
     border-bottom: 1px black solid;
     display: block;
     cursor: pointer;
@@ -173,11 +172,10 @@ body {
     padding-right: 3rem;
 }
 
-.featurette-divider2 {
-    margin: 1.5rem 0;
-    /* Space out the Bootstrap <hr> more */
+.resp{
+    padding-top: 7px;
+    font-size: 2.5ch;
 }
-
 
 /*estrellas*/
 .checked {
