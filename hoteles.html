@@ -37,11 +37,11 @@
     <script src="js/scripts.js"></script>
 </head>
 
-<body>
+<body style="background-color:#f8f7f7">
     <div id="popup" style="display: none;">
         <div class="content-popup">
             <div class="close">
-                <a href="#" id="close">X</a>
+                <a id="close">X</a>
             </div>
             <div>
                 <h2>Quienes somos</h2>
@@ -55,7 +55,7 @@
     <div id="popup2" style="display: none;">
         <div class="content-popup">
             <div class="close">
-                <a href="#" id="close2">X</a>
+                <a id="close2">X</a>
             </div>
             <div>
                 <h2>Contacto</h2>
@@ -127,20 +127,17 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">Idiomas</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">Español</a>
+                                    <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/">Español</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Català</a>
+                                    <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/cat">Català</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">English</a>
+                                    <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/eng">English</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-success" type="button">Login</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -190,6 +187,16 @@
                             <li>
                                 <label>
                                     <input type="checkbox" rel="Calvià" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Calvià
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" rel="Pollença" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Pollença
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" rel="Colònia de Sant Jordi" id="cbox1" onchange="actualizaFiltros()" value="first_checkbox"> Colònia de Sant Jordi
                                 </label>
                             </li>
                         </ul>
@@ -431,7 +438,7 @@
     <div id="popup-hotel" style="display: none;">
         <div class="content-popup-hotel">
             <div class="close">
-                <a href="#" id="close-hotel" onclick="cerrarpopup()">X</a>
+                <a id="close-hotel" onclick="cerrarpopup()">X</a>
             </div>
             <div class="panel-hotel">
                 <fieldset id="codigo"></fieldset>
@@ -440,12 +447,23 @@
         </div>
     </div>
 
+    <div id="comentarios" style="display: none;">
+        <div class="content-comentarios">
+            <div class="close">
+                <a id="close-comentarios" onclick="cerrarcomentarios()">X</a>
+            </div>
+            <div class="panel-comentarios">
+                <fieldset id="contenido"></fieldset>
+            </div>
+        </div>
+    </div>
+
     <main>
         <section class="p-4 my-container">
             <button class="btn my-4" id="menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
-            <div id="lista-hoteles">
+            <div id="lista-hoteles" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <script>printHoteles()</script>
             </div>
             <hr class="featurette-divider">

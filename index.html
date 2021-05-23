@@ -32,15 +32,22 @@
 
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
-
+    <link href="css/hoteles.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://kit.fontawesome.com/ddbe9af287.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </head>
 
 <body>
 
     <div id="popup" style="display: none;">
         <div class="content-popup">
-            <div class="close"><a href="#" id="close">X</a></div>
+            <div class="close"><a id="close">X</a></div>
             <div>
                 <h2>Quienes somos</h2>
                 <p>Hoteles Mallorca es una empresa fundada en 2020 con el objetivo de ayudar a la hostelería local.</p>
@@ -54,7 +61,7 @@
 
     <div id="popup2" style="display: none;">
         <div class="content-popup">
-            <div class="close"><a href="#" id="close2">X</a></div>
+            <div class="close"><a id="close2">X</a></div>
             <div>
                 <h2>Contacto</h2>
                 <p>Teléfono: 911 178 867 </p>
@@ -139,13 +146,22 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-success" type="button">Login</button>
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
+
+    <div id="popup-hotel" style="display: none;">
+        <div class="content-popup-hotel">
+            <div class="close">
+                <a id="close-hotel" onclick="cerrarpopup()">X</a>
+            </div>
+            <div class="panel-hotel">
+                <fieldset id="codigo"></fieldset>
+            </div>
+
+        </div>
+    </div>
 
     <main>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -157,11 +173,6 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
                     <div class="container">
                         <div class="carousel-caption text-start">
                             <h1>Hoteles con mejor valoración</h1>
@@ -171,11 +182,6 @@
                     <img src="img/1.jpg">
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Hoteles por precios</h1>
@@ -185,11 +191,6 @@
                     <img src="img/2.jpg">
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
                     <div class="container">
                         <div class="carousel-caption text-end">
                             <h1>Hoteles con todo incluido</h1>
@@ -227,7 +228,7 @@
                         se descubre una decoración cálida y sofisticada. La situación del hotel lo hace ideal para
                         disfrutar la ciudad a pie, así como el resto de la isla de Mallorca.</p>
                     <br />
-                    <p><a class="btn btn-secondary" href="http://hotelesmallorca.netlify.app/prueba">Ver hotel
+                    <p><a class="btn btn-secondary" onclick="getPopup(1)">Ver hotel
                             &raquo;</a></p>
                 </div>
                 <!-- /.col-lg-4 -->
@@ -242,7 +243,7 @@
                         un restaurante gastronómico de cocina fusión mediterránea, japonesa, peruana y una terraza
                         solarium para uso exclusivo de los huéspedes
                         del hotel.</p>
-                    <p><a class="btn btn-secondary" href="#">Ver hotel &raquo;</a></p>
+                    <p><a class="btn btn-secondary" onclick="getPopup(2)">Ver hotel &raquo;</a></p>
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
@@ -260,7 +261,7 @@
                         a la Bahía de Palma y una puesta de sol que, acompañada de un refrescante cóctel y música en
                         directo, se convertirá en uno
                         de los momentos inolvidables de tus vacaciones.</p>
-                    <p><a class="btn btn-secondary" href="#">Ver hotel &raquo;</a></p>
+                    <p><a class="btn btn-secondary" onclick="getPopup(3)">Ver hotel &raquo;</a></p>
                 </div>
                 <!-- /.col-lg-4 -->
             </div>
@@ -269,6 +270,8 @@
             <!-- START THE FEATURETTES -->
 
             <hr class="featurette-divider">
+
+
 
             <div class="row featurette">
                 <div class="col-md-7">

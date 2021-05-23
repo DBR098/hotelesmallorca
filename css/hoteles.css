@@ -9,7 +9,7 @@
 	height: 100vh;
 	position: fixed;
 	margin-left: -300px;
-	/*background-color: #1847e2;*/
+	background-color: white;
 	transition: 0.4s;
 	border-right: black 2px solid;
 	overflow: scroll;
@@ -33,6 +33,7 @@
 	margin-top: 50px;
 	margin-left: 0;
 	z-index: 1;
+	font-size: large;
 }
 
 /* for main section */
@@ -73,6 +74,7 @@
 	color: rgba(0, 0, 0, .65);
 	background-color: transparent;
 	border: 0;
+	font-size: large;
 }
 
 .btn-toggle:hover, .btn-toggle:focus {
@@ -115,32 +117,99 @@
 /*----*/
 
 .hotel {
+	background-color: white;
 	border: 1px solid black;
 	width: 100%;
 	height: auto;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .hotel table {
 	width: 97%;
+}
+
+.hotel .botones {
+	margin-right: 10px;
+	margin-bottom: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.hotel label {
 	margin: 8px;
 }
 
 .hotel img {
-	margin: 5px 15px 5px 5px;
-	width: 300px;
-	height: 200px;
+	width: 100%;
+	height: 290px;
+	padding-right: 10px;
+	display:block;
+	margin:auto;
 }
 
-.panel-hotel {
+.hotel .estrellas {
+	font-size: 15px;
+}
+
+.panel-hotel, .panel-comentarios {
 	width: 100%;
 	height: auto;
 	margin-bottom: 10px;
 }
 
+.panel-comentarios {
+	margin: 5px;
+	font-size: x-large;
+	color: white;
+}
+
+.panel-comentarios #valoracion{
+	font-size: large;
+	width: 30%;
+	margin-bottom: 10px;
+}
+
+.panel-comentarios #botoncomentario {
+	background-color:#26baba;
+	padding:10px;
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+	font-size:medium;
+	color:#fff;
+	border-radius: 5px;
+}
+
+.panel-comentarios .comentario {
+	border: 1px solid black;
+	background-color: #7cdd80dc;
+	height: auto;
+	margin: 5px;
+}
+
+.panel-comentarios #lista-comentarios {
+	width: 99%;
+	overflow-y: scroll;
+}
+
+.panel-comentarios .esc-comentario table {
+	table-layout: fixed;
+	width: 98%;
+	margin: 10px;	
+}
+
+.panel-comentarios .esc-comentario th, .panel-comentarios .esc-comentario td {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+textarea{
+    height: 200px;
+    width: 99%;
+}
+
 .panel-hotel #imagen {
 	padding-right: 15px;
-	width: 400px;
+	width: 98%;
 	height: 300px;
 }
 
@@ -148,11 +217,11 @@
 	font-size: x-large;
 }
 
-.panel-hotel table {
+.panel-hotel table, .panel-comentarios .comentario table {
 	width: 97%;
 }
 
-#popup-hotel {
+#popup-hotel, #comentarios {
 	left: 0;
 	position: fixed;
 	top: 0;
@@ -161,47 +230,168 @@
 	z-index: 1001;
 }
 
-.content-popup h2, .content-popup-hotel h2 {
-	color: #48484B;
+#map{
+	width: 98%;
+	height: 260px;	
+}
+
+.content-popup-hotel, .content-comentarios {
+	margin: 0px auto;
+	top: 50%;
+	position: relative;
+	padding: 10px;
+	width: 90%;
+	height: 90%;
+	border-radius: 4px;
+	background-color: #8eff949f;
+	box-shadow: 0 2px 5px #007c00;
+	transform: translateY(-50%);
+}
+
+.content-popup h2, .content-popup-hotel h2, .content-comentarios h2 {
+	color: white;
 	border-bottom: 1px solid #48484B;
 	margin-top: 0;
 	padding-bottom: 4px;
 }
 
-.desc {
-	overflow: scroll;
-	height: 700px;
+.content-popup-hotel .desc {
+	color: white;
+	display: block;
+	border: 0px solid red;
+	padding: 5px;
+	margin-top: 5px;
+	width: 100%;
+	overflow-y: scroll;
 }
 
-#map{
-	width: 350px;
-	height: 260px;	
-}
-
-.content-popup-hotel {
-	margin: 0px auto;
-	margin-top: 120px;
-	position: relative;
-	padding: 10px;
-	width: 90%;
-	height: auto;
-	border-radius: 4px;
-	background-color: #FFFFFF;
-	box-shadow: 0 2px 5px #666666;
-}
-
-/*
-@media (min-width: 640px) {
-	.informacion #map{
-		width: 600px;
-		height: 300px;	
+/*responsable*/
+@media (max-width: 1000px) {
+	.panel-hotel p, .panel-hotel label {
+		font-size: large;
+	}
+	
+	#openweathermap-widget-15 {
+		transform: scaleX(0.8);
 	}
 }
 
-@media (min-width: 992px) {
-	.informacion #map{
-		width: 200px;
-		height: 100px;	
+@media (max-width: 800px) {
+	.panel-hotel p, .panel-hotel label {
+		font-size: medium;
+	}
+
+	#openweathermap-widget-15 {
+		transform: scaleX(0.7);
+	}
+
+	
+}
+
+@media (max-width: 500px) {
+	.panel-hotel p, .panel-hotel label {
+		font-size: x-small;
+	}
+	#openweathermap-widget-15 {
+		transform: scaleX(0.6);
+	}
+
+	.iconos{
+		transform: scale(0.9);
 	}
 }
-*/
+
+@media (max-width: 400px) {
+	.panel-hotel p, .panel-hotel label {
+		font-size: xx-small;
+	}
+
+	#openweathermap-widget-15 {
+		transform: scaleX(0.6);
+	}
+
+	.iconos{
+		transform: scale(0.6);
+	}	
+}
+
+@media (min-height: 1061px) {
+	.content-popup-hotel {
+		height: auto;
+	}
+	
+}
+
+@media (min-height: 1301px) {
+	.panel-comentarios #lista-comentarios {
+		height: 630px;
+	}
+}
+
+@media (max-height: 1300px) {
+	.panel-comentarios #lista-comentarios {
+		height: 450px;
+	}
+}
+
+@media (max-height: 1100px) {
+	.panel-comentarios #lista-comentarios {
+		height: 330px;
+	}
+}
+
+@media (max-height: 960px) {
+	.content-popup-hotel .desc {
+		height: 700px;
+	}
+	
+	.panel-comentarios #lista-comentarios {
+		height: 230px;
+	}
+}
+
+@media (max-height: 860px) {
+	.content-popup-hotel .desc {
+		height: 600px;
+	}
+
+	.panel-comentarios {
+		font-size: large;
+	}
+
+	textarea {
+		height: 100px;
+	}
+}
+
+@media (max-height: 730px) {
+	.content-popup-hotel .desc {
+		height: 500px;
+	}
+
+	.panel-comentarios #lista-comentarios {
+		height: 160px;
+	}
+}
+
+@media (max-height: 640px) {
+	.content-popup-hotel .desc {
+		height: 400px;
+	}
+}
+
+@media (max-height: 520px) {
+	.content-popup-hotel .desc {
+		height: 300px;
+	}
+
+	textarea {
+		height: 90px;
+	}
+}
+
+@media (max-height: 420px) {
+	.content-popup-hotel .desc {
+		height: 200px;
+	}
+}

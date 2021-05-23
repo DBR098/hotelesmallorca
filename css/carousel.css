@@ -1,5 +1,75 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
+.close {
+	font-size: x-large;
+	color: red;
+	display: block;
+    cursor: pointer;
+}
+/*popup hotel*/
+.panel-hotel {
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.panel-hotel #imagen {
+	padding-right: 15px;
+	width: 98%;
+	height: 300px;
+}
+
+.panel-hotel p, .panel-hotel label {
+	font-size: x-large;
+}
+
+.panel-hotel table {
+	width: 97%;
+}
+
+#popup-hotel {
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1001;
+}
+
+.content-popup h2, .content-popup-hotel h2 {
+	color: white;
+	border-bottom: 1px solid #48484B;
+	margin-top: 0;
+	padding-bottom: 4px;
+}
+
+#map{
+	width: 98%;
+	height: 260px;	
+}
+
+.content-popup-hotel {
+	margin: 0px auto;
+	top: 50%;
+	position: relative;
+	padding: 10px;
+	width: 90%;
+	height: 90%;
+	border-radius: 4px;
+	background-color: #3adf427e;
+	box-shadow: 0 2px 5px #666666;
+	transform: translateY(-50%);
+}
+
+.content-popup-hotel .desc {
+	color: white;
+	display: block;
+	border: 0px solid red;
+	padding: 5px;
+	margin-top: 5px;
+	width: 100%;
+	overflow-y: scroll;
+}
 
 #popup,#popup2 {
     left: 0;
@@ -88,8 +158,17 @@ body {
     height: 32rem;
 }
 
-.carousel-item>img {
+.carousel-item img {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.embed-responsive-item {
+	position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -201,4 +280,107 @@ body {
     .featurette-heading {
         margin-top: 7rem;
     }
+}
+
+@media (max-width: 1000px) {
+	.panel-hotel p, .panel-hotel label {
+		font-size: large;
+	}
+	
+	#openweathermap-widget-15 {
+		transform: scaleX(0.8);
+	}
+}
+
+@media (max-width: 800px) {
+	.panel-hotel p, .panel-hotel label {
+		font-size: medium;
+	}
+
+	#openweathermap-widget-15 {
+		transform: scaleX(0.7);
+	}
+
+	
+}
+
+@media (max-width: 500px) {
+	.panel-hotel p, .panel-hotel label {
+		font-size: x-small;
+	}
+	#openweathermap-widget-15 {
+		transform: scaleX(0.6);
+	}
+
+	.iconos{
+		transform: scale(0.9);
+	}
+}
+
+@media (max-width: 400px) {
+	.panel-hotel p, .panel-hotel label {
+		font-size: xx-small;
+	}
+
+	#openweathermap-widget-15 {
+		transform: scaleX(0.6);
+	}
+
+	.iconos{
+		transform: scale(0.6);
+	}	
+}
+
+@media (min-height: 1101px) {
+	.content-popup-hotel {
+		height: auto;
+	}
+}
+
+@media (max-height: 1100px) {
+	.content-popup-hotel .desc {
+		height: 900px;
+	}
+}
+
+@media (max-height: 1060px) {
+	.content-popup-hotel .desc {
+		height: 800px;
+	}
+}
+
+@media (max-height: 950px) {
+	.content-popup-hotel .desc {
+		height: 700px;
+	}
+}
+
+@media (max-height: 860px) {
+	.content-popup-hotel .desc {
+		height: 600px;
+	}
+}
+
+@media (max-height: 760px) {
+	.content-popup-hotel .desc {
+		height: 500px;
+	}
+}
+
+@media (max-height: 660px) {
+	.content-popup-hotel .desc {
+		height: 400px;
+	}
+}
+
+@media (max-height: 560px) {
+	.content-popup-hotel .desc {
+		height: 300px;
+	}
+}
+
+@media (max-height: 430px) {
+	.content-popup-hotel .desc {
+		height: 200px;
+	}
 }

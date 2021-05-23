@@ -40,7 +40,7 @@
 <body>
     <div id="popup" style="display: none;">
         <div class="content-popup">
-            <div class="close"><a href="#" id="close">X</a></div>
+            <div class="close"><a id="close">X</a></div>
             <div>
                 <h2>Quienes somos</h2>
                 <p>Hoteles Mallorca es una empresa fundada en 2020 con el objetivo de ayudar a la hostelería local.</p>
@@ -54,7 +54,7 @@
 
     <div id="popup2" style="display: none;">
         <div class="content-popup">
-            <div class="close"><a href="#" id="close2">X</a></div>
+            <div class="close"><a id="close2">X</a></div>
             <div>
                 <h2>Contacto</h2>
                 <p>Teléfono: 911 178 867 </p>
@@ -128,20 +128,17 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">Idiomas</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">Español</a>
+                                    <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/">Español</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Català</a>
+                                    <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/cat">Català</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">English</a>
+                                    <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/eng">English</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-success" type="button">Login</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -150,27 +147,23 @@
     <main>
 
         <div class="preguntas">
-            <h2 class="preg" id="preg_1" onclick="muestraOculta('1')">Crear una cuenta
+            <h2 class="preg" id="preg_1" onclick="muestraOculta('1')">¿Puedo crear una cuenta?
                 <span class="fas fa-caret-right"></span>
             </h2>
-            <div class="resp" id="resp_1" style="display: none;">
-                <p><strong>Siga estos pasos para crear una cuenta en nuestra pagina web</strong></p>
-                <p>1. Pulsa el boton Login</p>
-                <p>2. Selecciona la opción Crear cuenta</p>
-                <p>3. Introduce tu dirección de correo electrónico, contraseña, nombre y apellidos.</p>
-                <p>4. Acepta los Términos y condiciones y la Política de privacidad.</p>
-                <p>5. Selecciona Crear cuenta.</p>
-            </div>
+            <p class="resp" id="resp_1" style="display: none;">
+                <strong>Por el momento no es posible. </strong>
+                Suscríbase a nuestro newsletter para recibir las últimas noticias de nuestra web.
+            </p>
             
             <br>
 
             <h2 class="preg" id="preg_2" onclick="muestraOculta('2')">No encuentro el hotel que busco
                 <span class="fas fa-caret-right"></span>
             </h2>
-            <p class="resp" id="resp_2" style="display: none;">Esta pagina web solo trabaja con hoteles situados en
-                la isla de Mallorca, por lo que si busca un hotel situado fuera de esta isla no encontrara
-                información. Por otro lado, esta pagina esta en desarrollo por lo que es posible que falte
-                algunos hoteles. Esto se ira corrigiendo con el tiempo. 
+            <p class="resp" id="resp_2" style="display: none;">Esta página web solo trabaja con hoteles situados en
+                la isla de Mallorca, por lo que si busca un hotel situado fuera de esta isla no encontrará
+                información. Por otro lado, esta pagina está en desarrollo, por lo que es posible que falten
+                algunos hoteles. Esto se irá corrigiendo con el tiempo. 
             </p>
 
             <br>
@@ -178,15 +171,13 @@
             <h2 class="preg" id="preg_3" onclick="muestraOculta('3')">No puedo ver los comentarios de un hotel
                 <span class="fas fa-caret-right"></span>
             </h2>
-            <p class="resp" id="resp_3" style="display: none;">Si esto sucede, es posible que el hotel no tenga
-                comentarios,
-                o la web esta experimentando una actualización de su contenido, por lo que se le pide a los usuarios
-                que tengan paciencia mientras esto sucede.
+            <p class="resp" id="resp_3" style="display: none;">Esto se puede deber a que el hotel aún no tenga comentarios 
+                o, por el contrario, un problema de conectividad. Espere unos minutos y vuelva a intentarlo.
             </p>
 
             <br>
 
-            <h2 class="preg" id="preg_4" onclick="muestraOculta('4')">¿Cual es el precio de cada hotel?
+            <h2 class="preg" id="preg_4" onclick="muestraOculta('4')">¿Cómo puedo saber los precios?
                 <span class="fas fa-caret-right"></span>
             </h2>
             <p class="resp" id="resp_4" style="display: none;">En esta pagina no se muestran los precios exactos de cada
@@ -197,14 +188,66 @@
 
             <br>
 
-            <h2 class="preg" id="preg_5" onclick="muestraOculta('5')">¿Como puedo ver los precios exactos de cada
-                uno de los hoteles?
+            <h2 class="preg" id="preg_5" onclick="muestraOculta('5')">¿Cuáles son los rangos de precio?
                 <span class="fas fa-caret-right"></span>
             </h2>
-            <p class="resp" id="resp_5" style="display: none;">Para ello deberá acceder a la pagina web del hotel que
+            <div class="resp" id="resp_5" style="display: none;">
+                Nuestros rangos de precio son los siguientes:
+                <p><strong>1 Estrella</strong> -> Hoteles con habitaciones de más de 200 euros la noche</p>
+                <p><strong>2 Estrellas</strong> -> Hoteles con habitaciones de entre 100 y 200 euros la noche</p>
+                <p><strong>3 Estrellas</strong> -> Hoteles con habitaciones de entre 60 y 100 euros la noche</p>
+                <p><strong>4 Estrellas</strong> -> Hoteles con habitaciones de entre 40 y 60 euros la noche</p>
+                <p><strong>5 Estrellas</strong> -> Hoteles con habitaciones de menos de 40 euros la noche</p>
+            </div>
+
+            <br>
+
+            <h2 class="preg" id="preg_6" onclick="muestraOculta('6')">¿Es posible ver el precio exacto para un hotel?
+                <span class="fas fa-caret-right"></span>
+            </h2>
+            <p class="resp" id="resp_6" style="display: none;">Para ello deberá acceder a la pagina web del hotel que
                 desee
                 consultar dicha información. Podrá encontrar un acceso a la web de cada uno de los hoteles en su
                 ventana informativa correspondiente.
+            </p>
+
+            <br>
+
+            <h2 class="preg" id="preg_7" onclick="muestraOculta('7')">¿Puedo añadir comentarios a los hoteles?
+                <span class="fas fa-caret-right"></span>
+            </h2>
+            <p class="resp" id="resp_7" style="display: none;">
+                Sí, todos los usuarios de esta web pueden dejar una valoración con su nombre y comentario.
+            </p>
+
+            <br>
+
+            <h2 class="preg" id="preg_8" onclick="muestraOculta('8')">Hay cierta información del hotel que no es correcta
+                <span class="fas fa-caret-right"></span>
+            </h2>
+            <p class="resp" id="resp_8" style="display: none;">
+                Si crees que nuestra web muestra alguna dato erróneo, por favor ponte en contacto con nosotros a través del 
+                número de teléfono 911 178 867 o a través del email info@hotelesmallorca.com.
+            </p>
+
+            <br>
+
+            <h2 class="preg" id="preg_9" onclick="muestraOculta('9')">¿Puedo solicitar que se añada un hotel?
+                <span class="fas fa-caret-right"></span>
+            </h2>
+            <p class="resp" id="resp_9" style="display: none;">
+                Sí, para ello ponte en contacto con nosotros a través del número de teléfono 911 178 867 o
+                a través del email info@hotelesmallorca.com.
+            </p>
+
+            <br>
+
+            <h2 class="preg" id="preg_10" onclick="muestraOculta('10')">¿Por qué cuando cambio de idioma solo cambia de idioma la página principal?
+                <span class="fas fa-caret-right"></span>
+            </h2>
+            <p class="resp" id="resp_10" style="display: none;">
+                <strong>Ahora mismo solo disponemos de traducción para la página principal. </strong>
+                Suscríbase a nuestro newsletter para recibir las últimas noticias de nuestra web.
             </p>
         </div>
 
