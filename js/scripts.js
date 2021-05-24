@@ -51,8 +51,8 @@ function abrirpopup(nom, media, desc, precio, valoracion, estrellas, ciudad, lon
     var texto =
         `<div>
             <h2 align="center">`+ nom + `</h2>
-            <hr style="margin:1rem 0;width:98%">
             <div class="desc">
+            <hr style="margin:1rem 0;width:98%">
                 <table>
                     <tr>
                         <td id="carrusel" style="width:40%">
