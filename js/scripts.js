@@ -56,7 +56,7 @@ function abrirpopup(nom, media, desc, precio, valoracion, estrellas, ciudad, lon
                     <tr>
                         <td id="carrusel" style="width:40%">
                         </td>
-                        <td>
+                        <td id="datos">
                             <p>`+ desc + `</p>
                             <table>
                                 <tr>
@@ -64,7 +64,7 @@ function abrirpopup(nom, media, desc, precio, valoracion, estrellas, ciudad, lon
                                         <label>Precio: </label>
                                         `+ tprecio + `
                                     </td>
-                                    <td style="padding-right:10%; padding-left:10%">
+                                    <td style="padding-right:7%; padding-left:7%">
                                         <label>Valoración: </label>
                                         `+ tval + `
                                     </td>
@@ -146,16 +146,16 @@ var coment = `<div class="comentario">
   </div>`;
 var coment2 = "";
 
-function ponercomentarios (){
+function ponercomentarios() {
     var nom = document.getElementById("nombre").value;
     var val = document.getElementById("valoracion").value;
     var com = document.getElementById("comentario").value;
 
-    if (nom != ""  && com != "") {
+    if (nom != "" && com != "") {
         var coment3 = `<div class="comentario">
-            <h2 align="center">`+nom+`</h2>
-            <p style="margin:10px">Valoración: `+val+`</p>
-            <p style="margin:10px">`+com+`</p>
+            <h2 align="center">`+ nom + `</h2>
+            <p style="margin:10px">Valoración: `+ val + `</p>
+            <p style="margin:10px">`+ com + `</p>
         </div>` + coment2;
         coment2 = coment3;
 
@@ -262,13 +262,11 @@ async function printHoteles() {
                             <br>
                             <label>Categoria: </label>`+ testrellas + `
                             <br><br>
-                            <div class="btn-group botones">
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="abrirpopup('${hotel.nom}',['${hotel.icones[0]}', '${hotel.imatges[0]}', '${hotel.videos[0].url}'],'${hotel.descripcio}','${hotel.preu.import}', '${hotel.puntuacio}', 
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="abrirpopup('${hotel.nom}',['${hotel.icones[0]}', '${hotel.imatges[0]}', '${hotel.videos[0].url}'],'${hotel.descripcio}','${hotel.preu.import}', '${hotel.puntuacio}', 
                                 '${hotel.dadesPropies.estrellas}', '${hotel.geoposicionament1.city}','${hotel.geoposicionament1.long}', '${hotel.geoposicionament1.lat}', 
                                 '${hotel.contacte.xarxes.twitter}', '${hotel.contacte.xarxes.facebook}', '${hotel.contacte.xarxes.instagram}', '${hotel.contacte.xarxes.web}', 
                                 '${hotel.contacte.telf}', '${hotel.contacte.email}')">Información</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="abrircomentarios('${hotel.nom}')">Comentarios</button>
-                            </div>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="abrircomentarios('${hotel.nom}')">Comentarios</button>
                         </td>
                     </tr>
                 </table>
@@ -411,6 +409,7 @@ function filtrarBusqueda(filters) {
 
     for (var i = 0; i < rElems.length; i++) {
         var el = rElems[i];
+        console.log(el.className);
         //Zonas
         if (filters.zonas.length > 0) {
             var isHidden = true;
@@ -514,19 +513,19 @@ function filtrarBusqueda(filters) {
 function getPopup(numhotel) {
     switch (numhotel) {
         case 1:
-            abrirpopup("Sant Francesc Hotel Singular", "img/logo1.jpg",
+            abrirpopup("Sant Francesc Hotel Singular", ["https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/35/81/3581670_v12.jpeg", "https://mk0abcmallorca71dgvy.kinstacdn.com/wp-content/uploads/2015/09/Cuidada-decoracion.jpg", "https://www.youtube.com/embed/L_O0KnUD4hI"], 
                 "Sant Francesc Hotel Singular Palma es un Hotel boutique de 5 estrellas, ubicado en una casa señorial neoclásica del S.XIX, en pleno casco antiguo de la ciudad de Palma de Mallorca. Cuenta con 42 habitaciones y suites. En el interior se descubre una decoración cálida y sofisticada. La situación del hotel lo hace ideal para disfrutar la ciudad a pie, así como el resto de la isla de Mallorca.",
                 1, 5, 5, "Palma", 2.652615329251165, 39.56900350156376, "https://twitter.com/hotelstfrancesc", "https://www.facebook.com/hotelsantfrancesc", "https://www.instagram.com/hotelsantfrancesc", "https://www.hotelsantfrancesc.com",
                 971495000, "INFO@HOTELSANTFRANCESC.COM");
             break;
         case 2:
-            abrirpopup("Boutique Hotel Can Alomar", "img/logo2.jpg",
+            abrirpopup("Boutique Hotel Can Alomar", ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/47/79/32/luxury-boutique-hotel.jpg?w=1200&h=-1&s=1", "https://www.boutiquehotelcanalomar.com/backoffice/uploadImages/HOME_02.jpg", "https://www.youtube.com/embed/CgtaXEfl83U"],
                 "El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo nombre, una antigua casa señorial urbana, catalogada y protegida, de interés histórico, artístico y arquitectónico y gran valor Patrimonial. El hotel dispone de 16 amplias y luminosas habitaciones decoradas dentro de un diseño moderno, un restaurante gastronómico de cocina fusión mediterránea, japonesa, peruana y una terraza solarium para uso exclusivo de los huéspedes del hotel.",
                 1, 5, 5, "Palma", 2.646164755620548, 39.57003181501989, "https://twitter.com/hotelcanalomar", "https://www.facebook.com/boutiquehotelcanalomar", "https://www.instagram.com/itmallorcahotels", "https://www.boutiquehotelcanalomar.com",
                 871592002, "info@boutiquehotelcanalomar.com");
             break;
         case 3:
-            abrirpopup("Hipotels Playa de Palma Palace", "img/logo3.jpg",
+            abrirpopup("Hipotels Playa de Palma Palace", ["https://www.hipotels.com/content/imgsxml/panel_slideinterior/playadepalmapalace-portada1237.jpg", "https://www.detectahotel.com/himg/74/63/a7/arbisoftimages-3652772-hipotels_playadepalmapalace_bar_spa1-image.jpg", "https://www.youtube.com/embed/plh8n0Jrs6Q"],
                 "El Hipotels Playa de Palma Palace es un espectacular hotel de 5 estrellas ubicado en Playa de Palma, Mallorca. Un hotel de nueva construcción ideal para vacaciones o negocios, con un lujoso spa y precios especiales para jugar al golf. Un interior moderno y elegante con habitaciones amplias de diseño, que te ofrecerán unas vacaciones perfectas con toda la oferta de ocio complementaria de Playa de Palma. No puedes perderte visitar la zona chill out en el último piso del hotel, nuestro Heaven Rooftop Bar con unas vistas únicas a la Bahía de Palma y una puesta de sol que, acompañada de un refrescante cóctel y música en directo, se convertirá en uno de los momentos inolvidables de tus vacaciones.",
                 2, 5, 5, "Palma", 2.749959252355224, 39.514941917153024, "https://twitter.com/hipotels", "https://www.facebook.com/Hipotels", "https://www.instagram.com/hipotels", "https://www.hipotels.com/hoteles/playadepalmapalace",
                 971260528, "playadepalmapalace@hipotels.com");
@@ -566,7 +565,7 @@ function getMedia(media) {
             text +=
                 `<div class="carousel-item">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="`+media[i]+`" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="`+ media[i] + `" allowfullscreen></iframe>
                     </div>
                 </div >
                 `;

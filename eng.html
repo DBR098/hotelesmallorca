@@ -32,18 +32,25 @@
 
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
-
+    
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://kit.fontawesome.com/ddbe9af287.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </head>
 
 <body>
 
     <div id="popup" style="display: none;">
         <div class="content-popup">
-            <div class="close"><a href="#" id="close">X</a></div>
+            <div class="close"><a id="close">X</a></div>
             <div>
                 <h2> Who we are </h2>
-                <p> Hotels Mallorca is a company founded in 2020 with the aim of helping the local hospitality industry.
+                <p> Hoteles Mallorca is a company founded in 2020 with the aim of helping the local hospitality industry.
                 </p>
                 <p> Here you will find the hotel you are looking for among a large selection of hotels. </p>
                 <div style="float:left; width:100%;">
@@ -55,11 +62,10 @@
 
     <div id="popup2" style="display: none;">
         <div class="content-popup">
-            <div class="close"><a href="#" id="close2">X</a></div>
+            <div class="close"><a id="close2">X</a></div>
             <div>
                 <h2>Contact</h2>
                 <p>Phone number: 911 178 867 </p>
-
                 <hr class="dropdown-divider">
                 <p>Our representatives are at your disposal every day from 08:00 to 22:00.
                 </p>
@@ -106,28 +112,27 @@
                 <div class="collapse navbar-collapse" id="mob-navbar">
                     <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://hotelesmallorca.netlify.app/hoteles">Hoteles</a>
+                            <a class="nav-link" href="https://hotelesmallorca.netlify.app/hoteles">Hotels</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Ayuda</a>
+                                data-bs-toggle="dropdown" aria-expanded="false">Help</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
                                     <a class="dropdown-item"
-                                        href="https://hotelesmallorca.netlify.com/preguntas-frecuentes">Preguntas
-                                        frecuentes</a>
+                                        href="https://hotelesmallorca.netlify.com/preguntas-frecuentes">FAQ</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#" id="open">Quienes somos</a>
+                                    <a class="dropdown-item" href="#" id="open">Who we are</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#" id="open2">Contacto</a>
+                                    <a class="dropdown-item" href="#" id="open2">Contact</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Idiomas</a>
+                                data-bs-toggle="dropdown" aria-expanded="false">Languages</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
                                     <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/">Español</a>
@@ -146,6 +151,18 @@
         </nav>
     </header>
 
+    <div id="popup-hotel" style="display: none;">
+        <div class="content-popup-hotel">
+            <div class="close">
+                <a id="close-hotel" onclick="cerrarpopup()">X</a>
+            </div>
+            <div class="panel-hotel">
+                <fieldset id="codigo"></fieldset>
+            </div>
+
+        </div>
+    </div>
+
     <main>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -156,11 +173,6 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
                     <div class="container">
                         <div class="carousel-caption text-start">
                             <h1> Best rated hotels </h1>
@@ -170,11 +182,6 @@
                     <img src="img/1.jpg">
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
                     <div class="container">
                         <div class="carousel-caption">
                             <h1> Hotels by price </h1>
@@ -184,11 +191,6 @@
                     <img src="img/2.jpg">
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
-
                     <div class="container">
                         <div class="carousel-caption text-end">
                             <h1> All Inclusive Hotels </h1>
@@ -227,7 +229,7 @@
                         a warm and sophisticated decoration is discovered. The location of the hotel is ideal to
                         enjoy the city on foot, as well as the rest of the island of Mallorca.</p>
                     <br />
-                    <p><a class="btn btn-secondary" href="http://hotelesmallorca.netlify.app/prueba">View hotel
+                    <p><a class="btn btn-secondary" onclick="getPopup(1)">View hotel
                             &raquo;</a></p>
                 </div>
                 <!-- /.col-lg-4 -->
@@ -242,7 +244,7 @@
                         a gastronomic restaurant serving Mediterranean, Japanese, Peruvian fusion and a terrace
                         solarium for the exclusive use of guests
                         of the hotel.</p>
-                    <p><a class="btn btn-secondary" href="#">View hotel &raquo;</a></p>
+                    <p><a class="btn btn-secondary" onclick="getPopup(2)" >View hotel &raquo;</a></p>
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
@@ -260,7 +262,7 @@
                         of Playa de Palma and a sunset that, accompanied by a refreshing cocktail and music in
                         direct, will become one
                         of the unforgettable moments of your vacation. </p>
-                    <p> <a class="btn btn-secondary" href="#"> View hotel &raquo;</a> </p>
+                    <p> <a class="btn btn-secondary" onclick="getPopup(3)" > View hotel &raquo;</a> </p>
                 </div>
                 <!-- /.col-lg-4 -->
             </div>
@@ -270,12 +272,14 @@
 
             <hr class="featurette-divider">
 
+
+
             <div class="row featurette">
                 <div class="col-md-7">
                     <h2 class="featurette-heading"> Find the best hotels. <span class="text-muted"> We have
-                            an extensive and up-to-date list. </span> </h2>
-                    <p class="lead"> Here you can see all the hotels around the island of Mallorca. Find the
-                        perfect hotel within the great variety we have. </p>
+                        an extensive and up-to-date list. </span> </h2>
+                <p class="lead"> Here you can see all the hotels around the island of Mallorca. Find the
+                    perfect hotel within the great variety we have. </p>
                 </div>
                 <div class="col-md-5">
                     <img src='img/5.jpg'>
@@ -287,10 +291,10 @@
             <div class="row featurette">
                 <div class="col-md-7 order-md-2">
                     <h2 class="featurette-heading"> Security Assurance <span class="text-muted"> We're adaptted to the
-                            global situation. </span>
-                    </h2>
-                    <p class="lead"> The hotels shown on this web portal comply with all health measures
-                        necessary to maintain the safety of its customers. </p>
+                        global situation. </span>
+                </h2>
+                <p class="lead"> The hotels shown on this web portal comply with all health measures
+                    necessary to maintain the safety of its customers. </p>
                 </div>
                 <div class="col-md-5">
                     <img src='img/4.jpg'>
@@ -298,6 +302,7 @@
             </div>
 
             <hr class="featurette-divider">
+
             <!-- /END THE FEATURETTES -->
 
         </div>
@@ -306,15 +311,9 @@
         <!-- FOOTER -->
         <footer class="container">
             <p class="float-end"><a href="#">Back to top</a></p>
-            <p>&copy; 2000–2021 Vini11BalondeOroCompany, Inc. &middot; <a
-                    href="https://hotelesmallorca.netlify.com/privacy">Privacy</a> &middot; <a
-                    href="https://hotelesmallorca.netlify.com/terms">Terms</a></p>
+            <p>Web diseñada por Denny Barreiro y Carlos Suárez &middot; 2000–2021 Vini11BalondeOroCompany, Inc.&copy;</p>
         </footer>
     </main>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-
 </body>
 
 </html>

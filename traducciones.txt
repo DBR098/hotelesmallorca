@@ -1,0 +1,181 @@
+INGLES:
+
+<h2> Who we are </h2>
+                <p> Hotels Mallorca is a company founded in 2020 with the aim of helping the local hospitality industry.
+                </p>
+                <p> Here you will find the hotel you are looking for among a large selection of hotels. </p>
+
+<h2>Contact</h2>
+                <p>Phone number: 911 178 867 </p>
+
+                <hr class="dropdown-divider">
+                <p>Our representatives are at your disposal every day from 08:00 to 22:00.
+                </p>
+                <p>Standard tariff</p>
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Help</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hotelesmallorca.netlify.com/preguntas-frecuentes">FAQ</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="open">Who we are</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="open2">Contact</a>
+                                </li>
+                            </ul>
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Languages</a>
+
+<h1> Best rated hotels </h1>
+                            <p> Find the best rated hotels among users </p>
+
+<h1> Hotels by price </h1>
+                            <p> Find the hotels that best fit your budget </p>
+
+<h1> All Inclusive Hotels </h1>
+                            <p> Forget about worrying about finding restaurants </p>
+
+<h2>Sant Francesc Hotel Singular</h2>
+                    <p>Sant Francesc Hotel Singular Palma is a 5 star boutique hotel, located in a
+                        Neoclassical manor house from the 19th century, in the heart of the old town of Palma de
+                        Mallorca. It counts
+                        with 42 rooms and suites. Inside,
+                        a warm and sophisticated decoration is discovered. The location of the hotel is ideal to
+                        enjoy the city on foot, as well as the rest of the island of Mallorca.</p>
+                    <br />
+                    <p><a class="btn btn-secondary" onclick="getPopup(1)">View hotel
+                            &raquo;</a></p>
+
+<h2>Boutique Hotel Can Alomar</h2>
+                    <p>The 5-star Boutique Hotel Can Alomar is located in the building of the same name.
+                        An old urban manor house, cataloged and protected, of historical, artistic and
+                        architectural interest and great heritage value.
+                        The hotel has 16 spacious and bright rooms decorated in a modern design.
+                        a gastronomic restaurant serving Mediterranean, Japanese, Peruvian fusion and a terrace
+                        solarium for the exclusive use of guests
+                        of the hotel.</p>
+                    <p><a class="btn btn-secondary" onclick="getPopup(2)" >View hotel &raquo;</a></p>
+
+<h2>Hipotels Playa de Palma Palace</h2>
+                    <p> The Hipotels Playa de Palma Palace is a spectacular 5 star hotel located on Playa de Palma,
+                        Mallorca.
+                        A newly built hotel ideal for holidays or business, with a luxurious spa and special prices for
+                        playing golf.
+                        A modern and elegant interior with spacious design rooms, which will offer you some
+                        perfect vacation with
+                        all the complementary leisure offer of Playa de Palma.
+                        You can't miss visiting the chill out area on the top floor of the hotel, our Heaven Rooftop
+                        Bar with unique views
+                        of Playa de Palma and a sunset that, accompanied by a refreshing cocktail and music in
+                        direct, will become one
+                        of the unforgettable moments of your vacation. </p>
+                    <p> <a class="btn btn-secondary" onclick="getPopup(3)" > View hotel &raquo;</a> </p>
+
+<h2 class="featurette-heading"> Find the best hotels. <span class="text-muted"> We have
+                            an extensive and up-to-date list. </span> </h2>
+                    <p class="lead"> Here you can see all the hotels around the island of Mallorca. Find the
+                        perfect hotel within the great variety we have. </p>
+
+<h2 class="featurette-heading"> Security Assurance <span class="text-muted"> We're adaptted to the
+                            global situation. </span>
+                    </h2>
+                    <p class="lead"> The hotels shown on this web portal comply with all health measures
+                        necessary to maintain the safety of its customers. </p>
+
+CATALANG:
+
+<h2>Qui som</h2>
+                <p>Hotels Mallorca és una empresa fundada el 2020 amb l'objectiu d'ajudar a l'hostaleria local.</p>
+                <p>Aquí podràs trobar l'hotel que cerques entre una gran selecció d'hotels.</p>
+
+<h2>Contacte</h2>
+                <p>Telèfon: 911 178 867 </p>
+
+                <hr class="dropdown-divider">
+                <p>Els nostres representants estan a la teva disposició tots els dies des de les 08:00 fins a les 22:00.</p>
+                <p>Tarifa estàndard</p>
+
+<li>
+                                    <a class="dropdown-item"
+                                        href="https://hotelesmallorca.netlify.com/preguntas-frecuentes">Preguntes
+                                        freqüents</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="open">Qui som</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="open2">Contacte</a>
+                                </li>
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Idiomes</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/">Español</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/cat">Català</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://hotelesmallorca.netlify.app/eng">English</a>
+                                </li>
+
+<div class="carousel-caption text-start">
+                            <h1>Hotels amb millor valoración</h1>
+                            <p>Troba els hotels millor valoració entre els usuaris</p>
+                        </div>
+
+<div class="carousel-caption">
+                            <h1>Hotels per preus</h1>
+                            <p>Troba els hotels que més s'ajustin al teu pressupost</p>
+                        </div>
+
+<h1>Hotels amb tot inclòs</h1>
+                            <p>Oblida't de la preocupació d'haver de cercar restaurants</p>
+
+<h2>Sant Francesc Hotel Singular</h2>
+                    <p>Sant Francesc Hotel Singular Palma és un Hotel boutique de 5 estrelles, ubicat en una casa
+                        senyorial neoclàssica de del S.XIX, en ple nucli antic de la ciutat de Palma de Mallorca. Compta
+                        amb 42 habitacions i suites. A l'interior
+                        es descobreix una decoració càlida i sofisticada. La situació de l'hotel és ideal per a
+                        gaudir la ciutat a peu, així com de la resta de l'illa de Mallorca.</p>
+
+<h2>Boutique Hotel Can Alomar</h2>
+                    <p>El Boutique Hotel Can Alomar de 5 estrelles es troba situat a l'edifici de el mateix nom,
+                        una antiga casa senyorial urbana, catalogada i protegida, d'interès històric, artístic i
+                        arquitectònic i gran valor patrimonial.
+                        L'hotel disposa de 16 àmplies i lluminoses habitacions decorades dins d'un disseny modern,
+                        un restaurant gastronòmic de cuina fusió mediterrània, japonesa, peruana i una terrassa
+                        solàrium per a ús exclusiu dels hostes
+                        de l'hotel.</p>
+
+<h2>Hipotels Playa de Palma Palace</h2>
+                    <p>L' Hipotels Playa de Palma Palace és un espectacular hotel de 5 estrelles situat a la Platja de
+                        Palma, Mallorca.
+                        Un hotel de nova construcció ideal per a vacances o negocis, amb un luxós spa i preus
+                        especials per jugar a golf.
+                        Un interior modern i elegant amb habitacions àmplies de disseny, que t' oferiran unes
+                        vacances perfectes amb
+                        tota l'oferta d'oci complementària de la Platja de Palma.
+                        No pots perdre't visitar la zona chill out a l'últim pis de l'hotel, el nostre Heaven Rooftop
+                        Bar amb unes vistes úniques
+                        a la Badia de Palma i una posta de sol que, acompanyada d'un refrescant còctel i música en
+                        directe, es convertirà en un
+                        dels moments inoblidables de les teves vacances.</p>
+
+<h2 class="featurette-heading">Troba els millors hotels. <span class="text-muted">Comptem amb
+                        una llista àmplia i actualitzada.</span></h2>
+                    <p class="lead">Aquí podràs veure tots els hotels a l'voltant de l'illa de Mallorca. Troba l'
+                        hotel perfecte dins de la gran varietat de la qual disposem.</p>
+
+<h2 class="featurette-heading">Garantia de seguretat <span class="text-muted">Ens adaptam a la
+                            situació
+                            global.</span>
+                    </h2>
+                    <p class="lead">Els hotels mostrats en aquest portal web compleixen amb totes les mesures sanitàries
+                        necessàries per mantenir la seguretat dels seus clients. </p>

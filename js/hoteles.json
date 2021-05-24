@@ -28,7 +28,7 @@
         "videos": [
             {
                 "tipus": "youtube#video",
-                "url": "https://www.youtube.com/watch?v=kwUIaYRwMeU"
+                "url": "https://www.youtube.com/embed/L_O0KnUD4hI"
             }
         ],
         "geoposicionament1": {
@@ -74,16 +74,15 @@
         },
         "puntuacio": 5,
         "icones": [
-            "data:image/jpeg;base64,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"
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/47/79/32/luxury-boutique-hotel.jpg?w=1200&h=-1&s=1"
         ],
         "imatges": [
-            "",
-            ""
+            "https://www.boutiquehotelcanalomar.com/backoffice/uploadImages/HOME_02.jpg"
         ],
         "videos": [
             {
                 "tipus": "youtube#video",
-                "url": "https://www.youtube.com/watch?v=kwUIaYRwMeU"
+                "url": "https://www.youtube.com/embed/CgtaXEfl83U"
             }
         ],
         "geoposicionament1": {
@@ -137,7 +136,7 @@
         "videos": [
             {
                 "tipus": "youtube#video",
-                "url": "https://www.youtube.com/watch?v=kwUIaYRwMeU"
+                "url": "https://www.youtube.com/embed/plh8n0Jrs6Q"
             }
         ],
         "geoposicionament1": {
@@ -453,15 +452,15 @@
         },
         "puntuacio": 4,
         "icones": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://www.oyster.com/wp-content/uploads/sites/35/2019/05/pool-v17098202-1440.jpg"
         ],
         "imatges": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://media-cdn.tripadvisor.com/media/photo-m/1280/15/9c/90/2c/the-level-pool.jpg"
         ],
         "videos": [
             {
-                "tipus": "intern",
-                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Apartamentos Niza en Paguera_360p.mp4"
+                "tipus": "youtube#video",
+                "url": "https://www.youtube.com/embed/kWpWWmK54-g"
             }
         ],
         "geoposicionament1": {
@@ -507,15 +506,15 @@
         },
         "puntuacio": 4,
         "icones": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/f0/b8/a0/caribbean-bay.jpg?w=900&h=-1&s=1"
         ],
         "imatges": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://cf.bstatic.com/images/hotel/max1280x900/194/194019742.jpg"
         ],
         "videos": [
             {
-                "tipus": "intern",
-                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Apartamentos Niza en Paguera_360p.mp4"
+                "tipus": "youtube#video",
+                "url": "https://www.youtube.com/embed/QlJB_tbeswI"
             }
         ],
         "geoposicionament1": {
@@ -561,15 +560,15 @@
         },
         "puntuacio": 4,
         "icones": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://media-cdn.tripadvisor.com/media/photo-s/13/f8/40/36/main-view-from-the-pool.jpg"
         ],
         "imatges": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://www.hciutatj.es/storage/app/uploads/public/5ac/24f/a9e/thumb_309_1800_800_0_0_auto.jpg"
         ],
         "videos": [
             {
-                "tipus": "intern",
-                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Apartamentos Niza en Paguera_360p.mp4"
+                "tipus": "youtube#video",
+                "url": "https://www.youtube.com/embed/g-P8KMdOXaw"
             }
         ],
         "geoposicionament1": {
@@ -615,15 +614,15 @@
         },
         "puntuacio": 4,
         "icones": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://cf.bstatic.com/images/hotel/max1280x900/979/97937665.jpg"
         ],
         "imatges": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://media-cdn.tripadvisor.com/media/photo-m/1280/19/f7/38/fa/massol-apartments.jpg"
         ],
         "videos": [
             {
-                "tipus": "intern",
-                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Apartamentos Niza en Paguera_360p.mp4"
+                "tipus": "youtube#video",
+                "url": "https://www.youtube.com/embed/B6bjNDivEcU"
             }
         ],
         "geoposicionament1": {
@@ -669,15 +668,15 @@
         },
         "puntuacio": 4,
         "icones": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://cf.bstatic.com/images/hotel/max1280x900/238/238735921.jpg"
         ],
         "imatges": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/ee/c1/d7/thb-sur-mallorca.jpg"
         ],
         "videos": [
             {
-                "tipus": "intern",
-                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Apartamentos Niza en Paguera_360p.mp4"
+                "tipus": "youtube#video",
+                "url": "https://www.youtube.com/embed/JW47KdL-2YA"
             }
         ],
         "geoposicionament1": {
@@ -703,109 +702,109 @@
         }
     },
     {
-        "nom": "INNER Niza Paguera",
-        "descripcio": "Los INNER Niza Paguera se encuentran en Paguera, al suroeste de la isla de Mallorca. Los estudios tienen aire acondicionado y balcón con vistas fantásticas al mar Mediterráneo.",
+        "nom": "Apartamentos Eden Village Cala Domingos",
+        "descripcio": "¿Buscas donde alojarte en Calas de Mallorca? Entonces no te pierdas Eden Village Cala Domingos, un hotel que te acerca a lo mejor de Calas de Mallorca. Las habitaciones de Cala Domingos Apartments Hotel ofrecen frigorífico y aire acondicionado, y los huéspedes pueden estar conectados con internet gratuito.",
         "tipus": "Hotel",
-        "identificador": "5",
+        "identificador": "",
         "preu": {
-            "import": "1",
-            "coment-preu": ""
+            "import": "5",
+            "coment-preu": "Hoteles por menos de 40 euros la noche"
         },
         "contacte": {
-            "telf": "971254874",
-            "email": "nizapaguera@gmail.com",
+            "telf": "971828084",
+            "email": "info@caladomingos.com",
             "xarxes": {
-                "web": "http://www.nizapaguera.com/",
+                "web": "http://www.cala-domingos.com/",
                 "facebook": "",
                 "twitter": "",
                 "instagram": ""
             }
         },
-        "puntuacio": 2,
+        "puntuacio": 4,
         "icones": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://photos.hotelbeds.com/giata/original/00/002642/002642a_hb_a_003.jpg"
         ],
         "imatges": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://www.viajeselcorteingles.es/imagenes/tm/europa/espana/baleares-islas/pmi-mallorca/pmiml-calas-de-mallorca/h10000790/mdm-2016-calesdemallorca-caladomingos-dsc-2407b_x.jpg"
         ],
         "videos": [
             {
-                "tipus": "intern",
-                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Apartamentos Niza en Paguera_360p.mp4"
+                "tipus": "youtube#video",
+                "url": "https://www.youtube.com/embed/EWQ3DKpcspE"
             }
         ],
         "geoposicionament1": {
-            "address": "Niza, 9,",
-            "lat": 39.5375,
-            "long": 3.12046,
-            "city": "Andratx",
+            "address": "C/ Pedro, s/nº - Urb. Cala Domingos",
+            "lat": 39.46053361267265, 
+            "long": 3.275059813419649,
+            "city": "Portocolom",
             "Country": "España",
-            "zip": "2.4481"
+            "zip": "07689"
         },
         "dadesPropies": {
-            "estrellas": 3,
+            "estrellas": 1,
             "extras": [
                 {
-                    "todoIncluido": 1,
+                    "todoIncluido": 0,
                     "wifi": 1,
                     "suites": 0,
-                    "nevera": 1,
-                    "piscina": 0,
-                    "aparcamiento": 0
+                    "nevera": 0,
+                    "piscina": 1,
+                    "aparcamiento": 1
                 }
             ]
         }
     },
     {
-        "nom": "INNER Niza Paguera",
-        "descripcio": "Los INNER Niza Paguera se encuentran en Paguera, al suroeste de la isla de Mallorca. Los estudios tienen aire acondicionado y balcón con vistas fantásticas al mar Mediterráneo.",
+        "nom": "Hotel Es Port",
+        "descripcio": "El Hotel Es Port se encuentra a 200 metros del centro de Port de Sóller y cuenta con piscinas cubierta y al aire libre, así como un spa con bañera de hidromasaje. Ofrece conexión Wi-Fi gratuita en las zonas comunes y dispone de aparcamiento.",
         "tipus": "Hotel",
-        "identificador": "5",
+        "identificador": "",
         "preu": {
             "import": "1",
-            "coment-preu": ""
+            "coment-preu": "Hoteles de mas de 200 euros la noche"
         },
         "contacte": {
-            "telf": "971254874",
-            "email": "nizapaguera@gmail.com",
+            "telf": "971631650",
+            "email": "info@hotelesport.com",
             "xarxes": {
                 "web": "http://www.nizapaguera.com/",
-                "facebook": "",
-                "twitter": "",
-                "instagram": ""
+                "facebook": "https://www.facebook.com/hotelesport/",
+                "twitter": "https://twitter.com/hotelesport?lang=es",
+                "instagram": "https://www.instagram.com/hotelesport/"
             }
         },
-        "puntuacio": 2,
+        "puntuacio": 5,
         "icones": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://media-cdn.tripadvisor.com/media/photo-s/0d/51/54/62/fachada-hotel-es-port.jpg"
         ],
         "imatges": [
-            "https://hoteles-free-covid.herokuapp.com/images/niza.jpg"
+            "https://q-xx.bstatic.com/xdata/images/hotel/840x460/267853766.jpg?k=f4fcfeede6eb21e76f21fb74ff00238d56c6a4a78e7b4aa402056c5f85806bec&o="
         ],
         "videos": [
             {
-                "tipus": "intern",
-                "url": "https://hoteles-free-covid.herokuapp.com/videos/yt1s.com - Apartamentos Niza en Paguera_360p.mp4"
+                "tipus": "mp4",
+                "url": "//www.hotelesport.com/wp-content/uploads/2020/08/Hotel-Es-Port2020.mp4"
             }
         ],
         "geoposicionament1": {
-            "address": "Niza, 9,",
-            "lat": 39.5375,
-            "long": 3.12046,
-            "city": "Andratx",
+            "address": "Carrer d'Antoni Montis, 10",
+            "lat": 39.79670959118907, 
+            "long": 2.699461365877385,
+            "city": "Fornalutx",
             "Country": "España",
-            "zip": "2.4481"
+            "zip": "07108"
         },
         "dadesPropies": {
-            "estrellas": 3,
+            "estrellas": 4,
             "extras": [
                 {
                     "todoIncluido": 1,
                     "wifi": 1,
-                    "suites": 0,
-                    "nevera": 1,
-                    "piscina": 0,
-                    "aparcamiento": 0
+                    "suites": 1,
+                    "nevera": 0,
+                    "piscina": 1,
+                    "aparcamiento": 1
                 }
             ]
         }

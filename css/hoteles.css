@@ -151,7 +151,7 @@
 	font-size: 15px;
 }
 
-.panel-hotel, .panel-comentarios {
+.panel-comentarios {
 	width: 100%;
 	height: auto;
 	margin-bottom: 10px;
@@ -207,21 +207,12 @@ textarea{
     width: 99%;
 }
 
-.panel-hotel #imagen {
-	padding-right: 15px;
-	width: 98%;
-	height: 300px;
-}
 
-.panel-hotel p, .panel-hotel label {
-	font-size: x-large;
-}
-
-.panel-hotel table, .panel-comentarios .comentario table {
+.panel-comentarios .comentario table {
 	width: 97%;
 }
 
-#popup-hotel, #comentarios {
+#comentarios {
 	left: 0;
 	position: fixed;
 	top: 0;
@@ -230,12 +221,7 @@ textarea{
 	z-index: 1001;
 }
 
-#map{
-	width: 98%;
-	height: 260px;	
-}
-
-.content-popup-hotel, .content-comentarios {
+.content-comentarios {
 	margin: 0px auto;
 	top: 50%;
 	position: relative;
@@ -246,23 +232,6 @@ textarea{
 	background-color: #8eff949f;
 	box-shadow: 0 2px 5px #007c00;
 	transform: translateY(-50%);
-}
-
-.content-popup h2, .content-popup-hotel h2, .content-comentarios h2 {
-	color: white;
-	border-bottom: 1px solid #48484B;
-	margin-top: 0;
-	padding-bottom: 4px;
-}
-
-.content-popup-hotel .desc {
-	color: white;
-	display: block;
-	border: 0px solid red;
-	padding: 5px;
-	margin-top: 5px;
-	width: 100%;
-	overflow-y: scroll;
 }
 
 /*responsable*/
