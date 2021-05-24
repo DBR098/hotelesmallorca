@@ -126,7 +126,6 @@ function cerrarpopup() {
 
 var coment = `<div class="comentario">
     <h2 align="center">Sebastian Rodriguez</h2>
-    <hr style="margin:1rem 0;width:98%">
     <p style="margin:10px">Valoración: 2</p>
     <p style="margin:10px">Este hotel es demasiado caro para lo que ofrece. 
         No merece la pena teniendo otros hoteles más baratos y con mejores prestaciones.
@@ -135,14 +134,12 @@ var coment = `<div class="comentario">
 
   <div class="comentario">
     <h2 align="center">Paco Buyo</h2>
-    <hr style="margin:1rem 0;width:98%">
     <p style="margin:10px">Valoración: 4</p>
     <p style="margin:10px">Este hotel es de los mejores en los que he estado. Muy recomendado.</p>
   </div>
 
   <div class="comentario">
     <h2 align="center">Alfredo Hernández</h2>
-    <hr style="margin:1rem 0;width:98%">
     <p style="margin:10px">Valoración: 3</p>
     <p style="margin:10px">El hotel no esta mal, la atencion al cliente ha sido buena, pero creo que hay 
         mejores hoteles.</p>
@@ -157,7 +154,6 @@ function ponercomentarios() {
     if (nom != "" && com != "") {
         var coment3 = `<div class="comentario">
             <h2 align="center">`+ nom + `</h2>
-            <hr style="margin:1rem 0;width:98%">
             <p style="margin:10px">Valoración: `+ val + `</p>
             <p style="margin:10px">`+ com + `</p>
         </div>` + coment2;
