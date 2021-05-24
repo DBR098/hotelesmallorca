@@ -173,6 +173,7 @@ function abrircomentarios(nom) {
     var texto =
         `<div>
             <h2 align="center">`+ nom + `</h2>
+            <hr style="margin:1rem 0;width:98%">
             <div class="esc-comentario">
                 <table>
                     <tr>
