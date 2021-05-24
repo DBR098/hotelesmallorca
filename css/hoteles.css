@@ -291,6 +291,12 @@ textarea{
 	}	
 }
 
+@media (max-width: 388px) {
+	.my-container {
+		margin-top: 55px;
+	}
+}
+
 @media (min-height: 1061px) {
 	.content-popup-hotel {
 		height: auto;
