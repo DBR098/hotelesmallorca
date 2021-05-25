@@ -193,6 +193,11 @@
 	margin: 5px;
 }
 
+#nombre {
+	width: 50%;
+	margin-right: 10px;
+}
+
 .panel-comentarios #lista-comentarios {
 	width: 99%;
 	overflow-y: scroll;
