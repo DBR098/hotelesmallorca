@@ -17,7 +17,7 @@ $(document).ready(function () {
     $('#open2').on('click', function () {
         $('#popup2').fadeIn('slow');
         $('.popup-overlay').fadeIn('slow');
-        document.getElementById("overlay").style.width = "100%";
+        document.getElementById("popup-overlay").style.width = "100%";
         return false;
     });
 
