@@ -17,7 +17,7 @@ $(document).ready(function () {
     $('#open2').on('click', function () {
         $('#popup2').fadeIn('slow');
         $('.popup-overlay').fadeIn('slow');
-        document.getElementById("overlay").style.width = "100%";
+        document.getElementById("popup-overlay").style.width = "100%";
         return false;
     });
 
@@ -176,19 +176,19 @@ function abrircomentarios(nom) {
             <div class="esc-comentario">
                 <table>
                     <tr>
-                        <td>
+                        <td align="center">
                             <p>Nombre de usuario: </p>
                         </td>
 
-                        <td>
+                        <td align="center">
                             <p>Valoración del hotel: </p>
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                        <input type="text" id="nombre" size="50%">
+                        <td align="center">
+                        <input type="text" id="nombre">
                         </td>
-                        <td>
+                        <td align="center">
                             <select class="form-control" style="width:60%" id="valoracion">
                                 <option value="5">5 estrellas</option>
                                 <option value="4">4 estrellas</option>

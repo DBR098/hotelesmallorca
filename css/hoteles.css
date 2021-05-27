@@ -169,6 +169,13 @@
 	margin-bottom: 10px;
 }
 
+.panel-comentarios h2 {
+	color: white;
+	border-bottom: 1px solid #48484B;
+	margin-top: 0;
+	padding-bottom: 4px;
+}
+
 .panel-comentarios #botoncomentario {
 	background-color:#26baba;
 	padding:10px;
@@ -184,6 +191,11 @@
 	background-color: #7cdd80dc;
 	height: auto;
 	margin: 5px;
+}
+
+#nombre {
+	width: 50%;
+	margin-right: 10px;
 }
 
 .panel-comentarios #lista-comentarios {
@@ -282,6 +294,12 @@ textarea{
 	.iconos{
 		transform: scale(0.6);
 	}	
+}
+
+@media (max-width: 388px) {
+	.my-container {
+		margin-top: 55px;
+	}
 }
 
 @media (min-height: 1061px) {
