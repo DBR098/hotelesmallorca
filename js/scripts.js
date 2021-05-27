@@ -28,7 +28,7 @@ $(document).ready(function () {
     });
 });
 
-function abrirpopup(nom, media, desc, precio, valoracion, estrellas, ciudad, longitud, latitud, twitter, facebook, instagram, web, telefono, correo) {
+function abrirpopup(nom, media, desc, precio, rangoprecio, valoracion, estrellas, ciudad, longitud, latitud, twitter, facebook, instagram, web, telefono, correo) {
     let tval = pintar(valoracion);
     let tprecio = pintar(precio);
     let testrellas = pintar(estrellas);
@@ -45,31 +45,31 @@ function abrirpopup(nom, media, desc, precio, valoracion, estrellas, ciudad, lon
         ticonos += `<a href="${instagram}" target="_blank" rel="noopener noreferrer"><img src="img/instagram.svg" height=90 alt="Nicegreen circle"/></a>`
     }
     if (web != "") {
-        ticonos += `<a href="${web}" target="_blank" rel="noopener noreferrer"><img src="img/web.svg" height=70 alt="Nicegreen circle"/></a>`
+        ticonos += `<a itemprop="url" href="${web}" target="_blank" rel="noopener noreferrer"><img src="img/web.svg" height=70 alt="Nicegreen circle"/></a>`
     }
 
     var texto =
-        `<div>
-            <h2 align="center">`+ nom + `</h2>
+        `<div itemscope itemtype="https://schema.org/Hotel">
+            <h2 align="center" itemprop="name">`+ nom + `</h2>
             <div class="desc">
                 <table>
                     <tr>
                         <td id="carrusel" style="width:40%">
                         </td>
                         <td id="datos">
-                            <p>`+ desc + `</p>
+                            <p itemprop="description">`+ desc + `</p>
                             <table>
                                 <tr>
                                     <td>
-                                        <label>Precio: </label>
+                                        <label itemprop="priceRange" content="${rangoprecio}">Precio: </label>
                                         `+ tprecio + `
                                     </td>
                                     <td style="padding-right:7%; padding-left:7%">
-                                        <label>Valoración: </label>
+                                        <label itemprop="aggregateRating" content="${valoracion}" estrellas">Valoración: </label>
                                         `+ tval + `
                                     </td>
                                     <td>
-                                        <label>Categoria: </label>
+                                        <label itemprop="starRating" content="${estrellas}" estrellas">Categoria: </label>
                                         `+ testrellas + `
                                     </td>
                                 </tr>
@@ -81,7 +81,7 @@ function abrirpopup(nom, media, desc, precio, valoracion, estrellas, ciudad, lon
                 <table> 
                     <tr>
                         <td align="center" style="width:70%">
-                            <div id="map"></div>
+                            <div id="map" ></div>
                         </td>   
                         <td align="center" id="tiempo">
                             <div id="openweathermap-widget-15"></div>
@@ -96,10 +96,10 @@ function abrirpopup(nom, media, desc, precio, valoracion, estrellas, ciudad, lon
                 <table> 
                     <tr>
                         <td align="center">
-                            <p>Telefono de contacto: ${telefono}</p>
+                            <p itemprop="telephone">Telefono de contacto: ${telefono}</p>
                         </td>
                         <td align="center">
-                            <p>Correo electronico: <a type="email" href="mailto:${correo}">${correo}</a></p>
+                            <p>Correo electronico: <a itemprop="email" type="email" href="mailto:${correo}">${correo}</a></p>
                         </td>
                     </tr>
                 </table>
@@ -171,8 +171,8 @@ function ponercomentarios() {
 
 function abrircomentarios(nom) {
     var texto =
-        `<div>
-            <h2 align="center">`+ nom + `</h2>
+        `<div itemscope itemtype="https://schema.org/Hotel">>
+            <h2 align="center" itemprop="name">`+ nom + `</h2>
             <div class="esc-comentario">
                 <table>
                     <tr>
@@ -248,24 +248,23 @@ async function printHoteles() {
         let testrellas = pintar(hotel.dadesPropies.estrellas);
         let htmlSegment =
             crearDivHotel(hotel.geoposicionament1.city, hotel.preu.import, hotel.dadesPropies.estrellas, hotel.puntuacio, hotel.dadesPropies.extras) + `>
-                <table class="hotel">
+                <table class="hotel" itemscope itemtype="https://schema.org/Hotel">
                     <tr>
                         <td style="width:40%">
-                            <img src="${hotel.icones[0]}">
+                            <img itemprop="image" src="${hotel.icones[0]}">
                         </td>
                         <td>
-                            <h2>${hotel.nom}</h2>
+                            <h2 itemprop="name">${hotel.nom}</h2>
                             <br>
-                            <label for="input-3" class="control-label">Precio: </label>`+ tprecio + `
+                            <label itemprop="priceRange" content="${hotel.preu.coment_preu}" for="input-3" class="control-label">Precio: </label>`+ tprecio + `
                             <br>
-                            <label for="input-3" class="control-label">Valoración: </label>`+ tval + `
+                            <label itemprop="aggregateRating" content="${hotel.puntuacio} estrellas" for="input-3" class="control-label">Valoración: </label>`+ tval + `
                             <br>
-                            <label>Categoria: </label>`+ testrellas + `
+                            <label itemprop="starRating" content="${hotel.dadesPropies.estrellas} estrellas">Categoria: </label>`+ testrellas + `
                             <br><br>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="abrirpopup('${hotel.nom}',['${hotel.icones[0]}', '${hotel.imatges[0]}', '${hotel.videos[0].url}'],'${hotel.descripcio}','${hotel.preu.import}', '${hotel.puntuacio}', 
-                                '${hotel.dadesPropies.estrellas}', '${hotel.geoposicionament1.city}','${hotel.geoposicionament1.long}', '${hotel.geoposicionament1.lat}', 
-                                '${hotel.contacte.xarxes.twitter}', '${hotel.contacte.xarxes.facebook}', '${hotel.contacte.xarxes.instagram}', '${hotel.contacte.xarxes.web}', 
-                                '${hotel.contacte.telf}', '${hotel.contacte.email}')">Información</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="abrirpopup('${hotel.nom}',['${hotel.icones[0]}', '${hotel.imatges[0]}', '${hotel.videos[0].url}'],'${hotel.descripcio}','${hotel.preu.import}','${hotel.preu.coment_preu}',
+                            '${hotel.puntuacio}', '${hotel.dadesPropies.estrellas}', '${hotel.geoposicionament1.city}','${hotel.geoposicionament1.long}', '${hotel.geoposicionament1.lat}', '${hotel.contacte.xarxes.twitter}', '${hotel.contacte.xarxes.facebook}', 
+                            '${hotel.contacte.xarxes.instagram}', '${hotel.contacte.xarxes.web}', '${hotel.contacte.telf}', '${hotel.contacte.email}')">Información</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="abrircomentarios('${hotel.nom}')">Comentarios</button>
                         </td>
                     </tr>
@@ -515,19 +514,19 @@ function getPopup(numhotel) {
         case 1:
             abrirpopup("Sant Francesc Hotel Singular", ["https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/35/81/3581670_v12.jpeg", "https://mk0abcmallorca71dgvy.kinstacdn.com/wp-content/uploads/2015/09/Cuidada-decoracion.jpg", "https://www.youtube.com/embed/L_O0KnUD4hI"], 
                 "Sant Francesc Hotel Singular Palma es un Hotel boutique de 5 estrellas, ubicado en una casa señorial neoclásica del S.XIX, en pleno casco antiguo de la ciudad de Palma de Mallorca. Cuenta con 42 habitaciones y suites. En el interior se descubre una decoración cálida y sofisticada. La situación del hotel lo hace ideal para disfrutar la ciudad a pie, así como el resto de la isla de Mallorca.",
-                1, 5, 5, "Palma", 2.652615329251165, 39.56900350156376, "https://twitter.com/hotelstfrancesc", "https://www.facebook.com/hotelsantfrancesc", "https://www.instagram.com/hotelsantfrancesc", "https://www.hotelsantfrancesc.com",
+                1, "+200€", 5, 5, "Palma", 2.652615329251165, 39.56900350156376, "https://twitter.com/hotelstfrancesc", "https://www.facebook.com/hotelsantfrancesc", "https://www.instagram.com/hotelsantfrancesc", "https://www.hotelsantfrancesc.com",
                 971495000, "INFO@HOTELSANTFRANCESC.COM");
             break;
         case 2:
             abrirpopup("Boutique Hotel Can Alomar", ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/47/79/32/luxury-boutique-hotel.jpg?w=1200&h=-1&s=1", "https://www.boutiquehotelcanalomar.com/backoffice/uploadImages/HOME_02.jpg", "https://www.youtube.com/embed/CgtaXEfl83U"],
                 "El Boutique Hotel Can Alomar de 5 estrellas se encuentra ubicado en el edificio del mismo nombre, una antigua casa señorial urbana, catalogada y protegida, de interés histórico, artístico y arquitectónico y gran valor Patrimonial. El hotel dispone de 16 amplias y luminosas habitaciones decoradas dentro de un diseño moderno, un restaurante gastronómico de cocina fusión mediterránea, japonesa, peruana y una terraza solarium para uso exclusivo de los huéspedes del hotel.",
-                1, 5, 5, "Palma", 2.646164755620548, 39.57003181501989, "https://twitter.com/hotelcanalomar", "https://www.facebook.com/boutiquehotelcanalomar", "https://www.instagram.com/itmallorcahotels", "https://www.boutiquehotelcanalomar.com",
+                1, "+200€", 5, 5, "Palma", 2.646164755620548, 39.57003181501989, "https://twitter.com/hotelcanalomar", "https://www.facebook.com/boutiquehotelcanalomar", "https://www.instagram.com/itmallorcahotels", "https://www.boutiquehotelcanalomar.com",
                 871592002, "info@boutiquehotelcanalomar.com");
             break;
         case 3:
             abrirpopup("Hipotels Playa de Palma Palace", ["https://www.hipotels.com/content/imgsxml/panel_slideinterior/playadepalmapalace-portada1237.jpg", "https://www.detectahotel.com/himg/74/63/a7/arbisoftimages-3652772-hipotels_playadepalmapalace_bar_spa1-image.jpg", "https://www.youtube.com/embed/plh8n0Jrs6Q"],
                 "El Hipotels Playa de Palma Palace es un espectacular hotel de 5 estrellas ubicado en Playa de Palma, Mallorca. Un hotel de nueva construcción ideal para vacaciones o negocios, con un lujoso spa y precios especiales para jugar al golf. Un interior moderno y elegante con habitaciones amplias de diseño, que te ofrecerán unas vacaciones perfectas con toda la oferta de ocio complementaria de Playa de Palma. No puedes perderte visitar la zona chill out en el último piso del hotel, nuestro Heaven Rooftop Bar con unas vistas únicas a la Bahía de Palma y una puesta de sol que, acompañada de un refrescante cóctel y música en directo, se convertirá en uno de los momentos inolvidables de tus vacaciones.",
-                2, 5, 5, "Palma", 2.749959252355224, 39.514941917153024, "https://twitter.com/hipotels", "https://www.facebook.com/Hipotels", "https://www.instagram.com/hipotels", "https://www.hipotels.com/hoteles/playadepalmapalace",
+                2, "100-200€", 5, 5, "Palma", 2.749959252355224, 39.514941917153024, "https://twitter.com/hipotels", "https://www.facebook.com/Hipotels", "https://www.instagram.com/hipotels", "https://www.hipotels.com/hoteles/playadepalmapalace",
                 971260528, "playadepalmapalace@hipotels.com");
             getMedia(["ejemplo.jpg", "ejemplo.jpg", "ejemplo.mp4", "ejemplo.jpg"]);
             break;

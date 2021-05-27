@@ -6,7 +6,7 @@
         "identificador": "",
         "preu": {
             "import": "1",
-            "coment-preu": "precio de más de 200€ noche"
+            "coment_preu": "+200€"
         },
         "contacte": {
             "telf": "971495000",
@@ -60,7 +60,7 @@
         "identificador": "",
         "preu": {
             "import": "1",
-            "coment-preu": "precio de más de 200€ noche"
+            "coment_preu": "+200€"
         },
         "contacte": {
             "telf": "871592002",
@@ -114,7 +114,7 @@
         "identificador": "",
         "preu": {
             "import": "2",
-            "coment-preu": "precio de más de 100€ noche"
+            "coment_preu": "100-200€"
         },
         "contacte": {
             "telf": "971260528",
@@ -168,7 +168,7 @@
         "identificador": "1",
         "preu": {
             "import": "3",
-            "coment-preu": ""
+            "coment_preu": "60-100€"
         },
         "contacte": {
             "telf": "971435024",
@@ -222,7 +222,7 @@
         "identificador": "2",
         "preu": {
             "import": "5",
-            "coment-preu": ""
+            "coment_preu": "-40€"
         },
         "contacte": {
             "telf": "971542841",
@@ -276,7 +276,7 @@
         "identificador": "3",
         "preu": {
             "import": "4",
-            "coment-preu": ""
+            "coment_preu": "40-60€"
         },
         "contacte": {
             "telf": "971452368",
@@ -330,7 +330,7 @@
         "identificador": "4",
         "preu": {
             "import": "3",
-            "coment-preu": ""
+            "coment_preu": "60-100€"
         },
         "contacte": {
             "telf": "971452369",
@@ -384,7 +384,7 @@
         "identificador": "5",
         "preu": {
             "import": "1",
-            "coment-preu": ""
+            "coment_preu": "+200€"
         },
         "contacte": {
             "telf": "971254874",
@@ -438,7 +438,7 @@
         "identificador": "",
         "preu": {
             "import": "2",
-            "coment-preu": "Precio entre 100 y 200 euros la noche"
+            "coment_preu": "100-200€"
         },
         "contacte": {
             "telf": "912764747",
@@ -492,7 +492,7 @@
         "identificador": "",
         "preu": {
             "import": "5",
-            "coment-preu": "Hoteles de menos de 40 euros la noche"
+            "coment_preu": "-40€"
         },
         "contacte": {
             "telf": "971441812",
@@ -546,7 +546,7 @@
         "identificador": "",
         "preu": {
             "import": "2",
-            "coment-preu": "Hoteles de entre 100 y 200 euros la noche"
+            "coment_preu": "100-200€"
         },
         "contacte": {
             "telf": "971746070",
@@ -600,7 +600,7 @@
         "identificador": "",
         "preu": {
             "import": "4",
-            "coment-preu": "Hoteles de entre 40 y 60 euros la noche"
+            "coment_preu": "40-60€"
         },
         "contacte": {
             "telf": "971866176",
@@ -654,7 +654,7 @@
         "identificador": "",
         "preu": {
             "import": "3",
-            "coment-preu": "Hoteles de entre 60 y 100 euros la noche"
+            "coment_preu": "60-100€"
         },
         "contacte": {
             "telf": "971655200",
@@ -708,7 +708,7 @@
         "identificador": "",
         "preu": {
             "import": "5",
-            "coment-preu": "Hoteles por menos de 40 euros la noche"
+            "coment_preu": "-40€"
         },
         "contacte": {
             "telf": "971828084",
@@ -762,7 +762,7 @@
         "identificador": "",
         "preu": {
             "import": "1",
-            "coment-preu": "Hoteles de mas de 200 euros la noche"
+            "coment_preu": "+200€"
         },
         "contacte": {
             "telf": "971631650",
