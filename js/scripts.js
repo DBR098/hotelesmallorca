@@ -64,13 +64,15 @@ function abrirpopup(nom, media, desc, precio, rangoprecio, valoracion, estrellas
                                         <label itemprop="priceRange" content="${rangoprecio}">Precio: </label>
                                         `+ tprecio + `
                                     </td>
-                                    <td style="padding-right:7%; padding-left:7%">
-                                        <label itemprop="aggregateRating" content="${valoracion}" estrellas">Valoración: </label>
-                                        `+ tval + `
+                                    <td itemscope itemtype="https://schema.org/Rating" style="padding-right:7%; padding-left:7%">
+                                        <label>Valoración: 
+                                            <a itemprop="ratingValue" content="${valoracion} estrellas">`+ tval + `</a>
+                                        </label>
                                     </td>
-                                    <td>
-                                        <label itemprop="starRating" content="${estrellas}" estrellas">Categoria: </label>
-                                        `+ testrellas + `
+                                    <td itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
+                                        <label>Categoria:
+                                            <a itemprop="ratingValue" content="${estrellas} estrellas">`+ testrellas + `</a>
+                                        </label>    
                                     </td>
                                 </tr>
                             </table>
@@ -81,7 +83,10 @@ function abrirpopup(nom, media, desc, precio, rangoprecio, valoracion, estrellas
                 <table> 
                     <tr>
                         <td align="center" style="width:70%">
-                            <div id="map" ></div>
+                            <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates" id="map">
+                                <meta itemprop="latitude" content="${latitud}" />
+                                <meta itemprop="longitude" content="${longitud}" />
+                            </div>
                         </td>   
                         <td align="center" id="tiempo">
                             <div id="openweathermap-widget-15"></div>
@@ -96,7 +101,7 @@ function abrirpopup(nom, media, desc, precio, rangoprecio, valoracion, estrellas
                 <table> 
                     <tr>
                         <td align="center">
-                            <p itemprop="telephone">Telefono de contacto: ${telefono}</p>
+                            <p itemprop="telephone" content="${telefono}">Telefono de contacto: ${telefono}</p>
                         </td>
                         <td align="center">
                             <p>Correo electronico: <a itemprop="email" type="email" href="mailto:${correo}">${correo}</a></p>
@@ -125,23 +130,23 @@ function cerrarpopup() {
 /* comentarios */
 
 var coment = `<div class="comentario">
-    <h2 align="center">Sebastian Rodriguez</h2>
-    <p style="margin:10px">Valoración: 2</p>
-    <p style="margin:10px">Este hotel es demasiado caro para lo que ofrece. 
+    <h2 align="center" itemprop="author">Sebastian Rodriguez</h2>
+    <p itemscope itemtype="https://schema.org/Rating" style="margin:10px">Valoración: <a itemprop="ratingValue">2 estrellas</a></p>
+    <p itemprop="comment" style="margin:10px">Este hotel es demasiado caro para lo que ofrece. 
         No merece la pena teniendo otros hoteles más baratos y con mejores prestaciones.
     </p>
   </div>
 
   <div class="comentario">
-    <h2 align="center">Paco Buyo</h2>
-    <p style="margin:10px">Valoración: 4</p>
-    <p style="margin:10px">Este hotel es de los mejores en los que he estado. Muy recomendado.</p>
+    <h2 align="center" itemprop="author">Paco Buyo</h2>
+    <p itemscope itemtype="https://schema.org/Rating" style="margin:10px">Valoración: <a itemprop="ratingValue">4 estrellas</a></p>
+    <p itemprop="comment" style="margin:10px">Este hotel es de los mejores en los que he estado. Muy recomendado.</p>
   </div>
 
   <div class="comentario">
-    <h2 align="center">Alfredo Hernández</h2>
-    <p style="margin:10px">Valoración: 3</p>
-    <p style="margin:10px">El hotel no esta mal, la atencion al cliente ha sido buena, pero creo que hay 
+    <h2 align="center" itemprop="author">Alfredo Hernández</h2>
+    <p itemscope itemtype="https://schema.org/Rating" style="margin:10px">Valoración: <a itemprop="ratingValue">3 estrellas</a></p>
+    <p itemprop="comment" style="margin:10px">El hotel no esta mal, la atencion al cliente ha sido buena, pero creo que hay 
         mejores hoteles.</p>
   </div>`;
 var coment2 = "";
@@ -153,9 +158,9 @@ function ponercomentarios() {
 
     if (nom != "" && com != "") {
         var coment3 = `<div class="comentario">
-            <h2 align="center">`+ nom + `</h2>
-            <p style="margin:10px">Valoración: `+ val + `</p>
-            <p style="margin:10px">`+ com + `</p>
+            <h2 align="center" itemprop="author">`+ nom + `</h2>
+            <p itemscope itemtype="https://schema.org/Rating" style="margin:10px">Valoración: <a itemprop="ratingValue">`+ val + ` estrellas</a></p>
+            <p itemprop="comment" style="margin:10px">`+ com + `</p>
         </div>` + coment2;
         coment2 = coment3;
 
@@ -171,12 +176,12 @@ function ponercomentarios() {
 
 function abrircomentarios(nom) {
     var texto =
-        `<div itemscope itemtype="https://schema.org/Hotel">>
-            <h2 align="center" itemprop="name">`+ nom + `</h2>
+        `<div>
+            <h2 align="center">`+ nom + `</h2>
             <div class="esc-comentario">
                 <table>
                     <tr>
-                        <td align="center">
+                        <td align="center" >
                             <p>Nombre de usuario: </p>
                         </td>
 
@@ -209,7 +214,7 @@ function abrircomentarios(nom) {
                 <hr style="margin:1rem 0;width:98%"> 
             </div>
             
-            <fieldset id="lista-comentarios"></fieldset>
+            <fieldset itemscope itemtype="https://schema.org/Comment" id="lista-comentarios"></fieldset>
         </div>`;
 
     var c = document.getElementById("contenido");
@@ -258,9 +263,13 @@ async function printHoteles() {
                             <br>
                             <label itemprop="priceRange" content="${hotel.preu.coment_preu}" for="input-3" class="control-label">Precio: </label>`+ tprecio + `
                             <br>
-                            <label itemprop="aggregateRating" content="${hotel.puntuacio} estrellas" for="input-3" class="control-label">Valoración: </label>`+ tval + `
+                            <label itemscope itemtype="https://schema.org/Rating" for="input-3" class="control-label">Valoración: 
+                                <a itemprop="ratingValue" content="${hotel.puntuacio} estrellas">`+ tval + `</a>
+                            </label>
                             <br>
-                            <label itemprop="starRating" content="${hotel.dadesPropies.estrellas} estrellas">Categoria: </label>`+ testrellas + `
+                            <label itemscope itemtype="https://schema.org/Rating" itemprop="starRating">Categoria: 
+                                <a itemprop="ratingValue" content="${hotel.dadesPropies.estrellas} estrellas">`+ testrellas + `</a>
+                            </label>
                             <br><br>
                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="abrirpopup('${hotel.nom}',['${hotel.icones[0]}', '${hotel.imatges[0]}', '${hotel.videos[0].url}'],'${hotel.descripcio}','${hotel.preu.import}','${hotel.preu.coment_preu}',
                             '${hotel.puntuacio}', '${hotel.dadesPropies.estrellas}', '${hotel.geoposicionament1.city}','${hotel.geoposicionament1.long}', '${hotel.geoposicionament1.lat}', '${hotel.contacte.xarxes.twitter}', '${hotel.contacte.xarxes.facebook}', 
@@ -549,7 +558,7 @@ function getMedia(media) {
             </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="`+ media[0] + `">
+                <img itemprop="image" src="`+ media[0] + `">
             </div>
             `;
     for (var i = 1; i < media.length; i++) {
