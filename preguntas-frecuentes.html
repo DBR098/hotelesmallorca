@@ -146,109 +146,195 @@
 
     <main>
 
-        <div class="preguntas">
-            <h2 class="preg" id="preg_1" onclick="muestraOculta('1')">¿Puedo crear una cuenta?
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <p class="resp" id="resp_1" style="display: none;">
-                <strong>Por el momento no es posible. </strong>
-                Suscríbase a nuestro newsletter para recibir las últimas noticias de nuestra web.
-            </p>
-            
-            <br>
-
-            <h2 class="preg" id="preg_2" onclick="muestraOculta('2')">No encuentro el hotel que busco
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <p class="resp" id="resp_2" style="display: none;">Esta página web solo trabaja con hoteles situados en
-                la isla de Mallorca, por lo que si busca un hotel situado fuera de esta isla no encontrará
-                información. Por otro lado, esta pagina está en desarrollo, por lo que es posible que falten
-                algunos hoteles. Esto se irá corrigiendo con el tiempo. 
-            </p>
-
-            <br>
-
-            <h2 class="preg" id="preg_3" onclick="muestraOculta('3')">No puedo ver los comentarios de un hotel
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <p class="resp" id="resp_3" style="display: none;">Esto se puede deber a que el hotel aún no tenga comentarios 
-                o, por el contrario, un problema de conectividad. Espere unos minutos y vuelva a intentarlo.
-            </p>
-
-            <br>
-
-            <h2 class="preg" id="preg_4" onclick="muestraOculta('4')">¿Cómo puedo saber los precios?
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <p class="resp" id="resp_4" style="display: none;">En esta pagina no se muestran los precios exactos de cada
-                hotel,
-                sino que se muestran en rangos de precios. Cada estrella representa un rango de precio, en el que
-                pueden oscilar los precios de los hoteles.
-            </p>
-
-            <br>
-
-            <h2 class="preg" id="preg_5" onclick="muestraOculta('5')">¿Cuáles son los rangos de precio?
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <div class="resp" id="resp_5" style="display: none;">
-                Nuestros rangos de precio son los siguientes:
-                <p><strong>1 Estrella</strong> -> Hoteles con habitaciones de más de 200 euros la noche</p>
-                <p><strong>2 Estrellas</strong> -> Hoteles con habitaciones de entre 100 y 200 euros la noche</p>
-                <p><strong>3 Estrellas</strong> -> Hoteles con habitaciones de entre 60 y 100 euros la noche</p>
-                <p><strong>4 Estrellas</strong> -> Hoteles con habitaciones de entre 40 y 60 euros la noche</p>
-                <p><strong>5 Estrellas</strong> -> Hoteles con habitaciones de menos de 40 euros la noche</p>
+        <div class="preguntas" itemscope itemtype="https://schema.org/FAQPage">
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_1" onclick="muestraOculta('1')">
+                    ¿Puedo crear una cuenta?
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_1"
+                    style="display: none;">
+                    <div itemprop="text">
+                        <p>
+                            <strong>Por el momento no es posible. </strong>
+                            Suscríbase a nuestro newsletter para recibir las últimas noticias de nuestra web.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <br>
 
-            <h2 class="preg" id="preg_6" onclick="muestraOculta('6')">¿Es posible ver el precio exacto para un hotel?
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <p class="resp" id="resp_6" style="display: none;">Para ello deberá acceder a la pagina web del hotel que
-                desee
-                consultar dicha información. Podrá encontrar un acceso a la web de cada uno de los hoteles en su
-                ventana informativa correspondiente.
-            </p>
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_2" onclick="muestraOculta('2')">
+                    No encuentro el hotel que busco
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_2"
+                    style="display: none;">
+                    <div itemprop="text">
+                        <p>
+                            Esta página web solo trabaja con hoteles situados en la isla de Mallorca, por lo que
+                            si busca un hotel situado fuera de esta isla no encontrará información. Por otro lado,
+                            esta pagina está en desarrollo, por lo que es posible que falten algunos hoteles.
+                            Esto se irá corrigiendo con el tiempo.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <br>
 
-            <h2 class="preg" id="preg_7" onclick="muestraOculta('7')">¿Puedo añadir comentarios a los hoteles?
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <p class="resp" id="resp_7" style="display: none;">
-                Sí, todos los usuarios de esta web pueden dejar una valoración con su nombre y comentario.
-            </p>
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_3" onclick="muestraOculta('3')">
+                    No puedo ver los comentarios de un hotel
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_3"
+                    style="display: none;">
+                    <div itemprop="text">
+                        <p>
+                            Esto se puede deber a que el hotel aún no tenga comentarioso, por el contrario,
+                            un problema de conectividad. Espere unos minutos y vuelva a intentarlo.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <br>
 
-            <h2 class="preg" id="preg_8" onclick="muestraOculta('8')">Hay cierta información del hotel que no es correcta
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <p class="resp" id="resp_8" style="display: none;">
-                Si crees que nuestra web muestra alguna dato erróneo, por favor ponte en contacto con nosotros a través del 
-                número de teléfono 911 178 867 o a través del email info@hotelesmallorca.com.
-            </p>
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_4" onclick="muestraOculta('4')">
+                    ¿Cómo puedo saber los precios?
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_4"
+                    style="display: none;">
+                    <div itemprop="text">
+                        <p>
+                            En esta pagina no se muestran los precios exactos de cada hotel, sino que se muestran
+                            en rangos de precios. Cada estrella representa un rango de precio, en el que pueden
+                            oscilar los precios de los hoteles.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <br>
 
-            <h2 class="preg" id="preg_9" onclick="muestraOculta('9')">¿Puedo solicitar que se añada un hotel?
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <p class="resp" id="resp_9" style="display: none;">
-                Sí, para ello ponte en contacto con nosotros a través del número de teléfono 911 178 867 o
-                a través del email info@hotelesmallorca.com.
-            </p>
+
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_5" onclick="muestraOculta('5')">
+                    ¿Cuáles son los rangos de precio?
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_5"
+                    style="display: none;">
+                    <div itemprop="text">
+                        Nuestros rangos de precio son los siguientes:
+                        <p><strong>1 Estrella</strong> -> Hoteles con habitaciones de más de 200 euros la noche</p>
+                        <p><strong>2 Estrellas</strong> -> Hoteles con habitaciones de entre 100 y 200 euros la noche
+                        </p>
+                        <p><strong>3 Estrellas</strong> -> Hoteles con habitaciones de entre 60 y 100 euros la noche</p>
+                        <p><strong>4 Estrellas</strong> -> Hoteles con habitaciones de entre 40 y 60 euros la noche</p>
+                        <p><strong>5 Estrellas</strong> -> Hoteles con habitaciones de menos de 40 euros la noche</p>
+                    </div>
+                </div>
+            </div>
 
             <br>
 
-            <h2 class="preg" id="preg_10" onclick="muestraOculta('10')">¿Por qué cuando cambio de idioma solo cambia de idioma la página principal?
-                <span class="fas fa-caret-right"></span>
-            </h2>
-            <p class="resp" id="resp_10" style="display: none;">
-                <strong>Ahora mismo solo disponemos de traducción para la página principal. </strong>
-                Suscríbase a nuestro newsletter para recibir las últimas noticias de nuestra web.
-            </p>
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_6" onclick="muestraOculta('6')">
+                    ¿Es posible ver el precio exacto para un hotel?
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_6"
+                    style="display: none;">
+                    <div itemprop="text">
+                        <p>
+                            Para ello deberá acceder a la pagina web del hotel que desee consultar dicha
+                            información. Podrá encontrar un acceso a la web de cada uno de los hoteles en
+                            suventana informativa correspondiente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_7" onclick="muestraOculta('7')">
+                    ¿Puedo añadir comentarios a los hoteles?
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_7"
+                    style="display: none;">
+                    <div itemprop="text">
+                        <p>
+                            Sí, todos los usuarios de esta web pueden dejar una valoración con su nombre 
+                            y comentario.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_8" onclick="muestraOculta('8')">
+                    Hay cierta información del hotel que no es correcta
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_8"
+                    style="display: none;">
+                    <div itemprop="text">
+                        <p>
+                            Si crees que nuestra web muestra alguna dato erróneo, por favor ponte en contacto 
+                            con nosotros a través del número de teléfono 911 178 867 o a través del email 
+                            info@hotelesmallorca.com.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_9" onclick="muestraOculta('9')">
+                    ¿Puedo solicitar que se añada un hotel?
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_9"
+                    style="display: none;">
+                    <div itemprop="text">
+                        <p>
+                            Sí, para ello ponte en contacto con nosotros a través del número de teléfono 911 178 867 o
+                            a través del email info@hotelesmallorca.com.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+                <h2 itemprop="name" class="preg" id="preg_10" onclick="muestraOculta('10')">
+                    ¿Por qué cuando cambio de idioma solo cambia de idioma la página
+                    principal?
+                    <span class="fas fa-caret-right"></span>
+                </h2>
+                <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" class="resp" id="resp_10"
+                    style="display: none;">
+                    <div itemprop="text">
+                        <p>
+                            <strong>Ahora mismo solo disponemos de traducción para la página principal. </strong>
+                            Suscríbase a nuestro newsletter para recibir las últimas noticias de nuestra web.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <hr class="featurette-divider">
@@ -256,7 +342,8 @@
         <!-- FOOTER -->
         <footer class="container">
             <p class="float-end"><a href="#">Back to top</a></p>
-            <p>Web diseñada por Denny Barreiro y Carlos Suárez &middot; 2000–2021 Vini11BalondeOroCompany, Inc.&copy;</p>
+            <p>Web diseñada por Denny Barreiro y Carlos Suárez &middot; 2000–2021 Vini11BalondeOroCompany, Inc.&copy;
+            </p>
         </footer>
     </main>
 
